@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Booking Enquiry | Rangoli Rang</title>
+<meta name="description" content="Book a custom rangoli or festive decor design. Booking enquiry form, studio address, phone, WhatsApp and upcoming live kolam workshop dates in Bengaluru.">
+<meta name="theme-color" content="#B4532A">
+<!-- favicons: SVG for modern browsers, ICO/PNG fallbacks, iOS home screen, PWA manifest -->
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('rr-theme');
+      if (!t) { t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+      if (t === 'dark') { document.documentElement.classList.add('dark'); document.documentElement.style.colorScheme = 'dark'; }
+      if (localStorage.getItem('rr-dir') === 'rtl') { document.documentElement.setAttribute('dir', 'rtl'); }
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Source+Serif+4:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          primary:   { 50:'#FBF3EF', 100:'#F6E5DB', 200:'#EDCBB8', 300:'#DFA98C', 400:'#CE8462', 500:'#B4532A', 600:'#9A4523', 700:'#7C371C', 800:'#5F2A15', 900:'#451D0F' },
+          secondary: { 50:'#EFFAF8', 100:'#D7F2EE', 200:'#AEE5DE', 300:'#7ED4CB', 400:'#3FA79C', 500:'#0F766E', 600:'#0C5B55', 700:'#094A45', 800:'#073A36', 900:'#052B28' },
+          gold: '#E8A33D',
+          plum: '#7C2D5B'
+        },
+        fontFamily: {
+          display: ['"Source Serif 4"', 'Georgia', 'Cambria', 'Times New Roman', 'serif'],
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+<script src="js/navbar.js" defer></script>
+<script src="js/footer.js" defer></script>
+</head>
+
+<body class="bg-white font-sans text-neutral-800 antialiased selection:bg-secondary-200 selection:text-neutral-900 dark:bg-neutral-950 dark:text-neutral-200 dark:selection:bg-secondary-500/30">
+
+<!-- ============ NAVBAR (injected) ============ -->
+<div data-navbar></div>
+
+<main id="main-content">
+
+  <section class="relative isolate overflow-hidden border-b border-neutral-200 bg-gradient-to-b from-primary-50 via-white to-secondary-50 dark:border-white/10 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950">
+
+    <div class="pointer-events-none absolute inset-0 text-primary-900/[0.14] dark:text-white/[0.06]" style="background-image:radial-gradient(currentColor 1px, transparent 1px);background-size:26px 26px;-webkit-mask-image:radial-gradient(ellipse 75% 65% at 50% 45%,#000 35%,transparent 100%);mask-image:radial-gradient(ellipse 75% 65% at 50% 45%,#000 35%,transparent 100%)" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -start-44 -top-52 h-[36rem] w-[36rem] rounded-full border border-primary-500/10 dark:border-white/[0.06]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -start-20 -top-28 h-[22rem] w-[22rem] rounded-full border border-secondary-500/15 dark:border-white/[0.05]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -end-40 -bottom-36 h-[28rem] w-[28rem] rounded-full border border-gold/25 dark:border-white/[0.06]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -end-24 top-1/4 h-72 w-72 rounded-full bg-secondary-100/70 blur-3xl dark:bg-secondary-500/10" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -start-32 bottom-0 h-80 w-80 rounded-full bg-primary-200/50 blur-3xl dark:bg-primary-500/10" aria-hidden="true"></div>
+    <img src="images/rangoli-hero.svg" alt="" aria-hidden="true" class="pointer-events-none absolute -end-32 top-1/2 w-[34rem] max-w-[80%] -translate-y-1/2 opacity-[0.07] dark:opacity-[0.05] xl:-end-24 xl:w-[44rem]" loading="eager">
+
+    <div class="relative mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-20 xl:px-8 xl:py-20">
+      <p class="inline-flex items-center gap-2 rounded-full border border-primary-200 bg-white/70 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary-700 backdrop-blur-sm dark:border-white/10 dark:bg-white/5 dark:text-primary-300">
+        <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-primary-500" aria-hidden="true"></span>
+        Contact
+      </p>
+
+      <h1 class="mx-auto mt-6 max-w-3xl font-display text-4xl font-bold leading-[1.08] tracking-tight text-neutral-900 sm:text-5xl xl:text-6xl dark:text-white">
+        Book a design,
+        <span class="text-primary-600 dark:text-primary-400">or just come and talk</span>
+      </h1>
+
+      <span class="mx-auto mt-6 block h-px w-24 bg-gradient-to-r from-transparent via-gold to-transparent" aria-hidden="true"></span>
+
+      <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-600 sm:text-lg dark:text-neutral-300">
+        Fill the form and you&rsquo;ll have a written quote within one working day. Or call, message, or
+        walk into the studio on a weekday morning &mdash; the wall of archived grids is worth seeing.
+      </p>
+
+      <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:items-center">
+        <a href="#booking-form" class="inline-flex items-center gap-2 rounded-full bg-primary-500 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-all duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:scale-[0.98] motion-reduce:transition-none dark:focus-visible:ring-offset-neutral-950">
+          Request a written quote
+          <svg viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4 rtl:rotate-180" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.06-1.06l5.5 5.5a.75.75 0 0 1 0 1.06l-5.5 5.5a.75.75 0 1 1-1.06-1.06l4.138-3.86H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/></svg>
+        </a>
+      
+        <a href="https://wa.me/919845022107" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white/70 px-7 py-3.5 text-sm font-semibold text-neutral-800 backdrop-blur transition-all duration-200 hover:border-primary-500 hover:text-primary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:scale-[0.98] motion-reduce:transition-none dark:border-white/15 dark:bg-white/5 dark:text-neutral-100 dark:hover:border-white/40 dark:hover:bg-white/10 dark:focus-visible:ring-offset-neutral-950">
+          <svg viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4" aria-hidden="true"><path fill-rule="evenodd" d="M10 2a8 8 0 0 0-6.9 12.02l-1.02 3.72 3.8-1a8 8 0 1 0 4.12-14.74Zm4.6 11.2c-.2.55-1.15 1.05-1.58 1.07-.4.03-.94.04-1.5-.1a11 11 0 0 1-4.2-2.5 10.4 10.4 0 0 1-2.2-3.1c-.15-.4-.2-1 .05-1.5.2-.4.55-.7 1-.72.3-.02.65 0 .8.3l.6 1.2c.08.15.04.3-.05.45l-.35.55a.4.4 0 0 0-.05.5 8 8 0 0 0 1.2 1.7 7.6 7.6 0 0 0 1.9 1.25c.2.06.4 0 .5-.15l.4-.6c.12-.17.3-.2.48-.12l1.2.6c.2.1.32.2.35.35.03.15.03.7-.15 1.25Z" clip-rule="evenodd"/></svg>
+          WhatsApp us
+        </a>
+      </div>
+
+      <nav aria-label="Breadcrumb" class="mt-8 text-sm text-neutral-500 dark:text-neutral-400">
+        <ol class="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-neutral-200 bg-white/70 px-4 py-2 backdrop-blur-sm dark:border-white/10 dark:bg-white/5">
+          <li><a href="index.html" class="rounded-full px-1.5 py-0.5 font-medium transition-colors duration-200 hover:text-primary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 dark:hover:text-primary-300">Home</a></li>
+          <li aria-hidden="true" class="text-neutral-300 dark:text-neutral-600">/</li>
+          <li class="rounded-full px-1.5 py-0.5 font-semibold text-neutral-900 dark:text-white" aria-current="page">Contact</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ================= QUICK CONTACT CARDS ================= -->
+  <section class="border-b border-neutral-200 dark:border-white/10">
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 xl:px-8">
+      <div class="grid gap-4 text-center sm:grid-cols-2 xl:grid-cols-4 xl:text-left">
+        <a href="tel:+919845022107"
+           class="rounded-2xl border border-neutral-200 p-6 transition-all duration-200 hover:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:hover:border-primary-400">
+          <span class="mx-auto inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary-50 text-primary-600 dark:bg-primary-500/10 dark:text-primary-300 xl:mx-0">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M3.5 5.5c0-.8.7-1.5 1.5-1.5h2.2c.7 0 1.3.5 1.5 1.2l.6 2.3c.2.7 0 1.4-.5 1.8l-1.2 1.2a12 12 0 0 0 5.4 5.4l1.2-1.2c.4-.5 1.1-.7 1.8-.5l2.3.6c.7.2 1.2.8 1.2 1.5v2.2c0 .8-.7 1.5-1.5 1.5h-1A15.5 15.5 0 0 1 3.5 6.5v-1Z"/></svg>
+          </span>
+          <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">Call the studio</p>
+          <p class="mt-1 font-display text-lg font-bold text-neutral-900 dark:text-white">+91 98450 22107</p>
+          <p class="mt-1 text-xs text-neutral-500 dark:text-neutral-400">9:30 AM – 7:00 PM, Mon to Sat</p>
+        </a>
+
+        <a href="https://wa.me/919845022107"
+           class="rounded-2xl border border-neutral-200 p-6 transition-all duration-200 hover:border-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary dark:border-white/10 dark:hover:border-secondary-400">
+          <span class="mx-auto inline-flex h-11 w-11 items-center justify-center rounded-xl bg-secondary-50 text-secondary-600 dark:bg-secondary-500/10 dark:text-secondary-300 xl:mx-0">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 1.8a8.2 8.2 0 1 1-4.2 15.1l-.3-.2-2.6.7.7-2.5-.2-.3A8.2 8.2 0 0 1 12 3.8Zm-3.3 4c-.2 0-.4 0-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.6 4 3.5 2 .7 2.4.6 2.8.5.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.6-.3-1.4-.7c-.2 0-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.6-.3-1.3-.6-1.8-1.1-.6-.6-1-1.3-1.1-1.8-.1-.2 0-.4.1-.5l.4-.5.3-.5v-.5l-.7-1.6c-.2-.4-.4-.4-.5-.4Z"/></svg>
+          </span>
+          <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">WhatsApp</p>
+          <p class="mt-1 font-display text-lg font-bold text-neutral-900 dark:text-white">Send a photo</p>
+          <p class="mt-1 text-xs text-neutral-500 dark:text-neutral-400">Fastest way to share a space</p>
+        </a>
+
+        <a href="mailto:hello@rangolirang.in"
+           class="rounded-2xl border border-neutral-200 p-6 transition-all duration-200 hover:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:hover:border-primary-400">
+          <span class="mx-auto inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gold/15 text-[#8A5A0B] dark:bg-gold/10 dark:text-gold xl:mx-0">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 8 8 5 8-5"/></svg>
+          </span>
+          <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">Email</p>
+          <p class="mt-1 font-display text-lg font-bold break-all text-neutral-900 dark:text-white">hello@rangolirang.in</p>
+          <p class="mt-1 text-xs text-neutral-500 dark:text-neutral-400">Quotes, invoices, vendor docs</p>
+        </a>
+
+        <div class="rounded-2xl border border-neutral-200 p-6 dark:border-white/10">
+          <span class="mx-auto inline-flex h-11 w-11 items-center justify-center rounded-xl bg-plum/10 text-plum dark:bg-plum/20 dark:text-plum xl:mx-0">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M12 21s7-5.3 7-10.4A7 7 0 0 0 5 10.6C5 15.7 12 21 12 21Z"/><circle cx="12" cy="10.5" r="2.6"/></svg>
+          </span>
+          <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">Studio</p>
+          <p class="mt-1 text-sm font-semibold leading-relaxed text-neutral-900 dark:text-white">No. 24, 3rd Cross, Domlur Layout, Indiranagar, Bengaluru 560038</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FORM + INFO ================= -->
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 xl:px-8 xl:py-24">
+    <div class="grid gap-12 xl:grid-cols-12 xl:gap-14">
+
+      <!-- ---------- FORM ---------- -->
+      <div class="xl:col-span-7">
+        <div class="rounded-2xl border border-neutral-200 p-6 sm:p-8 dark:border-white/10">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400">Booking enquiry</p>
+          <h2 class="mt-3 font-display text-2xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-3xl">
+            Tell us about the space
+          </h2>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Fields marked with an asterisk are required. Nothing here is shared with anyone — your details
+            are used only to prepare the quote.
+          </p>
+
+          <form id="booking-form" class="mt-8 space-y-5" novalidate>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div class="text-center sm:text-left">
+                <label for="name" class="block text-sm font-semibold text-neutral-900 dark:text-white">Full name <span class="text-primary" aria-hidden="true">*</span></label>
+                <input id="name" name="name" type="text" required autocomplete="name" placeholder="Your name"
+                  class="mt-2 h-12 w-full rounded-xl border border-neutral-300 bg-white px-4 text-sm text-neutral-900 transition-colors duration-200 placeholder:text-neutral-400 focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:bg-white/5 dark:text-white">
+                <p data-error-for="name" class="mt-1.5 hidden text-xs text-rose-600 dark:text-rose-400"></p>
+              </div>
+              <div class="text-center sm:text-left">
+                <label for="phone" class="block text-sm font-semibold text-neutral-900 dark:text-white">Phone <span class="text-primary" aria-hidden="true">*</span></label>
+                <input id="phone" name="phone" type="tel" required autocomplete="tel" inputmode="numeric" placeholder="10-digit mobile number"
+                  class="mt-2 h-12 w-full rounded-xl border border-neutral-300 bg-white px-4 text-sm text-neutral-900 transition-colors duration-200 placeholder:text-neutral-400 focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:bg-white/5 dark:text-white">
+                <p data-error-for="phone" class="mt-1.5 hidden text-xs text-rose-600 dark:text-rose-400"></p>
+              </div>
+            </div>
+
+            <div class="text-center sm:text-left">
+              <label for="email" class="block text-sm font-semibold text-neutral-900 dark:text-white">Email <span class="text-primary" aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"
+                class="mt-2 h-12 w-full rounded-xl border border-neutral-300 bg-white px-4 text-sm text-neutral-900 transition-colors duration-200 placeholder:text-neutral-400 focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:bg-white/5 dark:text-white">
+              <p data-error-for="email" class="mt-1.5 hidden text-xs text-rose-600 dark:text-rose-400"></p>
+            </div>
+
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div class="text-center sm:text-left">
+                <label for="service" class="block text-sm font-semibold text-neutral-900 dark:text-white">Service needed <span class="text-primary" aria-hidden="true">*</span></label>
+                <select id="service" name="service" required
+                  class="mt-2 h-12 w-full rounded-xl border border-neutral-300 bg-white px-4 text-sm text-neutral-900 transition-colors duration-200 focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:bg-white/5 dark:text-white">
+                  <option value="">Select a service</option>
+                  <option>Home Rangoli Art</option>
+                  <option>Event &amp; Wedding Decor</option>
+                  <option>Corporate Kolam Art</option>
+                  <option>Festive Set Dressing</option>
+                  <option>Live Kolam Workshop</option>
+                  <option>Custom / other design</option>
+                </select>
+                <p data-error-for="service" class="mt-1.5 hidden text-xs text-rose-600 dark:text-rose-400"></p>
+              </div>
+              <div class="text-center sm:text-left">
+                <label for="date" class="block text-sm font-semibold text-neutral-900 dark:text-white">Preferred date</label>
+                <input id="date" name="date" type="date"
+                  class="mt-2 h-12 w-full rounded-xl border border-neutral-300 bg-white px-4 text-sm text-neutral-900 transition-colors duration-200 focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:bg-white/5 dark:text-white">
+                <p data-error-for="date" class="mt-1.5 hidden text-xs text-rose-600 dark:text-rose-400"></p>
+              </div>
+            </div>
+
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div class="text-center sm:text-left">
+                <label for="size" class="block text-sm font-semibold text-neutral-900 dark:text-white">Approximate floor size</label>
+                <select id="size" name="size"
+                  class="mt-2 h-12 w-full rounded-xl border border-neutral-300 bg-white px-4 text-sm text-neutral-900 transition-colors duration-200 focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:bg-white/5 dark:text-white">
+                  <option value="">Not sure yet</option>
+                  <option>Under 4 ft &times; 4 ft</option>
+                  <option>4 – 6 ft &times; 6 ft</option>
+                  <option>6 – 12 ft &times; 8 ft</option>
+                  <option>12 – 20 ft &times; 20 ft</option>
+                  <option>Above 20 ft &times; 20 ft</option>
+                </select>
+              </div>
+              <div class="text-center sm:text-left">
+                <label for="budget" class="block text-sm font-semibold text-neutral-900 dark:text-white">Indicative budget</label>
+                <select id="budget" name="budget"
+                  class="mt-2 h-12 w-full rounded-xl border border-neutral-300 bg-white px-4 text-sm text-neutral-900 transition-colors duration-200 focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:bg-white/5 dark:text-white">
+                  <option value="">Prefer to discuss</option>
+                  <option>Under ₹2,000</option>
+                  <option>₹2,000 – ₹5,000</option>
+                  <option>₹5,000 – ₹12,000</option>
+                  <option>₹12,000 – ₹30,000</option>
+                  <option>Above ₹30,000</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="text-center sm:text-left">
+              <label for="city" class="block text-sm font-semibold text-neutral-900 dark:text-white">City / locality</label>
+              <input id="city" name="city" type="text" autocomplete="address-level2" placeholder="e.g. Whitefield, Bengaluru"
+                class="mt-2 h-12 w-full rounded-xl border border-neutral-300 bg-white px-4 text-sm text-neutral-900 transition-colors duration-200 placeholder:text-neutral-400 focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:bg-white/5 dark:text-white">
+            </div>
+
+            <div class="text-center sm:text-left">
+              <label for="message" class="block text-sm font-semibold text-neutral-900 dark:text-white">About the design <span class="text-primary" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="5" required placeholder="Festival or event, the floor area, any motif or reference image you like, and the colours you want to avoid."
+                class="mt-2 w-full rounded-xl border border-neutral-300 bg-white px-4 py-3 text-sm leading-relaxed text-neutral-900 transition-colors duration-200 placeholder:text-neutral-400 focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:bg-white/5 dark:text-white"></textarea>
+              <p data-error-for="message" class="mt-1.5 hidden text-xs text-rose-600 dark:text-rose-400"></p>
+            </div>
+
+            <label class="flex cursor-pointer items-start gap-3 text-start">
+              <input id="consent" name="consent" type="checkbox" required
+                class="mt-1 h-4 w-4 shrink-0 rounded border-neutral-400 text-primary focus:ring-primary focus:ring-offset-2 dark:border-neutral-600 dark:bg-white/5 dark:focus:ring-offset-neutral-950">
+              <span class="text-xs leading-relaxed text-neutral-600 dark:text-neutral-300">
+                I agree to be contacted about this enquiry. My details will not be shared with third parties.
+                <span class="text-primary" aria-hidden="true">*</span>
+              </span>
+            </label>
+            <p data-error-for="consent" class="mt-1.5 hidden text-xs text-rose-600 dark:text-rose-400"></p>
+
+            <button type="submit"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white shadow-sm shadow-primary/25 transition-all duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 active:scale-[0.99] motion-reduce:transition-none dark:focus-visible:ring-offset-neutral-950 sm:w-auto">
+              Send booking enquiry
+            </button>
+
+            <p class="text-center text-xs text-neutral-500 sm:text-start dark:text-neutral-400">
+              Prefer to skip the form? Call <a href="tel:+919845022107" class="font-semibold text-primary-700 underline underline-offset-4 dark:text-primary-400">+91 98450 22107</a> or message on WhatsApp.
+            </p>
+          </form>
+
+          <!-- success state -->
+          <div data-success class="mt-8 hidden rounded-2xl border border-secondary-300 p-8 text-center dark:border-secondary-500/40">
+            <span class="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-full bg-secondary-50 text-secondary-600 dark:bg-secondary-500/10 dark:text-secondary-300">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+            </span>
+            <h3 class="mt-4 font-display text-xl font-bold text-neutral-900 dark:text-white">Enquiry received</h3>
+            <p class="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+              Thank you, <span data-success-name class="font-semibold text-neutral-900 dark:text-white">friend</span>.
+              Your sketch and written quote will reach you within one working day. For anything urgent, call the studio directly.
+            </p>
+            <button type="button" data-reset class="mt-6 inline-flex items-center justify-center rounded-full border border-neutral-300 px-6 py-2.5 text-sm font-semibold text-neutral-800 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:text-neutral-100">
+              Send another enquiry
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- SIDE INFO ---------- -->
+      <aside class="space-y-6 xl:col-span-5">
+        <div class="rounded-2xl border border-neutral-200 p-6 text-center xl:text-left dark:border-white/10">
+          <h2 class="font-display text-xl font-bold text-neutral-900 dark:text-white">Studio hours</h2>
+          <dl class="mt-5 space-y-3 text-sm">
+            <div class="flex items-center justify-between gap-4 border-b border-neutral-200 pb-3 text-start dark:border-white/10">
+              <dt class="text-neutral-600 dark:text-neutral-300">Monday – Friday</dt>
+              <dd class="font-semibold text-neutral-900 dark:text-white">9:30 AM – 7:00 PM</dd>
+            </div>
+            <div class="flex items-center justify-between gap-4 border-b border-neutral-200 pb-3 text-start dark:border-white/10">
+              <dt class="text-neutral-600 dark:text-neutral-300">Saturday</dt>
+              <dd class="font-semibold text-neutral-900 dark:text-white">9:30 AM – 5:00 PM</dd>
+            </div>
+            <div class="flex items-center justify-between gap-4 text-start">
+              <dt class="text-neutral-600 dark:text-neutral-300">Sunday</dt>
+              <dd class="font-semibold text-neutral-500 dark:text-neutral-400">Installations only</dd>
+            </div>
+          </dl>
+          <p class="mt-5 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+            Morning home installations are scheduled 6:30 – 8:00 AM regardless of studio hours, so you can
+            leave for work before we start.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-neutral-200 p-6 text-center xl:text-left dark:border-white/10">
+          <h2 class="font-display text-xl font-bold text-neutral-900 dark:text-white">What happens next</h2>
+          <ol class="mt-5 space-y-4 text-start">
+            <li class="flex gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-neutral-300 text-xs font-bold text-neutral-700 dark:border-white/15 dark:text-neutral-300">1</span>
+              <p class="text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+                We reply within one working day with questions, an indicative price and available dates.
+              </p>
+            </li>
+            <li class="flex gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-neutral-300 text-xs font-bold text-neutral-700 dark:border-white/15 dark:text-neutral-300">2</span>
+              <p class="text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+                You send a photo and rough measurement. We confirm the footprint and the grid pitch.
+              </p>
+            </li>
+            <li class="flex gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-neutral-300 text-xs font-bold text-neutral-700 dark:border-white/15 dark:text-neutral-300">3</span>
+              <p class="text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+                A hand-drawn sketch and colour card arrive within 24 hours. Redesign until it feels right.
+              </p>
+            </li>
+            <li class="flex gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-neutral-300 text-xs font-bold text-neutral-700 dark:border-white/15 dark:text-neutral-300">4</span>
+              <p class="text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+                50% confirms the date. The crew arrives, draws, and we photograph the finished floor.
+              </p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="overflow-hidden rounded-2xl border border-neutral-200 dark:border-white/10">
+          <div class="relative h-56 bg-neutral-100 sm:h-64 dark:bg-neutral-900">
+            <!-- OpenStreetMap embed: no API key, no tracking. The invert/rotate
+                 filter flips the light tiles for dark mode; the zoom controls
+                 sit above the pill row so they stay clickable. -->
+            <iframe
+              title="Map of the Rangoli Rang studio, No. 24, 3rd Cross, Domlur Layout, Indiranagar, Bengaluru 560038"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=77.6315%2C12.9545%2C77.6473%2C12.9691&amp;layer=mapnik&amp;marker=12.9618%2C77.6394"
+              class="absolute inset-0 h-full w-full border-0 dark:invert dark:hue-rotate-180 dark:brightness-90 dark:contrast-95"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/5 dark:ring-white/10" aria-hidden="true"></div>
+            <span class="pointer-events-none absolute bottom-3 start-3 rounded-full border border-white/60 bg-white/80 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-neutral-800 backdrop-blur-sm dark:border-white/10 dark:bg-neutral-900/70 dark:text-neutral-200">
+              Indiranagar, Bengaluru
+            </span>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Indiranagar%2C+Bengaluru+560038"
+               target="_blank" rel="noopener noreferrer"
+               class="absolute bottom-3 end-3 inline-flex items-center gap-1.5 rounded-full border border-white/60 bg-white/80 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-neutral-800 backdrop-blur-sm transition-colors duration-200 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 dark:border-white/10 dark:bg-neutral-900/70 dark:text-neutral-200 dark:hover:bg-neutral-900">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-3.5 w-3.5" aria-hidden="true"><path fill-rule="evenodd" d="M9.69 18.933l.003.001A1.32 1.32 0 0 1 8.31 18.93l.003-.002.002-.001a1.32 1.32 0 0 1 .69-.93l.004-.002 5.2-5.2a3 3 0 0 0 0-4.243l-.354-.354a3 3 0 0 0-4.243 0l-5.2 5.2a1.32 1.32 0 0 1-.93.344l-.003.001-.001.002a1.32 1.32 0 0 1-.93-.344 1.32 1.32 0 0 1 0-1.86l.002-.002 5.2-5.2a4.5 4.5 0 0 1 6.364 0l.354.354a4.5 4.5 0 0 1 0 6.364l-5.2 5.2a4.5 4.5 0 0 1-1.386.93ZM9 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm8 6a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" clip-rule="evenodd"/></svg>
+              Directions
+            </a>
+          </div>
+          <div class="p-6 text-center xl:text-left">
+            <h2 class="font-display text-lg font-bold text-neutral-900 dark:text-white">Find the studio</h2>
+            <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+              No. 24, 3rd Cross, Domlur Layout, Indiranagar, Bengaluru 560038. Two minutes from 12th Main;
+              paid parking on the adjacent lane.
+            </p>
+            <p class="mt-4 text-xs text-neutral-500 dark:text-neutral-400">
+              Field visits by appointment only — the floor space is small and busy in the mornings.
+            </p>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+
+
+  <!-- ================= SERVICE AREAS ================= -->
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 xl:px-8 xl:py-20">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+        Where we work
+      </h2>
+      <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+        Home and corporate visits are free within 15 km of the studio. Beyond that, travel is charged at
+        ₹9 per kilometre and quoted before you confirm.
+      </p>
+    </div>
+
+    <ul class="mt-10 grid gap-3 text-center sm:grid-cols-2 lg:grid-cols-4 xl:text-left">
+      <li class="rounded-xl border border-neutral-200 px-5 py-4 text-sm font-semibold text-neutral-800 dark:border-white/10 dark:text-neutral-200">Indiranagar</li>
+      <li class="rounded-xl border border-neutral-200 px-5 py-4 text-sm font-semibold text-neutral-800 dark:border-white/10 dark:text-neutral-200">Domlur &amp; Koramangala</li>
+      <li class="rounded-xl border border-neutral-200 px-5 py-4 text-sm font-semibold text-neutral-800 dark:border-white/10 dark:text-neutral-200">Jayanagar &amp; JP Nagar</li>
+      <li class="rounded-xl border border-neutral-200 px-5 py-4 text-sm font-semibold text-neutral-800 dark:border-white/10 dark:text-neutral-200">Whitefield &amp; Marathahalli</li>
+      <li class="rounded-xl border border-neutral-200 px-5 py-4 text-sm font-semibold text-neutral-800 dark:border-white/10 dark:text-neutral-200">HSR Layout &amp; Bellandur</li>
+      <li class="rounded-xl border border-neutral-200 px-5 py-4 text-sm font-semibold text-neutral-800 dark:border-white/10 dark:text-neutral-200">Manyata &amp; Outer Ring Road</li>
+      <li class="rounded-xl border border-neutral-200 px-5 py-4 text-sm font-semibold text-neutral-800 dark:border-white/10 dark:text-neutral-200">Hebbal &amp; Yelahanka</li>
+      <li class="rounded-xl border border-neutral-200 px-5 py-4 text-sm font-semibold text-neutral-800 dark:border-white/10 dark:text-neutral-200">Hyderabad &amp; Chennai</li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER (injected) ============ -->
+<div data-footer></div>
+
+<script>
+  (function () {
+    var form = document.getElementById('booking-form');
+    var success = document.querySelector('[data-success]');
+    var nameOut = document.querySelector('[data-success-name]');
+    var resetBtn = document.querySelector('[data-reset]');
+    if (!form) return;
+
+    function setError(field, message) {
+      var box = form.querySelector('[data-error-for="' + field + '"]');
+      var input = form.querySelector('[name="' + field + '"]');
+      if (box) {
+        if (message) {
+          box.textContent = message;
+          box.classList.remove('hidden');
+        } else {
+          box.textContent = '';
+          box.classList.add('hidden');
+        }
+      }
+      if (input) {
+        input.classList.toggle('border-rose-500', !!message);
+        input.classList.toggle('dark:border-rose-400', !!message);
+        input.setAttribute('aria-invalid', message ? 'true' : 'false');
+      }
+    }
+
+    function validateField(field) {
+      var input = form.querySelector('[name="' + field + '"]');
+      if (!input) return true;
+      var value = (input.value || '').trim();
+      var message = '';
+
+      if (field === 'name' && value.length < 2) message = 'Please tell us your name.';
+      if (field === 'phone' && !/^[6-9]\d{9}$/.test(value.replace(/[\s\-\+]/g, '').slice(-10))) {
+        message = 'Enter a valid 10-digit Indian mobile number.';
+      }
+      if (field === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) {
+        message = 'Enter a valid email address so we can send the quote.';
+      }
+      if (field === 'service' && !value) message = 'Select the service you need.';
+      if (field === 'message' && value.length < 15) {
+        message = 'A sentence or two about the design helps us quote accurately.';
+      }
+      if (field === 'consent' && !input.checked) message = 'Please accept this to continue.';
+
+      setError(field, message);
+      return !message;
+    }
+
+    var fields = ['name', 'phone', 'email', 'service', 'message', 'consent'];
+
+    fields.forEach(function (field) {
+      var input = form.querySelector('[name="' + field + '"]');
+      if (!input) return;
+      input.addEventListener('blur', function () { validateField(field); });
+      input.addEventListener('input', function () {
+        var box = form.querySelector('[data-error-for="' + field + '"]');
+        if (box && !box.classList.contains('hidden')) validateField(field);
+      });
+      input.addEventListener('change', function () { validateField(field); });
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var firstInvalid = null;
+      fields.forEach(function (field) {
+        var ok = validateField(field);
+        if (!ok && !firstInvalid) firstInvalid = form.querySelector('[name="' + field + '"]');
+      });
+      if (firstInvalid) {
+        firstInvalid.focus();
+        firstInvalid.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        return;
+      }
+
+      var nameInput = form.querySelector('[name="name"]');
+      if (nameOut && nameInput) nameOut.textContent = nameInput.value.trim().split(' ')[0];
+      form.classList.add('hidden');
+      if (success) {
+        success.classList.remove('hidden');
+        success.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      }
+    });
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function () {
+        form.reset();
+        fields.forEach(function (field) { setError(field, ''); });
+        success.classList.add('hidden');
+        form.classList.remove('hidden');
+        form.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        var first = form.querySelector('[name="name"]');
+        if (first) first.focus();
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

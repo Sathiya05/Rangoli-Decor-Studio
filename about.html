@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About the Artist | Rangoli Rang — Kolam &amp; Festive Decor Studio</title>
+<meta name="description" content="The story of Rangoli Rang — how a family kolam practice became a decade-long studio of custom rangoli and festive decor art in Bengaluru.">
+<meta name="theme-color" content="#B4532A">
+<!-- favicons: SVG for modern browsers, ICO/PNG fallbacks, iOS home screen, PWA manifest -->
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('rr-theme');
+      if (!t) { t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+      if (t === 'dark') { document.documentElement.classList.add('dark'); document.documentElement.style.colorScheme = 'dark'; }
+      if (localStorage.getItem('rr-dir') === 'rtl') { document.documentElement.setAttribute('dir', 'rtl'); }
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Source+Serif+4:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          primary:   { 50:'#FBF3EF', 100:'#F6E5DB', 200:'#EDCBB8', 300:'#DFA98C', 400:'#CE8462', 500:'#B4532A', 600:'#9A4523', 700:'#7C371C', 800:'#5F2A15', 900:'#451D0F' },
+          secondary: { 50:'#EFFAF8', 100:'#D7F2EE', 200:'#AEE5DE', 300:'#7ED4CB', 400:'#3FA79C', 500:'#0F766E', 600:'#0C5B55', 700:'#094A45', 800:'#073A36', 900:'#052B28' },
+          gold: '#E8A33D',
+          plum: '#7C2D5B'
+        },
+        fontFamily: {
+          display: ['"Source Serif 4"', 'Georgia', 'Cambria', 'Times New Roman', 'serif'],
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+<script src="js/navbar.js" defer></script>
+<script src="js/footer.js" defer></script>
+</head>
+
+<body class="bg-white font-sans text-neutral-800 antialiased selection:bg-primary-200 selection:text-neutral-900 dark:bg-neutral-950 dark:text-neutral-200 dark:selection:bg-primary-500/30">
+
+<!-- ============ NAVBAR (injected) ============ -->
+<div data-navbar></div>
+
+<main id="main-content">
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="relative isolate overflow-hidden border-b border-neutral-200 bg-gradient-to-b from-primary-50 via-white to-secondary-50/60 dark:border-white/10 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950">
+    <div class="pointer-events-none absolute inset-0 text-primary-900/[0.13] dark:text-white/[0.06]" style="background-image:radial-gradient(currentColor 1px, transparent 1px);background-size:26px 26px;-webkit-mask-image:radial-gradient(ellipse 75% 65% at 50% 45%,#000 35%,transparent 100%);mask-image:radial-gradient(ellipse 75% 65% at 50% 45%,#000 35%,transparent 100%)" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -end-52 -top-56 h-[44rem] w-[44rem] rounded-full border border-primary-500/10 dark:border-white/[0.07]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -end-28 -top-32 h-[28rem] w-[28rem] rounded-full border border-secondary-500/10 dark:border-white/[0.05]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -end-24 top-1/3 h-72 w-72 rounded-full bg-secondary-100/60 blur-3xl dark:bg-secondary-500/10" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -bottom-28 -start-24 h-80 w-80 rounded-full bg-primary-100/70 blur-3xl dark:bg-primary-500/10" aria-hidden="true"></div>
+    <img src="images/rangoli-hero.svg" alt="" aria-hidden="true" class="pointer-events-none absolute -start-28 top-1/2 w-[38rem] max-w-[78%] -translate-y-1/2 opacity-[0.07] dark:opacity-[0.05] xl:w-[48rem]" loading="eager">
+
+    <!-- min-h was `sm:`, so every tablet (>=640px) stretched this hero to the
+         full viewport height while the content stayed top-aligned — the leftover
+         space all landed below the figures (96px on an iPad mini, 209px on an
+         iPad Pro 13"). Now the viewport-locked height is desktop-only, gated the
+         same way as the navbar: 1280px AND a fine pointer. -->
+    <div class="relative mx-auto flex max-w-7xl flex-col items-center px-4 py-10 text-center sm:px-6 sm:py-14 xl:justify-center xl:px-8 xl:py-8 [@media(min-width:1280px)_and_(pointer:fine)]:min-h-[calc(100svh-5rem-2px)]">
+      <p class="inline-flex items-center gap-2 rounded-full border border-primary-500/20 bg-white/70 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary-700 backdrop-blur-sm dark:border-white/10 dark:bg-white/5 dark:text-primary-300">
+        <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-primary-500" aria-hidden="true"></span>
+        About the studio
+      </p>
+      <h1 class="mx-auto mt-4 max-w-4xl font-display text-4xl font-bold leading-[1.1] tracking-tight text-neutral-900 dark:text-white sm:text-5xl xl:text-6xl">
+        A <span class=" text-primary-600 dark:text-primary-400">family practice</span> that grew into a studio of eight
+      </h1>
+      <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-neutral-600 sm:text-lg dark:text-neutral-300">
+        Rangoli Rang began in 2014 as one woman drawing her mother&rsquo;s kolam every single morning before
+        sunrise. Today the same practice runs a small, deliberately unhurried studio &mdash; and the grid has not
+        changed.
+      </p>
+      <nav aria-label="Breadcrumb" class="mt-6">
+        <ol class="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-neutral-200 bg-white/70 px-4 py-2 text-sm backdrop-blur-sm dark:border-white/10 dark:bg-white/5">
+          <li><a href="index.html" class="rounded-full px-1.5 py-0.5 font-medium text-neutral-600 transition-colors duration-200 hover:text-primary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 dark:text-neutral-300 dark:hover:text-primary-300">Home</a></li>
+          <li aria-hidden="true" class="text-neutral-300 dark:text-neutral-600">/</li>
+          <li class="rounded-full px-1.5 py-0.5 font-semibold text-neutral-900 dark:text-white" aria-current="page">About</li>
+        </ol>
+      </nav>
+
+      <div class="mt-6 flex items-center justify-center gap-2 sm:mt-10 sm:gap-6 lg:gap-8">
+        <figure class="h-20 w-20 shrink-0 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl motion-reduce:transition-none sm:h-32 sm:w-32 lg:h-40 lg:w-40 dark:border-white/10 dark:bg-white/5">
+          <img src="images/rangoli-11.svg" alt="Eleven petal plum wedding urva with a family motif" class="h-full w-full object-cover" width="400" height="400" loading="eager">
+        </figure>
+
+        <figure class="relative h-20 w-30 shrink-0 overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-xl ring-1 ring-primary-500/10 transition duration-300 hover:-translate-y-1 hover:shadow-2xl motion-reduce:transition-none sm:h-32 sm:w-48 lg:h-40 lg:w-60 dark:border-white/10 dark:bg-white/5 dark:ring-primary-400/20">
+          <img src="images/img8.jpeg" alt="Daily entrance kolam drawn before sunrise" class="h-full w-full object-cover" width="400" height="400" loading="eager">
+          <!-- caption hidden below sm: at 390px the tile is only 80px tall and the
+               two lines need ~110px, so the text was clipped mid-sentence and the
+               gradient covered the whole photo. From 640px up the tile is 192x128
+               (240x160 at lg) and the caption fits comfortably. -->
+          <figcaption class="absolute inset-x-0 bottom-0 hidden bg-gradient-to-t from-neutral-950/90 via-neutral-950/50 to-transparent px-2.5 pb-2.5 pt-8 text-left sm:block sm:px-3 sm:pb-3">
+            <span class="block text-[0.625rem] font-semibold uppercase tracking-[0.16em] text-white sm:text-[0.6875rem]">Est. 2014</span>
+            <span class="mt-0.5 block text-[0.6875rem] leading-snug text-white/80 sm:text-xs">Morning kolam, before sunrise</span>
+          </figcaption>
+        </figure>
+
+        <figure class="h-20 w-20 shrink-0 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl motion-reduce:transition-none sm:h-32 sm:w-32 lg:h-40 lg:w-40 dark:border-white/10 dark:bg-white/5">
+          <img src="images/rangoli-01.svg" alt="Twelve petal terracotta and teal entrance kolam" class="h-full w-full object-cover" width="400" height="400" loading="eager">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STORY ================= -->
+  <section id="story" class="mx-auto max-w-7xl scroll-mt-28 px-4 py-16 sm:px-6 sm:py-20 xl:px-8 xl:py-24">
+    <div class="grid items-center gap-12 xl:grid-cols-12 xl:gap-14">
+
+      <div class="xl:col-span-5">
+        <div class="relative mx-auto max-w-sm xl:mx-0 xl:max-w-none">
+          <div class="overflow-hidden rounded-3xl border border-neutral-200 bg-neutral-50 dark:border-white/10 dark:bg-white/5">
+            <img src="images\img9.jpeg" alt="Nine petal gold and terracotta kolam drawn by the studio's founder"
+                 class="aspect-[4/5] w-full object-cover" width="400" height="400" loading="eager">
+          </div>
+          <div class="absolute -bottom-6 end-0 w-40 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-xl sm:w-48 dark:border-white/10 dark:bg-neutral-950">
+            <img src="images\img10.jpeg" alt="Eight petal teal kolam study" class="aspect-square w-full object-cover" width="400" height="400" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center xl:col-span-7 xl:text-left">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400">The artist&rsquo;s story</p>
+        <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+          &ldquo;A kolam is not decoration. It is a promise you make to the morning.&rdquo;
+        </h2>
+        <div class="mt-6 space-y-5 text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+          <p>
+            <strong class="font-semibold text-neutral-900 dark:text-white">Priya Raghunathan</strong> learned the
+            eight-loop kolam from her grandmother in Madurai, on a floor of wet cow-dung plaster, correcting
+            the same four mistakes for two years. When she moved to Bengaluru in 2011 for work, she kept
+            drawing — first for her own apartment, then for neighbours, then for a wedding hall in Malleswaram
+            that has since rebooked her every year.
+          </p>
+          <p>
+            The studio was never built to scale. It was built so the work could stay hand-made: the same eight
+            people who sketch your design are the people who lay the powder. Nothing is printed from a
+            template, nothing is outsourced to a WhatsApp group of vendors at 4 AM.
+          </p>
+          <p>
+            That constraint is also the reason for the queue. We take a limited number of orders per week
+            because each one gets a drawn sketch, a conversation, and a floor that is checked before we leave.
+          </p>
+        </div>
+        <div class="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-center xl:justify-start">
+          <a href="gallery.html" class="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950">
+            See the work
+          </a>
+          <a href="contact.html" class="inline-flex items-center gap-2 rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-800 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:text-neutral-100">
+            Talk to the studio
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- ================= NUMBERS ================= -->
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 xl:px-8 xl:py-24">
+    <div class="grid gap-8 text-center sm:grid-cols-2 xl:grid-cols-4">
+      <div>
+        <p class="font-display text-4xl font-bold text-primary dark:text-primary-400 sm:text-5xl">12</p>
+        <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-400">Years of drawing</p>
+      </div>
+      <div>
+        <p class="font-display text-4xl font-bold text-secondary dark:text-secondary-300 sm:text-5xl">3,400+</p>
+        <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-400">Floors designed</p>
+      </div>
+      <div>
+        <p class="font-display text-4xl font-bold text-plum dark:text-plum sm:text-5xl">90+</p>
+        <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-400">Grids archived</p>
+      </div>
+      <div>
+        <p class="font-display text-4xl font-bold text-[#8A5A0B] dark:text-gold sm:text-5xl">46</p>
+        <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-400">Since 2018</p>
+      </div>
+    </div>
+  </section>
+  <!-- ================= MISSION / VISION / VALUES ================= -->
+  <section class="border-y border-neutral-200 bg-neutral-50 py-16 dark:border-white/10 dark:bg-white/[0.03] sm:py-20 xl:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 xl:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-secondary-700 dark:text-secondary-300">What we stand on</p>
+        <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+          Mission, vision and the three rules we don&rsquo;t break
+        </h2>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <article class="rounded-2xl border border-neutral-200 bg-white p-7 text-center dark:border-white/10 dark:bg-neutral-950">
+          <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary-50 text-primary-600 dark:bg-primary-500/10 dark:text-primary-300">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-6 w-6" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke-linecap="round"/></svg>
+          </span>
+          <h3 class="mt-5 font-display text-lg font-bold text-neutral-900 dark:text-white">Our mission</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            To make hand-drawn floor art and craft an ordinary, affordable part of daily Indian homes — not a
+            one-off luxury hired once in a decade of years.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-neutral-200 bg-white p-7 text-center dark:border-white/10 dark:bg-neutral-950">
+          <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-secondary-50 text-secondary-600 dark:bg-secondary-500/10 dark:text-secondary-300">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-6 w-6" aria-hidden="true"><path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6-10-6-10-6Z" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.5"/></svg>
+          </span>
+          <h3 class="mt-5 font-display text-lg font-bold text-neutral-900 dark:text-white">Our vision</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            A regional studio network that keeps the kolam tradition documented — every grid archived,
+            every technique taught, every material sourced is used.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-neutral-200 bg-white p-7 text-center dark:border-white/10 dark:bg-neutral-950">
+          <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gold/15 text-[#8A5A0B] dark:bg-gold/10 dark:text-gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-6 w-6" aria-hidden="true"><path d="M12 3.5 14.4 9l6 .9-4.3 4.2 1 6-5.1-2.7L6.9 20l1-6L3.6 9.9 9.6 9 12 3.5Z" stroke-linejoin="round"/></svg>
+          </span>
+          <h3 class="mt-5 font-display text-lg font-bold text-neutral-900 dark:text-white">Rule one</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            <span class="font-semibold text-neutral-900 dark:text-white">Only natural material.</span> Rice
+            flour, sieved stone powder, turmeric, vermilion, indigo, sandalwood, real petals. No acrylic
+            colour, no plastic dust, no chemical dye.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-neutral-200 bg-white p-7 text-center dark:border-white/10 dark:bg-neutral-950">
+          <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-plum/10 text-plum dark:bg-plum/20 dark:text-plum">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-6 w-6" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z" stroke-linejoin="round"/></svg>
+          </span>
+          <h3 class="mt-5 font-display text-lg font-bold text-neutral-900 dark:text-white">Rule two</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            <span class="font-semibold text-neutral-900 dark:text-white">Only hand-drawn.</span> Every
+            pattern starts as a counted grid drawn with a stick, then free-hand. A stamped or printed
+            pattern is not a kolam, and we will tell you so.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ================= JOURNEY ================= -->
+  <section class="border-y border-neutral-200 py-16 dark:border-white/10 sm:py-20 xl:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 xl:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400">The long way round</p>
+        <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+          Twelve years, four turning points
+        </h2>
+      </div>
+
+      <ol class="mt-12 space-y-4">
+        <li class="grid gap-4 rounded-2xl border border-neutral-200 p-6 text-center sm:grid-cols-12 sm:items-start sm:text-left dark:border-white/10">
+          <p class="font-display text-2xl font-bold text-primary sm:col-span-2 sm:text-3xl">2014</p>
+          <div class="sm:col-span-10">
+            <h3 class="font-display text-lg font-bold text-neutral-900 dark:text-white">One apartment, one doorstep</h3>
+            <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+              A word-of-mouth run drawing freehand kolam for eleven neighbours in Domlur. No website, no
+              pricing list — just a chalk board of timings on the building gate.
+            </p>
+          </div>
+        </li>
+        <li class="grid gap-4 rounded-2xl border border-neutral-200 p-6 text-center sm:grid-cols-12 sm:items-start sm:text-left dark:border-white/10">
+          <p class="font-display text-2xl font-bold text-primary sm:col-span-2 sm:text-3xl">2017</p>
+          <div class="sm:col-span-10">
+            <h3 class="font-display text-lg font-bold text-neutral-900 dark:text-white">The first 14-foot urva</h3>
+            <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+              A wedding in Yelahanka needed a mandala larger than any drawn before. Six people, one night,
+              and the first version of the scaled grid plan the studio still uses today.
+            </p>
+          </div>
+        </li>
+        <li class="grid gap-4 rounded-2xl border border-neutral-200 p-6 text-center sm:grid-cols-12 sm:items-start sm:text-left dark:border-white/10">
+          <p class="font-display text-2xl font-bold text-primary sm:col-span-2 sm:text-3xl">2020</p>
+          <div class="sm:col-span-10">
+            <h3 class="font-display text-lg font-bold text-neutral-900 dark:text-white">Shut doors, opened the studio</h3>
+            <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+              With events cancelled, the crew began teaching live online and shipping material kits. The
+              workshops are now the second half of the business.
+            </p>
+          </div>
+        </li>
+        <li class="grid gap-4 rounded-2xl border border-neutral-200 p-6 text-center sm:grid-cols-12 sm:items-start sm:text-left dark:border-white/10">
+          <p class="font-display text-2xl font-bold text-primary sm:col-span-2 sm:text-3xl">2023</p>
+          <div class="sm:col-span-10">
+            <h3 class="font-display text-lg font-bold text-neutral-900 dark:text-white">Corporate calendars</h3>
+            <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+              A tech park in Manyata asked for the same lobby medallion every quarter. That became a retainer
+              format — fixed grid, fixed palette, fixed installation window each festival.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= PROCESS ================= -->
+  <section id="process" class="mx-auto max-w-7xl scroll-mt-28 px-4 py-16 sm:px-6 sm:py-20 xl:px-8 xl:py-24">
+    <div class="grid gap-12 xl:grid-cols-12 xl:gap-14">
+      <div class="text-center xl:col-span-5 xl:text-left">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-secondary-700 dark:text-secondary-300">The craft, up close</p>
+        <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+          Six steps between a photo and a finished floor
+        </h2>
+        <p class="mt-5 text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+          The reason our floors hold their shape for days is unglamorous: preparation, measurement and
+          timing. We do all three before a single dot is placed.
+        </p>
+        <img src="images/rangoli-04.svg" alt="Plum and rose festive rangoli prepared as a final study"
+             class="mx-auto mt-8 aspect-square w-48 rounded-2xl border border-neutral-200 dark:border-white/10 sm:w-56 xl:mx-0" width="400" height="400" loading="lazy">
+      </div>
+
+      <ol class="grid gap-4 sm:grid-cols-2 xl:col-span-7">
+        <li class="rounded-2xl border border-neutral-200 p-6 text-center xl:text-left dark:border-white/10">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-neutral-400">Step 01</p>
+          <h3 class="mt-2 text-base font-bold text-neutral-900 dark:text-white">Sweep &amp; size</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            The surface is swept, wiped and measured in feet. Grid pitch is calculated from the actual space,
+            never from a stock chart.
+          </p>
+        </li>
+        <li class="rounded-2xl border border-neutral-200 p-6 text-center xl:text-left dark:border-white/10">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-neutral-400">Step 02</p>
+          <h3 class="mt-2 text-base font-bold text-neutral-900 dark:text-white">Grid the floor</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            A stick-drawn chalk grid is laid and counted aloud. This is where the symmetry is decided — and
+            where most mistakes are prevented.
+          </p>
+        </li>
+        <li class="rounded-2xl border border-neutral-200 p-6 text-center xl:text-left dark:border-white/10">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-neutral-400">Step 03</p>
+          <h3 class="mt-2 text-base font-bold text-neutral-900 dark:text-white">Powder sieve</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Rice flour and stone powder are sieved twice for a fine, non-grainy line. Colours are mixed by
+            hand in small batches to keep the tone even across the whole floor.
+          </p>
+        </li>
+        <li class="rounded-2xl border border-neutral-200 p-6 text-center xl:text-left dark:border-white/10">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-neutral-400">Step 04</p>
+          <h3 class="mt-2 text-base font-bold text-neutral-900 dark:text-white">Draw the loops</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Free-hand from the counted grid — no stencils, no printed sheets. The artist who sketched your
+            design is the one drawing it.
+          </p>
+        </li>
+        <li class="rounded-2xl border border-neutral-200 p-6 text-center xl:text-left dark:border-white/10">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-neutral-400">Step 05</p>
+          <h3 class="mt-2 text-base font-bold text-neutral-900 dark:text-white">Fill &amp; finish</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Petals, diyas, banana leaf or a marigold border if the design calls for it. Nothing is fixed to
+            the floor, so nothing is left behind.
+          </p>
+        </li>
+        <li class="rounded-2xl border border-neutral-200 p-6 text-center xl:text-left dark:border-white/10">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-neutral-400">Step 06</p>
+          <h3 class="mt-2 text-base font-bold text-neutral-900 dark:text-white">Sweep &amp; archive</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            The floor is swept, photographed and the scaled grid plan saved — so the same design can be
+            redrawn exactly next Diwali.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= MATERIALS ================= -->
+  <section class="border-t border-neutral-200 py-16 dark:border-white/10 sm:py-20 xl:py-24">
+    <div class="mx-auto max-w-5xl px-4 text-center sm:px-6 xl:px-8">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400">Materials &amp; dedication</p>
+      <h2 class="mx-auto mt-3 max-w-2xl font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+        Safe for children, pets, and swept floors
+      </h2>
+      <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+        Every material is food-grade or garden-grade. If a toddler can crawl through it, so can a toddler
+        eat it. We source powder from two family-run mills in Mysuru and flowers from the same vendors
+        who supply the market near our studio.
+      </p>
+
+      <ul class="mt-10 flex flex-wrap items-center justify-center gap-2.5">
+        <li class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-medium text-neutral-700 dark:border-white/10 dark:text-neutral-300">Rice flour</li>
+        <li class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-medium text-neutral-700 dark:border-white/10 dark:text-neutral-300">Stone powder</li>
+        <li class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-medium text-neutral-700 dark:border-white/10 dark:text-neutral-300">Turmeric</li>
+        <li class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-medium text-neutral-700 dark:border-white/10 dark:text-neutral-300">Vermilion</li>
+        <li class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-medium text-neutral-700 dark:border-white/10 dark:text-neutral-300">Indigo</li>
+        <li class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-medium text-neutral-700 dark:border-white/10 dark:text-neutral-300">Sandalwood</li>
+        <li class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-medium text-neutral-700 dark:border-white/10 dark:text-neutral-300">Fresh petals</li>
+        <li class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-medium text-neutral-700 dark:border-white/10 dark:text-neutral-300">Banana leaf</li>
+        <li class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-medium text-neutral-700 dark:border-white/10 dark:text-neutral-300">Terracotta diyas</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 sm:pb-24 xl:px-8">
+    <div class="rounded-3xl bg-[#0B2E2B] px-6 py-14 text-center dark:bg-neutral-900 sm:px-12">
+      <h2 class="mx-auto max-w-2xl font-display text-3xl font-bold leading-tight text-white sm:text-4xl">
+        Come and see the archive of grids sometime
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/70 sm:text-base">
+        Studio visits are welcome on weekday mornings — the wall of archived designs is easier to see in
+        person than to describe.
+      </p>
+      <div class="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-[#0B2E2B] transition-colors duration-200 hover:bg-[#F2B755] focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B2E2B]">
+          Book a studio visit
+        </a>
+        <a href="services.html" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:border-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B2E2B]">
+          What we offer
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER (injected) ============ -->
+<div data-footer></div>
+
+</body>
+</html>

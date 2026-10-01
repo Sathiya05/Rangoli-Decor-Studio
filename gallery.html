@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Past Rangoli &amp; Kolam Work | Rangoli Rang</title>
+<meta name="description" content="A gallery of completed kolam, urva and festive floor art by Rangoli Rang — homes, festivals, weddings and corporate lobbies across South India.">
+<meta name="theme-color" content="#B4532A">
+<!-- favicons: SVG for modern browsers, ICO/PNG fallbacks, iOS home screen, PWA manifest -->
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('rr-theme');
+      if (!t) { t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+      if (t === 'dark') { document.documentElement.classList.add('dark'); document.documentElement.style.colorScheme = 'dark'; }
+      if (localStorage.getItem('rr-dir') === 'rtl') { document.documentElement.setAttribute('dir', 'rtl'); }
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Source+Serif+4:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          primary:   { 50:'#FBF3EF', 100:'#F6E5DB', 200:'#EDCBB8', 300:'#DFA98C', 400:'#CE8462', 500:'#B4532A', 600:'#9A4523', 700:'#7C371C', 800:'#5F2A15', 900:'#451D0F' },
+          secondary: { 50:'#EFFAF8', 100:'#D7F2EE', 200:'#AEE5DE', 300:'#7ED4CB', 400:'#3FA79C', 500:'#0F766E', 600:'#0C5B55', 700:'#094A45', 800:'#073A36', 900:'#052B28' },
+          gold: '#E8A33D',
+          plum: '#7C2D5B'
+        },
+        fontFamily: {
+          display: ['"Source Serif 4"', 'Georgia', 'Cambria', 'Times New Roman', 'serif'],
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+<script src="js/navbar.js" defer></script>
+<script src="js/footer.js" defer></script>
+</head>
+
+<body class="bg-white font-sans text-neutral-800 antialiased selection:bg-plum/20 selection:text-neutral-900 dark:bg-neutral-950 dark:text-neutral-200 dark:selection:bg-plum/40">
+
+<!-- ============ NAVBAR (injected) ============ -->
+<div data-navbar></div>
+
+<main id="main-content">
+
+  <!-- ================= PAGE HERO =================
+       Same layered recipe as the other page heroes: gradient wash, masked dot
+       grid, concentric rangoli rings, blurred glows and a ghosted kolam
+       watermark, then the copy and a translucent stat strip on top. Only the
+       copy and the real thumbnails are exposed to assistive tech; every
+       decorative layer is pointer-events-none and aria-hidden. -->
+  <section class="relative isolate overflow-hidden border-b border-neutral-200 bg-gradient-to-b from-plum/10 via-white to-primary-50 dark:border-white/10 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950">
+
+    <div class="pointer-events-none absolute inset-0 text-plum/[0.14] dark:text-white/[0.06]" style="background-image:radial-gradient(currentColor 1px, transparent 1px);background-size:26px 26px;-webkit-mask-image:radial-gradient(ellipse 75% 65% at 50% 45%,#000 35%,transparent 100%);mask-image:radial-gradient(ellipse 75% 65% at 50% 45%,#000 35%,transparent 100%)" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -start-44 -top-52 h-[36rem] w-[36rem] rounded-full border border-plum/15 dark:border-white/[0.06]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -start-20 -top-28 h-[22rem] w-[22rem] rounded-full border border-gold/25 dark:border-white/[0.05]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -end-40 -bottom-40 h-[30rem] w-[30rem] rounded-full border border-primary-500/10 dark:border-white/[0.06]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -end-24 top-1/4 h-72 w-72 rounded-full bg-gold/25 blur-3xl dark:bg-secondary-500/10" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -start-32 bottom-0 h-80 w-80 rounded-full bg-plum/15 blur-3xl dark:bg-plum-500/10" aria-hidden="true"></div>
+    <img src="images/rangoli-hero.svg" alt="" aria-hidden="true" class="pointer-events-none absolute -end-32 top-1/2 w-[34rem] max-w-[80%] -translate-y-1/2 opacity-[0.07] dark:opacity-[0.05] xl:-end-24 xl:w-[44rem]" loading="eager">
+
+    <div class="relative mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-20 xl:px-8 xl:py-24">
+      <p class="inline-flex items-center gap-2 rounded-full border border-plum/20 bg-white/70 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-plum backdrop-blur-sm dark:border-white/10 dark:bg-white/5 dark:text-plum">
+        <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-plum" aria-hidden="true"></span>
+        Gallery
+      </p>
+
+      <h1 class="mx-auto mt-6 max-w-3xl font-display text-4xl font-bold leading-[1.08] tracking-tight text-neutral-900 sm:text-5xl xl:text-6xl dark:text-white">
+        240 floors, 90 archived grids,
+        <span class="text-plum dark:text-plum">twelve years</span>
+      </h1>
+
+      <span class="mx-auto mt-6 block h-px w-24 bg-gradient-to-r from-transparent via-gold to-transparent" aria-hidden="true"></span>
+
+      <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-600 sm:text-lg dark:text-neutral-300">
+        Every image below is a completed installation. Filter by the kind of space, or open any design to read
+        the surface, the materials and how long the floor took to lay.
+      </p>
+
+      <div class="mt-8 flex items-center justify-center gap-2.5">
+        <img src="images/rangoli-01.svg" alt="Twelve petal terracotta and teal entrance kolam" class="h-14 w-14 rounded-xl border border-neutral-200 bg-white object-cover shadow-sm sm:h-16 sm:w-16 dark:border-white/10 dark:bg-white/5" width="400" height="400" loading="eager">
+        <img src="images/rangoli-04.svg" alt="Plum and rose wedding mandala with ten petals" class="h-16 w-16 rounded-2xl border border-neutral-200 bg-white object-cover shadow-lg ring-1 ring-plum/20 sm:h-20 sm:w-20 dark:border-white/10 dark:bg-white/5 dark:ring-plum/40" width="400" height="400" loading="eager">
+        <img src="images/rangoli-07.svg" alt="Branded corporate reception medallion" class="h-14 w-14 rounded-xl border border-neutral-200 bg-white object-cover shadow-sm sm:h-16 sm:w-16 dark:border-white/10 dark:bg-white/5" width="400" height="400" loading="eager">
+        <img src="images/rangoli-10.svg" alt="Festive pookalam with marigold petals and brass urvil" class="h-14 w-14 rounded-xl border border-neutral-200 bg-white object-cover shadow-sm sm:h-16 sm:w-16 dark:border-white/10 dark:bg-white/5" width="400" height="400" loading="eager">
+      </div>
+
+      <dl class="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-200/70 text-start shadow-sm backdrop-blur-sm sm:grid-cols-4 dark:border-white/10 dark:bg-white/10">
+        <div class="bg-white/80 px-5 py-4 dark:bg-white/[0.04]">
+          <dt class="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">Floors laid</dt>
+          <dd class="mt-1 font-display text-2xl font-bold text-neutral-900 dark:text-white">240</dd>
+        </div>
+        <div class="bg-white/80 px-5 py-4 dark:bg-white/[0.04]">
+          <dt class="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">Archived grids</dt>
+          <dd class="mt-1 font-display text-2xl font-bold text-neutral-900 dark:text-white">90</dd>
+        </div>
+        <div class="bg-white/80 px-5 py-4 dark:bg-white/[0.04]">
+          <dt class="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">Years drawing</dt>
+          <dd class="mt-1 font-display text-2xl font-bold text-neutral-900 dark:text-white">12</dd>
+        </div>
+        <div class="bg-white/80 px-5 py-4 dark:bg-white/[0.04]">
+          <dt class="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">Spaces covered</dt>
+          <dd class="mt-1 font-display text-2xl font-bold text-neutral-900 dark:text-white">4<span class="text-sm font-medium text-neutral-500 dark:text-neutral-400"> kinds</span></dd>
+        </div>
+      </dl>
+
+      <nav aria-label="Breadcrumb" class="mt-8 text-sm text-neutral-500 dark:text-neutral-400">
+        <ol class="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-neutral-200 bg-white/70 px-4 py-2 backdrop-blur-sm dark:border-white/10 dark:bg-white/5">
+          <li><a href="index.html" class="rounded-full px-1.5 py-0.5 font-medium transition-colors duration-200 hover:text-primary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 dark:hover:text-primary-300">Home</a></li>
+          <li aria-hidden="true" class="text-neutral-300 dark:text-neutral-600">/</li>
+          <li class="rounded-full px-1.5 py-0.5 font-semibold text-neutral-900 dark:text-white" aria-current="page">Gallery</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ================= FILTERS ================= -->
+  <section class="border-b border-neutral-200 bg-white dark:border-white/10 dark:bg-neutral-950">
+    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 xl:px-8">
+      <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center xl:justify-between">
+        <div class="flex flex-wrap items-center justify-center gap-2" role="group" aria-label="Filter gallery by category">
+          <button type="button" data-filter="all" aria-pressed="true"
+            class="rounded-full border border-primary bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950">All work</button>
+          <button type="button" data-filter="home" aria-pressed="false"
+            class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:text-neutral-300">Home</button>
+          <button type="button" data-filter="festival" aria-pressed="false"
+            class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:text-neutral-300">Festival</button>
+          <button type="button" data-filter="wedding" aria-pressed="false"
+            class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:text-neutral-300">Wedding</button>
+          <button type="button" data-filter="corporate" aria-pressed="false"
+            class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:text-neutral-300">Corporate</button>
+        </div>
+        <p data-count class="text-sm text-neutral-500 dark:text-neutral-400" role="status" aria-live="polite">
+          Showing 12 of 12 designs
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY ================= -->
+  <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 xl:px-8 xl:py-20">
+    <div data-grid class="columns-1 gap-5 sm:columns-2 lg:columns-3 xl:columns-4 [&>*]:mb-5">
+
+      <figure class="break-inside-avoid" data-item data-category="home">
+        <button type="button" data-open
+          class="group block w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white text-start transition-all duration-200 hover:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-white/10 dark:bg-white/5 dark:focus-visible:ring-offset-neutral-950"
+          data-src="images/rangoli-01.svg" data-title="Twelve-petal entrance kolam"
+          data-meta="Home · 6 ft × 4 ft · Powder only · 90 minutes">
+          <img src="images\1.jpeg" alt="Twelve petal terracotta and teal entrance kolam" class="aspect-[4/5] w-full object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none" width="400" height="400" loading="eager">
+          <figcaption class="p-4">
+            <span class="block text-sm font-semibold text-neutral-900 dark:text-white">Entrance kolam, Domlur</span>
+            <span class="mt-1 block text-xs text-neutral-500 dark:text-neutral-400">Home · 6 ft × 4 ft · Powder only</span>
+          </figcaption>
+        </button>
+      </figure>
+
+      <figure class="break-inside-avoid" data-item data-category="wedding">
+        <button type="button" data-open
+          class="group block w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white text-start transition-all duration-200 hover:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-white/10 dark:bg-white/5 dark:focus-visible:ring-offset-neutral-950"
+          data-src="images/rangoli-04.svg" data-title="Plum and rose wedding mandala"
+          data-meta="Wedding · 14 ft × 14 ft · Powder + petals · 4 hours, crew of 6">
+          <img src="images\2.jpeg" alt="Plum and rose wedding mandala with ten petals" class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none" width="400" height="400" loading="eager">
+          <figcaption class="p-4">
+            <span class="block text-sm font-semibold text-neutral-900 dark:text-white">Wedding mandala, Yelahanka</span>
+            <span class="mt-1 block text-xs text-neutral-500 dark:text-neutral-400">Wedding · 14 ft × 14 ft · Powder + petals</span>
+          </figcaption>
+        </button>
+      </figure>
+
+      <figure class="break-inside-avoid" data-item data-category="corporate">
+        <button type="button" data-open
+          class="group block w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white text-start transition-all duration-200 hover:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-white/10 dark:bg-white/5 dark:focus-visible:ring-offset-neutral-950"
+          data-src="images/rangoli-07.svg" data-title="Branded reception medallion"
+          data-meta="Corporate · 12 ft × 12 ft · Powder, fixed grid · Quarterly retainer">
+          <img src="images\3.jpeg" alt="Indigo and teal corporate reception medallion" class="aspect-[3/4] w-full object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none" width="400" height="400" loading="lazy">
+          <figcaption class="p-4">
+            <span class="block text-sm font-semibold text-neutral-900 dark:text-white">Reception medallion, Manyata</span>
+            <span class="mt-1 block text-xs text-neutral-500 dark:text-neutral-400">Corporate · 12 ft × 12 ft · Quarterly</span>
+          </figcaption>
+        </button>
+      </figure>
+
+      <figure class="break-inside-avoid" data-item data-category="festival">
+        <button type="button" data-open
+          class="group block w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white text-start transition-all duration-200 hover:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-white/10 dark:bg-white/5 dark:focus-visible:ring-offset-neutral-950"
+          data-src="images/rangoli-03.svg" data-title="Sixteen-petal Diwali rangoli"
+          data-meta="Festival · 9 ft × 9 ft · Powder + diyas · 2 hours, crew of 3">
+          <img src="images\4.jpeg" alt="Sixteen petal marigold Diwali rangoli" class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none" width="400" height="400" loading="lazy">
+          <figcaption class="p-4">
+            <span class="block text-sm font-semibold text-neutral-900 dark:text-white">Diwali floor, Jayanagar</span>
+            <span class="mt-1 block text-xs text-neutral-500 dark:text-neutral-400">Festival · 9 ft × 9 ft · Powder + diyas</span>
+          </figcaption>
+        </button>
+      </figure>
+
+      <figure class="break-inside-avoid" data-item data-category="home">
+        <button type="button" data-open
+          class="group block w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white text-start transition-all duration-200 hover:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-white/10 dark:bg-white/5 dark:focus-visible:ring-offset-neutral-950"
+          data-src="images/rangoli-02.svg" data-title="Eight-petal morning kolam"
+          data-meta="Home · 5 ft × 3 ft · Rice flour · 60 minutes, retainer visit">
+          <img src="images\5.jpeg" alt="Eight petal teal morning kolam" class="aspect-[4/5] w-full object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none" width="400" height="400" loading="lazy">
+          <figcaption class="p-4">
+            <span class="block text-sm font-semibold text-neutral-900 dark:text-white">Morning kolam, Koramangala</span>
+            <span class="mt-1 block text-xs text-neutral-500 dark:text-neutral-400">Home · 5 ft × 3 ft · Rice flour</span>
+          </figcaption>
+        </button>
+      </figure>
+
+      <figure class="break-inside-avoid" data-item data-category="festival">
+        <button type="button" data-open
+          class="group block w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white text-start transition-all duration-200 hover:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-white/10 dark:bg-white/5 dark:focus-visible:ring-offset-neutral-950"
+          data-src="images/rangoli-08.svg" data-title="Eighteen-petal celebration centrepiece"
+          data-meta="Festival · 16 ft × 16 ft · Powder + rose petals · 5 hours, crew of 8">
+          <img src="images\6.jpeg" alt="Eighteen petal plum and gold celebration rangoli" class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none" width="400" height="400" loading="lazy">
+          <figcaption class="p-4">
+            <span class="block text-sm font-semibold text-neutral-900 dark:text-white">Celebration centrepiece, palace wedding</span>
+            <span class="mt-1 block text-xs text-neutral-500 dark:text-neutral-400">Festival · 16 ft × 16 ft · 8 artisans</span>
+          </figcaption>
+        </button>
+      </figure>
+
+      <figure class="break-inside-avoid" data-item data-category="home">
+        <button type="button" data-open
+          class="group block w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white text-start transition-all duration-200 hover:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-white/10 dark:bg-white/5 dark:focus-visible:ring-offset-neutral-950"
+          data-src="images/rangoli-05.svg" data-title="Fourteen-petal pooja room kolam"
+          data-meta="Home · 4 ft × 4 ft · Sandalwood + rice flour · 75 minutes">
+          <img src="images\7.jpeg" alt="Fourteen petal sandalwood pooja room kolam" class="aspect-[3/4] w-full object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none" width="400" height="400" loading="lazy">
+          <figcaption class="p-4">
+            <span class="block text-sm font-semibold text-neutral-900 dark:text-white">Pooja room kolam, Whitefield</span>
+            <span class="mt-1 block text-xs text-neutral-500 dark:text-neutral-400">Home · 4 ft × 4 ft · Sandalwood</span>
+          </figcaption>
+        </button>
+      </figure>
+
+      <figure class="break-inside-avoid" data-item data-category="wedding">
+        <button type="button" data-open
+          class="group block w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white text-start transition-all duration-200 hover:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-white/10 dark:bg-white/5 dark:focus-visible:ring-offset-neutral-950"
+          data-src="images/rangoli-11.svg" data-title="Eleven-petal urva with family motif"
+          data-meta="Wedding · 12 ft × 12 ft · Powder + urvil · 3 hours, crew of 5">
+          <img src="images\8.jpeg" alt="Eleven petal plum wedding urva" class="aspect-[4/5] w-full object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none" width="400" height="400" loading="lazy">
+          <figcaption class="p-4">
+            <span class="block text-sm font-semibold text-neutral-900 dark:text-white">Family-motif urva, Hosur</span>
+            <span class="mt-1 block text-xs text-neutral-500 dark:text-neutral-400">Wedding · 12 ft × 12 ft · Powder + urvil</span>
+          </figcaption>
+        </button>
+      </figure>
+
+      <figure class="break-inside-avoid" data-item data-category="festival">
+        <button type="button" data-open
+          class="group block w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white text-start transition-all duration-200 hover:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-white/10 dark:bg-white/5 dark:focus-visible:ring-offset-neutral-950"
+          data-src="images/rangoli-09.svg" data-title="Nine-petal temple kolam"
+          data-meta="Festival · 7 ft × 7 ft · Turmeric + stone powder · 2 hours">
+          <img src="images\9.jpeg" alt="Nine petal gold temple kolam" class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none" width="400" height="400" loading="lazy">
+          <figcaption class="p-4">
+            <span class="block text-sm font-semibold text-neutral-900 dark:text-white">Temple kolam, Mysuru</span>
+            <span class="mt-1 block text-xs text-neutral-500 dark:text-neutral-400">Festival · 7 ft × 7 ft · Turmeric</span>
+          </figcaption>
+        </button>
+      </figure>
+
+      <figure class="break-inside-avoid" data-item data-category="home">
+        <button type="button" data-open
+          class="group block w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white text-start transition-all duration-200 hover:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-white/10 dark:bg-white/5 dark:focus-visible:ring-offset-neutral-950"
+          data-src="images/rangoli-06.svg" data-title="Six-petal doorway kolam"
+          data-meta="Home · 6 ft × 6 ft · Powder + diyas · 90 minutes">
+          <img src="images\10.jpeg" alt="Six petal teal and gold doorway kolam" class="aspect-[4/5] w-full object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none" width="400" height="400" loading="lazy">
+          <figcaption class="p-4">
+            <span class="block text-sm font-semibold text-neutral-900 dark:text-white">Doorway kolam, Richmond Road</span>
+            <span class="mt-1 block text-xs text-neutral-500 dark:text-neutral-400">Home · 6 ft × 6 ft · Powder + diyas</span>
+          </figcaption>
+        </button>
+      </figure>
+
+      <figure class="break-inside-avoid" data-item data-category="corporate">
+        <button type="button" data-open
+          class="group block w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white text-start transition-all duration-200 hover:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-white/10 dark:bg-white/5 dark:focus-visible:ring-offset-neutral-950"
+          data-src="images/rangoli-10.svg" data-title="Atrium centrepiece, fixed brand grid"
+          data-meta="Corporate · 15 ft × 15 ft · Powder · Quarterly, 3 artisans">
+          <img src="images\11.jpeg" alt="Twenty petal leaf green atrium centrepiece" class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none" width="400" height="400" loading="lazy">
+          <figcaption class="p-4">
+            <span class="block text-sm font-semibold text-neutral-900 dark:text-white">Atrium centrepiece, Manyata</span>
+            <span class="mt-1 block text-xs text-neutral-500 dark:text-neutral-400">Corporate · 15 ft × 15 ft · Quarterly</span>
+          </figcaption>
+        </button>
+      </figure>
+
+      <figure class="break-inside-avoid" data-item data-category="festival">
+        <button type="button" data-open
+          class="group block w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white text-start transition-all duration-200 hover:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-white/10 dark:bg-white/5 dark:focus-visible:ring-offset-neutral-950"
+          data-src="images/rangoli-12.svg" data-title="Fifteen-petal Pongal floor"
+          data-meta="Festival · 10 ft × 10 ft · Powder + flowers · 3 hours, crew of 4">
+          <img src="images\12.jpeg" alt="Fifteen petal teal and rose Pongal floor design" class="aspect-[3/4] w-full object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none" width="400" height="400" loading="lazy">
+          <figcaption class="p-4">
+            <span class="block text-sm font-semibold text-neutral-900 dark:text-white">Pongal floor, Coimbatore</span>
+            <span class="mt-1 block text-xs text-neutral-500 dark:text-neutral-400">Festival · 10 ft × 10 ft · Powder + flowers</span>
+          </figcaption>
+        </button>
+      </figure>
+
+    </div>
+
+    <p data-empty class="mt-10 hidden text-center text-sm text-neutral-500 dark:text-neutral-400">
+      No designs in this category yet — try another filter.
+    </p>
+  </section>
+
+  <!-- ================= GALLERY NOTES ================= -->
+  <section class="border-y border-neutral-200 bg-neutral-50 py-16 dark:border-white/10 dark:bg-white/[0.03] sm:py-20 xl:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 xl:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400">Reading the archive</p>
+        <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+          What the captions tell you
+        </h2>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <article class="rounded-2xl border border-neutral-200 bg-white p-6 text-center xl:text-left dark:border-white/10 dark:bg-neutral-950">
+          <h3 class="font-display text-lg font-bold text-neutral-900 dark:text-white">Surface</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Every caption lists the footprint in feet. Floor pitch is calculated from that number, so a
+            4 ft and a 20 ft version of the same design are not simply scaled copies.
+          </p>
+        </article>
+        <article class="rounded-2xl border border-neutral-200 bg-white p-6 text-center xl:text-left dark:border-white/10 dark:bg-neutral-950">
+          <h3 class="font-display text-lg font-bold text-neutral-900 dark:text-white">Material</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            &ldquo;Powder&rdquo; means rice flour and sieved stone powder. &ldquo;Petals&rdquo; or
+            &ldquo;flowers&rdquo; means loose fresh material on a wet base — it will not survive a full
+            day of footfall without a refresh.
+          </p>
+        </article>
+        <article class="rounded-2xl border border-neutral-200 bg-white p-6 text-center xl:text-left dark:border-white/10 dark:bg-neutral-950">
+          <h3 class="font-display text-lg font-bold text-neutral-900 dark:text-white">Time</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Installation time scales roughly with area and complexity. Add an hour for every extra 10 ft,
+            and another hour if the design has to be redrawn around furniture.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 xl:px-8">
+    <div class="rounded-3xl border border-neutral-200 px-6 py-14 text-center dark:border-white/10 sm:px-12">
+      <h2 class="mx-auto max-w-2xl font-display text-3xl font-bold leading-tight text-neutral-900 dark:text-white sm:text-4xl">
+        Want your design on this wall?
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-neutral-600 sm:text-base dark:text-neutral-300">
+        Send a reference image — a temple carving, a family motif, a festival poster — and we&rsquo;ll tell you
+        whether it can be drawn in powder.
+      </p>
+      <div class="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950">
+          Share a reference
+        </a>
+        <a href="packages.html#compare" class="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-300 px-7 py-3.5 text-sm font-semibold text-neutral-800 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:text-neutral-100">
+          See pricing
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= LIGHTBOX ================= -->
+<div data-lightbox
+     class="fixed inset-0 z-[100] hidden items-center justify-center bg-neutral-950/90 p-4 backdrop-blur-sm"
+     role="dialog" aria-modal="true" aria-labelledby="lb-title">
+  <button type="button" data-lb-close aria-label="Close image viewer"
+          class="absolute end-4 top-4 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors duration-200 hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" class="h-6 w-6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <figure class="flex max-h-full w-full max-w-3xl flex-col items-center gap-4">
+    <img data-lb-img src="" alt="" class="max-h-[70vh] w-auto rounded-2xl border border-white/10 bg-white object-contain">
+    <figcaption class="text-center">
+      <h2 id="lb-title" data-lb-title class="font-display text-lg font-bold text-white"></h2>
+      <p data-lb-meta class="mt-1 text-sm text-white/70"></p>
+    </figcaption>
+  </figure>
+</div>
+
+<!-- ============ FOOTER (injected) ============ -->
+<div data-footer></div>
+
+<script>
+  (function () {
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('[data-filter]'));
+    var items = Array.prototype.slice.call(document.querySelectorAll('[data-item]'));
+    var countEl = document.querySelector('[data-count]');
+    var emptyEl = document.querySelector('[data-empty]');
+
+    var activeCls = 'rounded-full border border-primary bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950';
+    var idleCls = 'rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:text-neutral-300';
+
+    function applyFilter(filter) {
+      var shown = 0;
+      items.forEach(function (item) {
+        var match = filter === 'all' || item.getAttribute('data-category') === filter;
+        item.classList.toggle('hidden', !match);
+        if (match) shown++;
+      });
+      buttons.forEach(function (btn) {
+        var on = btn.getAttribute('data-filter') === filter;
+        btn.className = on ? activeCls : idleCls;
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      if (countEl) countEl.textContent = 'Showing ' + shown + ' of ' + items.length + ' designs';
+      if (emptyEl) emptyEl.classList.toggle('hidden', shown !== 0);
+    }
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () { applyFilter(btn.getAttribute('data-filter')); });
+    });
+    applyFilter('all');
+
+    var box = document.querySelector('[data-lightbox]');
+    var lbImg = document.querySelector('[data-lb-img]');
+    var lbTitle = document.querySelector('[data-lb-title]');
+    var lbMeta = document.querySelector('[data-lb-meta]');
+    var lastFocus = null;
+
+    function open(btn) {
+      if (!box) return;
+      lastFocus = btn;
+      lbImg.src = btn.getAttribute('data-src');
+      lbImg.alt = btn.getAttribute('data-title') || '';
+      lbTitle.textContent = btn.getAttribute('data-title') || '';
+      lbMeta.textContent = btn.getAttribute('data-meta') || '';
+      box.classList.remove('hidden');
+      box.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      var closeBtn = box.querySelector('[data-lb-close]');
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function close() {
+      if (!box) return;
+      box.classList.add('hidden');
+      box.classList.remove('flex');
+      document.body.style.overflow = '';
+      if (lastFocus) lastFocus.focus();
+    }
+
+    document.querySelectorAll('[data-open]').forEach(function (btn) {
+      btn.addEventListener('click', function () { open(btn); });
+    });
+
+    if (box) {
+      box.addEventListener('click', function (e) {
+        if (e.target === box || e.target.closest('[data-lb-close]')) close();
+      });
+    }
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && box && !box.classList.contains('hidden')) close();
+    });
+  })();
+</script>
+
+</body>
+</html>

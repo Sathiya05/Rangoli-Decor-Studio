@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Home, Event &amp; Corporate Rangoli Art | Rangoli Rang</title>
+<meta name="description" content="Detailed rangoli and kolam art services: home doorway designs, wedding and event urva art, corporate lobby installations, festive set dressing and live workshops.">
+<meta name="theme-color" content="#B4532A">
+<!-- favicons: SVG for modern browsers, ICO/PNG fallbacks, iOS home screen, PWA manifest -->
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('rr-theme');
+      if (!t) { t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+      if (t === 'dark') { document.documentElement.classList.add('dark'); document.documentElement.style.colorScheme = 'dark'; }
+      if (localStorage.getItem('rr-dir') === 'rtl') { document.documentElement.setAttribute('dir', 'rtl'); }
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Source+Serif+4:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          primary:   { DEFAULT:'#B4532A', 50:'#FBF3EF', 100:'#F6E5DB', 200:'#EDCBB8', 300:'#DFA98C', 400:'#CE8462', 500:'#B4532A', 600:'#9A4523', 700:'#7C371C', 800:'#5F2A15', 900:'#451D0F' },
+          secondary: { DEFAULT:'#0F766E', 50:'#EFFAF8', 100:'#D7F2EE', 200:'#AEE5DE', 300:'#7ED4CB', 400:'#3FA79C', 500:'#0F766E', 600:'#0C5B55', 700:'#094A45', 800:'#073A36', 900:'#052B28' },
+          gold: '#E8A33D',
+          plum: '#7C2D5B'
+        },
+        fontFamily: {
+          display: ['"Source Serif 4"', 'Georgia', 'Cambria', 'Times New Roman', 'serif'],
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+<script src="js/navbar.js" defer></script>
+<script src="js/footer.js" defer></script>
+<style>
+  /* ---- hero: keep the fold intact on short viewports ------------------
+     On phones the copy stack and the five service tiles together are taller
+     than a small viewport can show, so the hero would push the page down and
+     the user would scroll before seeing the whole thing. Height is the
+     binding constraint, so these are height queries (not width ones) that
+     shed the decorative layers and tighten the type as room runs out.
+     Selectors are two classes deep to outrank the Tailwind CDN, which
+     injects its stylesheet after this block.
+
+     The gate is a union: narrow portrait phones, plus any viewport short
+     enough to be a landscape phone. A plain width query would miss
+     landscape (a 667x375 screen is wider than 640), and a plain height
+     query would strip a desktop browser window that is merely short. */
+  @media (max-width: 640px), (max-height: 520px) {
+    /* ~844px and below: drop the stats row and tighten the vertical rhythm. */
+    @media (max-height: 900px) {
+      .hero .hero-stats { display: none; }
+      .hero .hero-lede { font-size: 0.9375rem; line-height: 1.55; }
+      .hero .hero-cta > a { padding-top: 0.625rem; padding-bottom: 0.625rem; }
+      .hero .hero-tiles > li > a { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+    }
+    /* ~780px and below: the pill restates what the five tiles already show. */
+    @media (max-height: 780px) {
+      .hero .hero-pill { display: none; }
+    }
+    /* ~700px and below: drop the breadcrumb (the nav sits directly above),
+       close up the vertical rhythm and squeeze the tiles and buttons. */
+    @media (max-height: 700px) {
+      .hero .hero-crumb { display: none; }
+      .hero .hero-rule,
+      .hero .hero-title,
+      .hero .hero-lede { margin-top: 0.25rem; }
+      .hero .hero-cta { margin-top: 0.5rem; }
+      .hero .hero-tiles > li > a { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+      .hero .hero-cta > a { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+      .hero .hero-lede { font-size: 0.875rem; }
+    }
+    /* ~640px and below: only the title, the lede, the buttons and the tiles
+       are left, so trim their type, padding and price to the last few pixels
+       that are needed to keep the fold intact. */
+    @media (max-height: 640px) {
+      .hero { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+      .hero .hero-title { font-size: 1.5rem; }
+      .hero .hero-lede { font-size: 0.8125rem; line-height: 1.45; }
+      .hero .hero-tiles > li > a { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+      .hero .hero-price { font-size: 0.8125rem; }
+    }
+    /* ~580px and below (legacy 320x568 phones): last-reset trim. */
+    @media (max-height: 580px) {
+      .hero { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+      .hero .hero-title { font-size: 1.3125rem; }
+      .hero .hero-lede { font-size: 0.75rem; line-height: 1.4; }
+      .hero .hero-tiles > li > a { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+    }
+    /* ~400px and below (landscape phones): the copy sits above the card
+       rather than beside it, so the only real saving left is to stop
+       stacking the two buttons. */
+    @media (max-height: 400px) {
+      .hero { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+      .hero .hero-title { font-size: 1.25rem; }
+      .hero .hero-lede { font-size: 0.75rem; }
+      .hero .hero-cta { flex-direction: row; }
+      .hero .hero-cta > a {
+        padding-top: 0.375rem; padding-bottom: 0.375rem;
+        padding-left: 1rem; padding-right: 1rem; font-size: 0.75rem;
+      }
+      .hero .hero-tiles > li > a { padding-top: 0.0625rem; padding-bottom: 0.0625rem; }
+    }
+    /* ~340px and below: there is no longer room for the lede. */
+    @media (max-height: 340px) {
+      .hero .hero-lede { display: none; }
+    }
+  }
+
+  /* Landscape tablets and short desktop windows, e.g. iPad Air 1024x768 and
+     iPad mini 1133x744. They are wider than 640px but their height is phone
+     territory, so the gate above misses them entirely — and the "at a glance"
+     tiles are ~130px taller in their 2-up layout than in the 3-up grid it
+     replaced, which pushed a 1024x768 screen 11px past the fold. Two tiers,
+     lightest first, same two-class selectors so they outrank the CDN:
+     the pill only restates what the five tiles already say, and the stats row
+     is the last thing to go. */
+  @media (min-width: 641px) and (max-height: 820px) {
+    .hero .hero-pill { display: none; }
+  }
+  @media (min-width: 641px) and (max-height: 680px) {
+    .hero .hero-stats { display: none; }
+  }
+</style>
+</head>
+
+<body class="bg-white font-sans text-neutral-800 antialiased selection:bg-secondary-200 selection:text-neutral-900 dark:bg-neutral-950 dark:text-neutral-200 dark:selection:bg-secondary-500/30">
+
+<!-- ============ NAVBAR (injected) ============ -->
+<div data-navbar></div>
+
+<main id="main-content">
+
+  <!-- ================= PAGE HERO =================
+       Fits the space under the sticky navbar exactly: min-h is
+       100svh - navbar (h-16 mobile / h-20 from sm), and the copy is centred
+       in it. Every size and gap below is a clamp() driven by vh (and vw for
+       the h1) so the whole hero compresses on short viewports instead of
+       spilling past the fold. Measured to fit without scrolling from
+       1920x1080 down to 375x667. -->
+      <!-- The 4rem min-h matches the h-16 mobile header, so it is scoped to
+           phones with max-[639px] — unscoped it also applied to every tablet,
+           which is what left the empty band below the copy. From 640px up the
+           header is h-20 (5rem) and the height is gated on 1280px AND a fine
+           pointer (same rule as the navbar), so tablets size to content. -->
+      <section class="hero relative flex flex-col justify-center overflow-hidden border-b border-neutral-200 bg-gradient-to-b from-secondary-50 via-white to-primary-50/40 dark:border-white/10 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950 max-[639px]:min-h-[calc(100svh-4rem)] [@media(min-width:1280px)_and_(pointer:fine)]:min-h-[calc(100svh-5rem)]">
+
+    <!-- ambient depth: soft glows + ghosted kolam motifs -->
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div class="absolute -start-24 -top-32 h-[28rem] w-[28rem] rounded-full bg-secondary-200/60 blur-3xl dark:bg-secondary-500/10"></div>
+      <div class="absolute -bottom-48 -end-24 h-[32rem] w-[32rem] rounded-full bg-primary-200/50 blur-3xl dark:bg-primary-500/10"></div>
+      <img src="images/rangoli-hero.svg" alt=""
+           class="absolute -end-28 top-1/2 hidden h-[38rem] w-[38rem] -translate-y-1/2 opacity-[0.08] lg:block dark:opacity-[0.12]">
+    </div>
+
+    <div class="relative mx-auto w-full max-w-7xl px-4 py-[clamp(0.75rem,_0.4rem+_2.1svh,_3.5rem)] sm:px-6 xl:px-8">
+      <div class="grid items-center gap-[clamp(1rem,_0.7rem+_1.4svh,_2.5rem)] xl:grid-cols-12 xl:gap-12">
+
+        <!-- ============ copy ============ -->
+        <div class="text-center xl:col-span-7 xl:text-start">
+
+          <nav aria-label="Breadcrumb" class="hero-crumb flex items-center justify-center gap-2 text-xs font-medium text-neutral-500 xl:justify-start dark:text-neutral-400">
+            <ol class="flex items-center gap-2">
+              <li><a href="index.html" class="transition-colors duration-200 hover:text-secondary">Home</a></li>
+              <li aria-hidden="true" class="text-neutral-300 dark:text-neutral-600">/</li>
+              <li class="font-semibold text-neutral-900 dark:text-white" aria-current="page">Services</li>
+            </ol>
+          </nav>
+
+          <span class="mx-auto mt-[clamp(0.5rem,_0.35rem+_0.9svh,_1.5rem)] hero-rule block h-px w-16 bg-gradient-to-r from-transparent via-gold to-transparent xl:mx-0"></span>
+
+          <p class="hero-pill mt-[clamp(0.5rem,_0.35rem+_0.9svh,_1.5rem)] inline-flex items-center gap-2.5 rounded-full border border-secondary-200 bg-white/70 px-4 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-secondary-800 backdrop-blur dark:border-secondary-500/30 dark:bg-white/5 dark:text-secondary-200">
+            <span class="relative flex h-2 w-2">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-secondary opacity-75 motion-reduce:animate-none"></span>
+              <span class="relative inline-flex h-2 w-2 rounded-full bg-secondary"></span>
+            </span>
+            Five services · Indiranagar studio
+          </p>
+
+          <h1 class="hero-title mt-[clamp(0.5rem,_0.35rem+_0.9svh,_1.5rem)] font-display text-[clamp(1.5rem,_0.9rem+_1.5svh+_1.3vw,_3.75rem)] font-bold leading-[1.08] tracking-tight text-neutral-900 dark:text-white">
+            Every surface we draw on,
+            <span class="text-primary-500 dark:text-secondary-300">and exactly what it includes.</span>
+          </h1>
+
+          <p class="hero-lede mx-auto mt-[clamp(0.5rem,_0.35rem+_0.9svh,_1.5rem)] max-w-2xl text-[clamp(0.8125rem,_0.72rem+_0.6svh,_1.125rem)] leading-relaxed text-neutral-600 xl:mx-0 dark:text-neutral-300">
+            Five services, each with its own method, crew size and turnaround. Prices below are starting points —
+            your quote is fixed in writing before a single dot is placed.
+          </p>
+
+          <div class="hero-cta mt-[clamp(0.75rem,_0.5rem+_1.3svh,_2.25rem)] flex flex-col items-stretch justify-center gap-[clamp(0.375rem,_0.3rem+_0.5svh,_0.75rem)] sm:flex-row sm:items-center xl:justify-start">
+            <a href="contact.html"
+               class="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-6 py-[clamp(0.5rem,_0.4rem+_0.6svh,_0.875rem)] text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white active:scale-[0.98] motion-reduce:transition-none dark:focus-visible:ring-offset-neutral-950">
+              Get a written quote
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4 rtl:rotate-180" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.06-1.06l5.5 5.5a.75.75 0 0 1 0 1.06l-5.5 5.5a.75.75 0 1 1-1.06-1.06l4.138-3.86H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/></svg>
+            </a>
+            <a href="packages.html"
+               class="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-300 bg-white/70 px-6 py-[clamp(0.5rem,_0.4rem+_0.6svh,_0.875rem)] text-sm font-semibold text-neutral-800 backdrop-blur transition-all duration-200 hover:border-secondary hover:text-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-white active:scale-[0.98] motion-reduce:transition-none dark:border-white/15 dark:bg-white/5 dark:text-neutral-100 dark:focus-visible:ring-offset-neutral-950">
+              See published pricing
+            </a>
+          </div>
+
+          <dl class="hero-stats mx-auto mt-[clamp(0.75rem,_0.5rem+_1.3svh,_2.25rem)] grid max-w-xl grid-cols-3 gap-4 border-t border-neutral-200/80 pt-[clamp(0.5rem,_0.35rem+_0.9svh,_1.75rem)] dark:border-white/10 xl:mx-0">
+            <div class="text-center xl:text-start">
+              <dt class="font-display text-[clamp(1.25rem,_1rem+_0.8svh,_1.875rem)] font-bold text-secondary dark:text-secondary-300">5<span class="text-[0.7em]"> lines</span></dt>
+              <dd class="mt-1 text-[clamp(0.6875rem,_0.62rem+_0.3svh,_0.875rem)] leading-snug text-neutral-500 dark:text-neutral-400">Home to corporate lobby</dd>
+            </div>
+            <div class="text-center xl:text-start">
+              <dt class="font-display text-[clamp(1.25rem,_1rem+_0.8svh,_1.875rem)] font-bold text-primary dark:text-primary-400">24<span class="text-[0.7em]"> hr</span></dt>
+              <dd class="mt-1 text-[clamp(0.6875rem,_0.62rem+_0.3svh,_0.875rem)] leading-snug text-neutral-500 dark:text-neutral-400">Quote turnaround</dd>
+            </div>
+            <div class="text-center xl:text-start">
+              <dt class="font-display text-[clamp(1.25rem,_1rem+_0.8svh,_1.875rem)] font-bold text-plum dark:text-plum">3,400<span class="text-[0.7em]">+</span></dt>
+              <dd class="mt-1 text-[clamp(0.6875rem,_0.62rem+_0.3svh,_0.875rem)] leading-snug text-neutral-500 dark:text-neutral-400">Entrances drawn by hand</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- ============ at a glance ============
+             One markup, two layouts. Below xl it reflows into a compact
+             tile grid (2 across on phones, 3 from sm) so it stays visible
+             without inflating the hero; at xl it becomes the full detail
+             list beside the copy. Five columns was tried and dropped: the
+             stacked card is capped at max-w-md, which left ~88px tiles and
+             clipped the service names. -->
+        <div class="xl:col-span-5">
+          <div class="relative mx-auto max-w-md sm:max-w-xl lg:max-w-3xl xl:max-w-none">
+            <div class="absolute -inset-4 rounded-[2.25rem] bg-gradient-to-br from-secondary-200/60 via-transparent to-primary-200/60 blur-2xl dark:from-secondary-500/20 dark:to-primary-500/20" aria-hidden="true"></div>
+
+            <div class="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white/85 shadow-2xl shadow-neutral-900/10 backdrop-blur-xl dark:border-white/10 dark:bg-neutral-900/70 dark:shadow-black/40">
+
+              <div class="hidden items-center justify-between gap-3 border-b border-neutral-200 px-6 py-4 dark:border-white/10 xl:flex">
+                <h2 class="font-display text-base font-bold tracking-tight text-neutral-900 dark:text-white">At a glance</h2>
+                <span class="rounded-full bg-neutral-100 px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-[0.14em] text-neutral-500 dark:bg-white/10 dark:text-neutral-400">Starting at</span>
+              </div>
+
+              <ul class="hero-tiles grid grid-cols-2 gap-px bg-neutral-200/80 xl:block xl:bg-transparent xl:divide-y xl:divide-neutral-200/80 dark:bg-white/[0.07] xl:dark:bg-transparent xl:dark:divide-white/[0.07]">
+                <li>
+                  <a href="#home" class="group flex flex-col gap-1.5 px-4 py-[clamp(0.375rem,_0.25rem+_0.6svh,_0.625rem)] transition-colors duration-200 hover:bg-secondary-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary xl:flex-row xl:items-center xl:gap-4 xl:px-6 xl:py-4 dark:hover:bg-white/5">
+                    <span class="flex min-w-0 items-center gap-1.5 xl:flex-1 xl:gap-4">
+                      <span class="font-display text-xs font-bold tabular-nums text-neutral-300 transition-colors duration-200 group-hover:text-secondary dark:text-neutral-600 dark:group-hover:text-secondary-300 sm:text-sm">01</span>
+                      <span class="min-w-0">
+                        <span class="block text-xs font-semibold text-neutral-900 dark:text-white sm:text-sm">Home Rangoli Art</span>
+                        <span class="mt-0.5 hidden text-xs text-neutral-500 dark:text-neutral-400 sm:block">Doorway, pooja &amp; balcony kolams</span>
+                      </span>
+                    </span>
+                    <span class="flex items-baseline gap-1 xl:shrink-0 xl:text-end">
+                      <span class="hero-price font-display text-sm font-bold tabular-nums text-neutral-900 dark:text-white">₹1,200</span>
+                      <span class="hidden text-[0.65rem] text-neutral-400 dark:text-neutral-500 sm:block">per design</span>
+                    </span>
+                    <svg viewBox="0 0 20 20" fill="currentColor" class="hidden h-4 w-4 shrink-0 text-neutral-300 transition-colors duration-200 group-hover:text-secondary rtl:rotate-180 dark:text-neutral-600 dark:group-hover:text-secondary-300 xl:block" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.06-1.06l5.5 5.5a.75.75 0 0 1 0 1.06l-5.5 5.5a.75.75 0 1 1-1.06-1.06l4.138-3.86H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#events" class="group flex flex-col gap-1.5 px-4 py-[clamp(0.375rem,_0.25rem+_0.6svh,_0.625rem)] transition-colors duration-200 hover:bg-secondary-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary xl:flex-row xl:items-center xl:gap-4 xl:px-6 xl:py-4 dark:hover:bg-white/5">
+                    <span class="flex min-w-0 items-center gap-1.5 xl:flex-1 xl:gap-4">
+                      <span class="font-display text-xs font-bold tabular-nums text-neutral-300 transition-colors duration-200 group-hover:text-secondary dark:text-neutral-600 dark:group-hover:text-secondary-300 sm:text-sm">02</span>
+                      <span class="min-w-0">
+                        <span class="block text-xs font-semibold text-neutral-900 dark:text-white sm:text-sm">Event &amp; Wedding Decor</span>
+                        <span class="mt-0.5 hidden text-xs text-neutral-500 dark:text-neutral-400 sm:block">Urva, mandala &amp; large floors</span>
+                      </span>
+                    </span>
+                    <span class="flex items-baseline gap-1 xl:shrink-0 xl:text-end">
+                      <span class="hero-price font-display text-sm font-bold tabular-nums text-neutral-900 dark:text-white">₹9,500</span>
+                      <span class="hidden text-[0.65rem] text-neutral-400 dark:text-neutral-500 sm:block">per event</span>
+                    </span>
+                    <svg viewBox="0 0 20 20" fill="currentColor" class="hidden h-4 w-4 shrink-0 text-neutral-300 transition-colors duration-200 group-hover:text-secondary rtl:rotate-180 dark:text-neutral-600 dark:group-hover:text-secondary-300 xl:block" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.06-1.06l5.5 5.5a.75.75 0 0 1 0 1.06l-5.5 5.5a.75.75 0 1 1-1.06-1.06l4.138-3.86H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#corporate" class="group flex flex-col gap-1.5 px-4 py-[clamp(0.375rem,_0.25rem+_0.6svh,_0.625rem)] transition-colors duration-200 hover:bg-secondary-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary xl:flex-row xl:items-center xl:gap-4 xl:px-6 xl:py-4 dark:hover:bg-white/5">
+                    <span class="flex min-w-0 items-center gap-1.5 xl:flex-1 xl:gap-4">
+                      <span class="font-display text-xs font-bold tabular-nums text-neutral-300 transition-colors duration-200 group-hover:text-secondary dark:text-neutral-600 dark:group-hover:text-secondary-300 sm:text-sm">03</span>
+                      <span class="min-w-0">
+                        <span class="block text-xs font-semibold text-neutral-900 dark:text-white sm:text-sm">Corporate Kolam Art</span>
+                        <span class="mt-0.5 hidden text-xs text-neutral-500 dark:text-neutral-400 sm:block">Lobby installations, quarterly</span>
+                      </span>
+                    </span>
+                    <span class="flex items-baseline gap-1 xl:shrink-0 xl:text-end">
+                      <span class="hero-price font-display text-sm font-bold tabular-nums text-neutral-900 dark:text-white">₹18,000</span>
+                      <span class="hidden text-[0.65rem] text-neutral-400 dark:text-neutral-500 sm:block">per quarter</span>
+                    </span>
+                    <svg viewBox="0 0 20 20" fill="currentColor" class="hidden h-4 w-4 shrink-0 text-neutral-300 transition-colors duration-200 group-hover:text-secondary rtl:rotate-180 dark:text-neutral-600 dark:group-hover:text-secondary-300 xl:block" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.06-1.06l5.5 5.5a.75.75 0 0 1 0 1.06l-5.5 5.5a.75.75 0 1 1-1.06-1.06l4.138-3.86H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#festive" class="group flex flex-col gap-1.5 px-4 py-[clamp(0.375rem,_0.25rem+_0.6svh,_0.625rem)] transition-colors duration-200 hover:bg-secondary-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary xl:flex-row xl:items-center xl:gap-4 xl:px-6 xl:py-4 dark:hover:bg-white/5">
+                    <span class="flex min-w-0 items-center gap-1.5 xl:flex-1 xl:gap-4">
+                      <span class="font-display text-xs font-bold tabular-nums text-neutral-300 transition-colors duration-200 group-hover:text-secondary dark:text-neutral-600 dark:group-hover:text-secondary-300 sm:text-sm">04</span>
+                      <span class="min-w-0">
+                        <span class="block text-xs font-semibold text-neutral-900 dark:text-white sm:text-sm">Festive Set Dressing</span>
+                        <span class="mt-0.5 hidden text-xs text-neutral-500 dark:text-neutral-400 sm:block">Torans, diyas, pooja styling</span>
+                      </span>
+                    </span>
+                    <span class="flex items-baseline gap-1 xl:shrink-0 xl:text-end">
+                      <span class="hero-price font-display text-sm font-bold tabular-nums text-neutral-900 dark:text-white">₹3,200</span>
+                      <span class="hidden text-[0.65rem] text-neutral-400 dark:text-neutral-500 sm:block">per home</span>
+                    </span>
+                    <svg viewBox="0 0 20 20" fill="currentColor" class="hidden h-4 w-4 shrink-0 text-neutral-300 transition-colors duration-200 group-hover:text-secondary rtl:rotate-180 dark:text-neutral-600 dark:group-hover:text-secondary-300 xl:block" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.06-1.06l5.5 5.5a.75.75 0 0 1 0 1.06l-5.5 5.5a.75.75 0 1 1-1.06-1.06l4.138-3.86H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/></svg>
+                  </a>
+                </li>
+                <li class="col-span-2 xl:col-span-1">
+                  <a href="#workshops" class="group flex flex-col gap-1.5 px-4 py-[clamp(0.375rem,_0.25rem+_0.6svh,_0.625rem)] transition-colors duration-200 hover:bg-secondary-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary xl:flex-row xl:items-center xl:gap-4 xl:px-6 xl:py-4 dark:hover:bg-white/5">
+                    <span class="flex min-w-0 items-center gap-1.5 xl:flex-1 xl:gap-4">
+                      <span class="font-display text-xs font-bold tabular-nums text-neutral-300 transition-colors duration-200 group-hover:text-secondary dark:text-neutral-600 dark:group-hover:text-secondary-300 sm:text-sm">05</span>
+                      <span class="min-w-0">
+                        <span class="block text-xs font-semibold text-neutral-900 dark:text-white sm:text-sm">Live Kolam Workshops</span>
+                        <span class="mt-0.5 hidden text-xs text-neutral-500 dark:text-neutral-400 sm:block">Studio &amp; online, materials included</span>
+                      </span>
+                    </span>
+                    <span class="flex items-baseline gap-1 xl:shrink-0 xl:text-end">
+                      <span class="hero-price font-display text-sm font-bold tabular-nums text-neutral-900 dark:text-white">₹1,499</span>
+                      <span class="hidden text-[0.65rem] text-neutral-400 dark:text-neutral-500 sm:block">per session</span>
+                    </span>
+                    <svg viewBox="0 0 20 20" fill="currentColor" class="hidden h-4 w-4 shrink-0 text-neutral-300 transition-colors duration-200 group-hover:text-secondary rtl:rotate-180 dark:text-neutral-600 dark:group-hover:text-secondary-300 xl:block" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.06-1.06l5.5 5.5a.75.75 0 0 1 0 1.06l-5.5 5.5a.75.75 0 1 1-1.06-1.06l4.138-3.86H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/></svg>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="hidden border-t border-neutral-200 bg-neutral-50/70 px-6 py-4 dark:border-white/10 dark:bg-white/[0.03] xl:block">
+                <p class="text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+                  Every quote is fixed in writing before we begin — no hourly billing, no surprise add-ons on site.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class=" top-16 z-30 border-b border-neutral-200 bg-white/90 backdrop-blur dark:border-white/10 dark:bg-neutral-950/90 sm:top-20">
+    <!-- Below md the six pills need ~807px, so they stay in a swipeable row (a
+         phone cannot fit them any other way without truncating labels). From md
+         up they step down to text-xs/px-3 (~678px) and the row may wrap and
+         centre, so the bar never scrolls sideways on a tablet or laptop; lg
+         restores the full-size pills, which fit from 1024px. -->
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 xl:px-8">
+      <nav aria-label="Services on this page" class="overflow-x-auto py-3 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:overflow-x-visible">
+        <div class="mx-auto flex w-max snap-x gap-2 md:w-full md:flex-wrap md:justify-center md:snap-none">
+          <a href="#home"       class="shrink-0 snap-start rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary md:px-3 md:text-xs lg:px-4 lg:text-sm dark:border-white/10 dark:text-neutral-300">Home Rangoli</a>
+          <a href="#events"     class="shrink-0 snap-start rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary md:px-3 md:text-xs lg:px-4 lg:text-sm dark:border-white/10 dark:text-neutral-300">Events &amp; Weddings</a>
+          <a href="#corporate"  class="shrink-0 snap-start rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary md:px-3 md:text-xs lg:px-4 lg:text-sm dark:border-white/10 dark:text-neutral-300">Corporate</a>
+          <a href="#festive"    class="shrink-0 snap-start rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary md:px-3 md:text-xs lg:px-4 lg:text-sm dark:border-white/10 dark:text-neutral-300">Festive Decor</a>
+          <a href="#workshops"  class="shrink-0 snap-start rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary md:px-3 md:text-xs lg:px-4 lg:text-sm dark:border-white/10 dark:text-neutral-300">Workshops</a>
+          <a href="packages.html" class="shrink-0 snap-start rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary md:px-3 md:text-xs lg:px-4 lg:text-sm">View packages</a>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ================= 1. HOME RANGOLI ================= -->
+  <section id="home" class="mx-auto max-w-7xl scroll-mt-40 px-4 py-16 sm:px-6 sm:py-20 xl:px-8 xl:py-24">
+    <div class="grid items-center gap-12 xl:grid-cols-12 xl:gap-14">
+
+      <div class="text-center xl:col-span-7 xl:text-left">
+        <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-600 dark:border-white/10 dark:text-neutral-300">
+          Service 01
+        </span>
+        <h2 class="mt-5 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+          Home Rangoli Art
+        </h2>
+        <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300 xl:mx-0">
+          For the doorway, pooja room, balcony threshold and the small patch of floor the family actually
+          walks across. Drawn fresh each morning, or refreshed on a fortnightly retainer. The most-ordered
+          service in the studio, and the one we judge ourselves on.
+        </p>
+
+        <div class="mt-8 grid gap-4 text-start sm:grid-cols-2">
+          <div class="rounded-2xl border border-neutral-200 p-5 dark:border-white/10">
+            <h3 class="text-sm font-bold text-neutral-900 dark:text-white">What&rsquo;s included</h3>
+            <ul class="mt-3 space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+              <li class="flex items-start gap-2"><span class="mt-0.5 text-primary">&check;</span> Site visit and floor measurement</li>
+              <li class="flex items-start gap-2"><span class="mt-0.5 text-primary">&check;</span> Hand-drawn grid sketch in 24 hrs</li>
+              <li class="flex items-start gap-2"><span class="mt-0.5 text-primary">&check;</span> Natural powder set, mixed on site</li>
+              <li class="flex items-start gap-2"><span class="mt-0.5 text-primary">&check;</span> Sweep and clear before we leave</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-neutral-200 p-5 dark:border-white/10">
+            <h3 class="text-sm font-bold text-neutral-900 dark:text-white">Good to know</h3>
+            <ul class="mt-3 space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+              <li class="flex items-start gap-2"><span class="mt-0.5 text-primary">&check;</span> Arrival window 6:30 – 8:00 AM</li>
+              <li class="flex items-start gap-2"><span class="mt-0.5 text-primary">&check;</span> Typical size 4 – 8 ft wide</li>
+              <li class="flex items-start gap-2"><span class="mt-0.5 text-primary">&check;</span> Two people, 90 minutes on site</li>
+              <li class="flex items-start gap-2"><span class="mt-0.5 text-primary">&check;</span> Daily, weekly or monthly cadence</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-center xl:justify-start">
+          <p class="font-display text-2xl font-bold text-neutral-900 dark:text-white">From ₹1,200 <span class="text-sm font-medium text-neutral-500">per design</span></p>
+          <a href="contact.html" class="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950">
+            Book a home design
+          </a>
+        </div>
+      </div>
+
+      <div class="xl:col-span-5">
+        <div class="mx-auto grid max-w-sm grid-cols-2 gap-4 sm:max-w-md xl:max-w-none">
+          <img src="images\img11.avif" alt="Twelve petal entrance kolam" class="aspect-square w-full rounded-2xl border border-neutral-200 dark:border-white/10" width="400" height="400" loading="lazy">
+          <img src="images\img12.avif" alt="Eight petal teal home kolam" class="mt-5 aspect-square w-full rounded-2xl border border-neutral-200 dark:border-white/10" width="400" height="400" loading="lazy">
+          <img src="images\img13.avif" alt="Six petal festive home entrance design" class="-mt-2 aspect-square w-full rounded-2xl border border-neutral-200 dark:border-white/10" width="400" height="400" loading="lazy">
+          <img src="images\img15.avif" alt="Nine petal gold temple kolam" class="mt-3 aspect-square w-full rounded-2xl border border-neutral-200 dark:border-white/10" width="400" height="400" loading="lazy">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 2. EVENTS & WEDDINGS ================= -->
+  <section id="events" class="scroll-mt-40 border-y border-neutral-200 bg-neutral-50 py-16 dark:border-white/10 dark:bg-white/[0.03] sm:py-20 xl:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 xl:px-8">
+      <div class="grid items-center gap-12 xl:grid-cols-12 xl:gap-14">
+
+        <div class="order-2 xl:order-1 xl:col-span-5">
+          <div class="mx-auto grid max-w-sm grid-cols-2 gap-4 sm:max-w-md xl:max-w-none">
+            <img src="images\img17.avif" alt="Plum and rose wedding mandala" class="aspect-square w-full rounded-2xl border border-neutral-200 dark:border-white/10" width="400" height="400" loading="lazy">
+            <img src="images\img18.avif" alt="Eighteen petal celebration rangoli" class="mt-5 aspect-square w-full rounded-2xl border border-neutral-200 dark:border-white/10" width="400" height="400" loading="lazy">
+            <img src="images\img19.avif" alt="Eleven petal wedding urva detail" class="-mt-2 aspect-square w-full rounded-2xl border border-neutral-200 dark:border-white/10" width="400" height="400" loading="lazy">
+            <img src="images\img20.avif" alt="Fifteen petal festive celebration floor" class="mt-3 aspect-square w-full rounded-2xl border border-neutral-200 dark:border-white/10" width="400" height="400" loading="lazy">
+          </div>
+        </div>
+
+        <div class="order-1 text-center xl:order-2 xl:col-span-7 xl:text-left">
+          <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-600 dark:border-white/10 dark:text-neutral-300">
+            Service 02
+          </span>
+          <h2 class="mt-5 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+            Event &amp; Wedding Decor
+          </h2>
+          <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300 xl:mx-0">
+            Weddings, engagements, housewarmings, naming ceremonies and temple festivals. Large mandala and
+            urva floors built around your family motif, with a crew that arrives in the dark and finishes
+            before the first guest wakes up.
+          </p>
+
+          <div class="mt-8 grid gap-4 text-start sm:grid-cols-2">
+            <div class="rounded-2xl border border-neutral-200 bg-white p-5 dark:border-white/10 dark:bg-neutral-950">
+              <h3 class="text-sm font-bold text-neutral-900 dark:text-white">Scale &amp; crew</h3>
+              <ul class="mt-3 space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-secondary">&check;</span> Floors from 8 ft to 40 ft wide</li>
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-secondary">&check;</span> Crew of 4 to 8, scaled to the floor</li>
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-secondary">&check;</span> 3 – 5 hours on site, start time your call</li>
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-secondary">&check;</span> Rose petal, brass urvil and diya finishing</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-neutral-200 bg-white p-5 dark:border-white/10 dark:bg-neutral-950">
+              <h3 class="text-sm font-bold text-neutral-900 dark:text-white">Booking notes</h3>
+              <ul class="mt-3 space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-secondary">&check;</span> Confirm 6 weeks ahead for peak season</li>
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-secondary">&check;</span> Site visit included within 15 km of the studio</li>
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-secondary">&check;</span> One free redesign of the sketch, always</li>
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-secondary">&check;</span> Travel &amp; stay quoted before confirmation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-center xl:justify-start">
+            <p class="font-display text-2xl font-bold text-neutral-900 dark:text-white">From ₹9,500 <span class="text-sm font-medium text-neutral-500">per event</span></p>
+            <a href="packages.html#wedding" class="inline-flex items-center gap-2 rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-800 transition-colors duration-200 hover:border-secondary hover:text-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary dark:border-white/15 dark:text-neutral-100">
+              Wedding Grand package
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3. CORPORATE ================= -->
+  <section id="corporate" class="mx-auto max-w-7xl scroll-mt-40 px-4 py-16 sm:px-6 sm:py-20 xl:px-8 xl:py-24">
+    <div class="grid items-center gap-12 xl:grid-cols-12 xl:gap-14">
+
+      <div class="text-center xl:col-span-7 xl:text-left">
+        <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-600 dark:border-white/10 dark:text-neutral-300">
+          Service 03
+        </span>
+        <h2 class="mt-5 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+          Corporate Kolam Art
+        </h2>
+        <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300 xl:mx-0">
+          Reception medallions, entrance floors, atrium centrepieces and festival lobby installations on a
+          fixed quarterly schedule. Same grid, same palette, same two people — every visit, so the artwork
+          never has to be re-explained to your facilities team.
+        </p>
+
+        <div class="mt-8 grid gap-4 text-start sm:grid-cols-2">
+          <div class="rounded-2xl border border-neutral-200 p-5 dark:border-white/10">
+            <h3 class="text-sm font-bold text-neutral-900 dark:text-white">What&rsquo;s included</h3>
+            <ul class="mt-3 space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+              <li class="flex items-start gap-2"><span class="mt-0.5 text-[#8A5A0B] dark:text-gold">&check;</span> Branded grid using your colours</li>
+              <li class="flex items-start gap-2"><span class="mt-0.5 text-[#8A5A0B] dark:text-gold">&check;</span> Festival calendar (4 installs a year)</li>
+              <li class="flex items-start gap-2"><span class="mt-0.5 text-[#8A5A0B] dark:text-gold">&check;</span> Site photography after every install</li>
+              <li class="flex items-start gap-2"><span class="mt-0.5 text-[#8A5A0B] dark:text-gold">&check;</span> GST invoice and vendor documentation</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-neutral-200 p-5 dark:border-white/10">
+            <h3 class="text-sm font-bold text-neutral-900 dark:text-white">Built for facilities</h3>
+            <ul class="mt-3 space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+              <li class="flex items-start gap-2"><span class="mt-0.5 text-[#8A5A0B] dark:text-gold">&check;</span> Installs timed around shutdown windows</li>
+              <li class="flex items-start gap-2"><span class="mt-0.5 text-[#8A5A0B] dark:text-gold">&check;</span> Lift and floor-protection plan submitted</li>
+              <li class="flex items-start gap-2"><span class="mt-0.5 text-[#8A5A0B] dark:text-gold">&check;</span> Single point of contact, one number</li>
+              <li class="flex items-start gap-2"><span class="mt-0.5 text-[#8A5A0B] dark:text-gold">&check;</span> Discounted add-ons on the same visit</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-center xl:justify-start">
+          <p class="font-display text-2xl font-bold text-neutral-900 dark:text-white">From ₹18,000 <span class="text-sm font-medium text-neutral-500">per quarter</span></p>
+          <a href="packages.html#corporate" class="inline-flex items-center gap-2 rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-800 transition-colors duration-200 hover:border-secondary hover:text-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary dark:border-white/15 dark:text-neutral-100">
+            Corporate Annual package
+          </a>
+        </div>
+      </div>
+
+      <div class="xl:col-span-5">
+        <div class="mx-auto max-w-sm sm:max-w-md xl:max-w-none">
+          <img src="images\img21.avif" alt="Indigo and teal corporate lobby medallion"
+               class="aspect-[4/3] w-full rounded-2xl border border-neutral-200 object-cover dark:border-white/10" width="400" height="400" loading="lazy">
+          <div class="mt-4 grid grid-cols-3 gap-3 text-center">
+            <div class="rounded-xl border border-neutral-200 p-4 dark:border-white/10">
+              <p class="font-display text-lg font-bold text-neutral-900 dark:text-white">26</p>
+              <p class="mt-1 text-[0.7rem] leading-snug text-neutral-500 dark:text-neutral-400">Corporate sites</p>
+            </div>
+            <div class="rounded-xl border border-neutral-200 p-4 dark:border-white/10">
+              <p class="font-display text-lg font-bold text-neutral-900 dark:text-white">4</p>
+              <p class="mt-1 text-[0.7rem] leading-snug text-neutral-500 dark:text-neutral-400">Installs a year</p>
+            </div>
+            <div class="rounded-xl border border-neutral-200 p-4 dark:border-white/10">
+              <p class="font-display text-lg font-bold text-neutral-900 dark:text-white">0</p>
+              <p class="mt-1 text-[0.7rem] leading-snug text-neutral-500 dark:text-neutral-400">Missed windows</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 4. FESTIVE SET DRESSING ================= -->
+  <section id="festive" class="scroll-mt-40 border-y border-neutral-200 bg-[#FBF4E9] py-16 dark:border-white/10 dark:bg-black sm:py-20 xl:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 xl:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="inline-flex items-center gap-2 rounded-full border border-primary-200 bg-white/70 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-primary-700 dark:border-white/20 dark:bg-white/5 dark:text-white/80">
+          Service 04
+        </span>
+        <h2 class="mt-5 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+          Festive Set Dressing
+        </h2>
+        <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+          The floor is one part of a festival morning. We also dress staircases, door frames, pooja rooms
+          and balcony rails with terracotta diyas, marigold garlands, toran, mango-leaf torans and brass
+          urvil — coordinated to the same palette as the kolam.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <article class="rounded-2xl border border-neutral-200 bg-white p-6 text-center transition-colors duration-200 hover:border-primary-300 hover:bg-primary-50/40 xl:text-left dark:border-white/15 dark:bg-white/[0.03] dark:hover:border-white/25 dark:hover:bg-white/[0.06]">
+          <h3 class="font-display text-lg font-bold text-neutral-900 dark:text-white">Diya pathways</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Rows of oil lamps and terracotta diyas from the gate to the pooja room, laid to match the floor
+            design and lit by our team at dusk.
+          </p>
+          <p class="mt-4 text-sm font-semibold text-[#8A5A0B] dark:text-gold">From ₹3,200 per home</p>
+        </article>
+        <article class="rounded-2xl border border-neutral-200 bg-white p-6 text-center transition-colors duration-200 hover:border-primary-300 hover:bg-primary-50/40 xl:text-left dark:border-white/15 dark:bg-white/[0.03] dark:hover:border-white/25 dark:hover:bg-white/[0.06]">
+          <h3 class="font-display text-lg font-bold text-neutral-900 dark:text-white">Toran &amp; door frames</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Traditional mango-leaf and marigold torans for every entrance, plus brass finials and hanging
+            strings sized to each doorway.
+          </p>
+          <p class="mt-4 text-sm font-semibold text-[#8A5A0B] dark:text-gold">From ₹1,400 per entrance</p>
+        </article>
+        <article class="rounded-2xl border border-neutral-200 bg-white p-6 text-center transition-colors duration-200 hover:border-primary-300 hover:bg-primary-50/40 xl:text-left dark:border-white/15 dark:bg-white/[0.03] dark:hover:border-white/25 dark:hover:bg-white/[0.06]">
+          <h3 class="font-display text-lg font-bold text-neutral-900 dark:text-white">Pooja room styling</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Sandalwood paste patterns, kumkum borders, brass bells, banana-leaf decking and a swept,
+            spotless mandir floor for the morning puja.
+          </p>
+          <p class="mt-4 text-sm font-semibold text-[#8A5A0B] dark:text-gold">From ₹2,600 per room</p>
+        </article>
+        <article class="rounded-2xl border border-neutral-200 bg-white p-6 text-center transition-colors duration-200 hover:border-primary-300 hover:bg-primary-50/40 xl:text-left dark:border-white/15 dark:bg-white/[0.03] dark:hover:border-white/25 dark:hover:bg-white/[0.06]">
+          <h3 class="font-display text-lg font-bold text-neutral-900 dark:text-white">Marigold &amp; flower borders</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Thick loose-petal borders and pookalam corners using real flowers, replaced fresh on request
+            for three days of guests.
+          </p>
+          <p class="mt-4 text-sm font-semibold text-[#8A5A0B] dark:text-gold">From ₹1,900 per border</p>
+        </article>
+        <article class="rounded-2xl border border-neutral-200 bg-white p-6 text-center transition-colors duration-200 hover:border-primary-300 hover:bg-primary-50/40 xl:text-left dark:border-white/15 dark:bg-white/[0.03] dark:hover:border-white/25 dark:hover:bg-white/[0.06]">
+          <h3 class="font-display text-lg font-bold text-neutral-900 dark:text-white">Office &amp; lobby festive</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Reception medallion, atrium centrepiece and lift lobbies decorated for the office festival week,
+            removed on the agreed date without trace.
+          </p>
+          <p class="mt-4 text-sm font-semibold text-[#8A5A0B] dark:text-gold">From ₹9,800 per site</p>
+        </article>
+        <article class="rounded-2xl border border-neutral-200 bg-white p-6 text-center transition-colors duration-200 hover:border-primary-300 hover:bg-primary-50/40 xl:text-left dark:border-white/15 dark:bg-white/[0.03] dark:hover:border-white/25 dark:hover:bg-white/[0.06]">
+          <h3 class="font-display text-lg font-bold text-neutral-900 dark:text-white">Custom &amp; theme decor</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Beyond the classics: a specific regional motif, a memorial floor, a named-alphabet welcome or a
+            film-recreation design. Send the reference and we&rsquo;ll tell you if it can be drawn.
+          </p>
+          <p class="mt-4 text-sm font-semibold text-[#8A5A0B] dark:text-gold">Quoted per design</p>
+        </article>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+        <a href="packages.html#signature" class="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#FBF4E9] dark:bg-gold dark:text-[#0B2E2B] dark:hover:bg-[#F2B755] dark:focus-visible:ring-gold dark:focus-visible:ring-offset-black">
+          See the festive package
+        </a>
+        <a href="contact.html" class="inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white px-7 py-3.5 text-sm font-semibold text-neutral-800 transition-colors duration-200 hover:border-primary hover:bg-primary-50 hover:text-primary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#FBF4E9] dark:border-white/25 dark:bg-transparent dark:text-white dark:hover:border-white dark:hover:bg-white/10 dark:focus-visible:ring-white dark:focus-visible:ring-offset-black">
+          Request a decor call
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5. WORKSHOPS ================= -->
+  <section id="workshops" class="mx-auto max-w-7xl scroll-mt-40 px-4 py-16 sm:px-6 sm:py-20 xl:px-8 xl:py-24">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-plum dark:text-plum">Service 05</p>
+      <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+        Live Kolam Workshops
+      </h2>
+      <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+        Three hours, twelve seats, all materials included. Taught at the studio in Indiranagar, on
+        weekends, in English and Kannada — and online for families who are not in the city this month.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <article class="rounded-2xl border border-neutral-200 p-6 text-center xl:text-left dark:border-white/10">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-400">Session A</p>
+        <h3 class="mt-2 font-display text-lg font-bold text-neutral-900 dark:text-white">Basic 8-Petal Kolam</h3>
+        <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">Free symmetry, dot spacing, flour ratio.</p>
+        <p class="mt-4 font-display text-2xl font-bold text-neutral-900 dark:text-white">₹1,499</p>
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">2 hrs 30 min · 12 seats</p>
+      </article>
+      <article class="rounded-2xl border border-neutral-200 p-6 text-center xl:text-left dark:border-white/10">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-400">Session B</p>
+        <h3 class="mt-2 font-display text-lg font-bold text-neutral-900 dark:text-white">Pookalam with Petals</h3>
+        <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">A 5-foot flower pookalam and the wet-look trick.</p>
+        <p class="mt-4 font-display text-2xl font-bold text-neutral-900 dark:text-white">₹1,899</p>
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">3 hrs · 12 seats</p>
+      </article>
+      <article class="rounded-2xl border border-neutral-200 p-6 text-center xl:text-left dark:border-white/10">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-400">Session C</p>
+        <h3 class="mt-2 font-display text-lg font-bold text-neutral-900 dark:text-white">Wedding Urva Masterclass</h3>
+        <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">Scaling a mandola and running a six-person crew.</p>
+        <p class="mt-4 font-display text-2xl font-bold text-neutral-900 dark:text-white">₹3,499</p>
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">4 hrs · 8 seats</p>
+      </article>
+      <article class="rounded-2xl border border-neutral-200 p-6 text-center xl:text-left dark:border-white/10">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-400">Session D</p>
+        <h3 class="mt-2 font-display text-lg font-bold text-neutral-900 dark:text-white">Corporate Team Session</h3>
+        <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">A half-day offsite for teams, branded grid included.</p>
+        <p class="mt-4 font-display text-2xl font-bold text-neutral-900 dark:text-white">₹12,000</p>
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">4 hrs · 20 people</p>
+      </article>
+    </div>
+
+    <p class="mt-8 text-center text-sm text-neutral-500 dark:text-neutral-400">
+      Upcoming dates and seat availability are listed on the
+      <a href="contact.html#workshops" class="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-600 dark:text-primary-400">contact page</a>.
+    </p>
+  </section>
+
+  
+
+  <!-- ================= CTA ================= -->
+  <section class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 sm:pb-24 xl:px-8">
+    <div class="rounded-3xl border border-neutral-200 px-6 py-14 text-center dark:border-white/10 sm:px-12">
+      <h2 class="mx-auto max-w-2xl font-display text-3xl font-bold leading-tight text-neutral-900 dark:text-white sm:text-4xl">
+        Not sure which service fits your space?
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-neutral-600 sm:text-base dark:text-neutral-300">
+        Send a photo and a rough measurement. We&rsquo;ll recommend the smallest service that will look
+        right — and tell you if a bigger one isn&rsquo;t worth it.
+      </p>
+      <div class="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950">
+          Get a recommendation
+        </a>
+        <a href="packages.html#compare" class="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-300 px-7 py-3.5 text-sm font-semibold text-neutral-800 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:text-neutral-100">
+          Compare all packages
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER (injected) ============ -->
+<div data-footer></div>
+
+</body>
+</html>

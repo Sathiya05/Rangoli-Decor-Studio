@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home 2 — Festival Showcase | Rangoli Rang Kolam &amp; Festive Decor Studio</title>
+<meta name="description" content="Home layout 2: a festival-first showcase of Rangoli Rang — seasonal collections, live workshop dates and the artisan team behind every floor.">
+<meta name="theme-color" content="#B4532A">
+<!-- favicons: SVG for modern browsers, ICO/PNG fallbacks, iOS home screen, PWA manifest -->
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('rr-theme');
+      if (!t) { t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+      if (t === 'dark') { document.documentElement.classList.add('dark'); document.documentElement.style.colorScheme = 'dark'; }
+      if (localStorage.getItem('rr-dir') === 'rtl') { document.documentElement.setAttribute('dir', 'rtl'); }
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Source+Serif+4:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          primary:   { 50:'#FBF3EF', 100:'#F6E5DB', 200:'#EDCBB8', 300:'#DFA98C', 400:'#CE8462', 500:'#B4532A', 600:'#9A4523', 700:'#7C371C', 800:'#5F2A15', 900:'#451D0F' },
+          secondary: { 50:'#EFFAF8', 100:'#D7F2EE', 200:'#AEE5DE', 300:'#7ED4CB', 400:'#3FA79C', 500:'#0F766E', 600:'#0C5B55', 700:'#094A45', 800:'#073A36', 900:'#052B28' },
+          gold: '#E8A33D',
+          plum: '#7C2D5B'
+        },
+        fontFamily: {
+          display: ['"Source Serif 4"', 'Georgia', 'Cambria', 'Times New Roman', 'serif'],
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+<script src="js/navbar.js" defer></script>
+<script src="js/footer.js" defer></script>
+</head>
+
+<body class="bg-white font-sans text-neutral-800 antialiased selection:bg-secondary-200 selection:text-neutral-900 dark:bg-neutral-950 dark:text-neutral-200 dark:selection:bg-secondary-500/30">
+
+<!-- ============ NAVBAR (injected) ============ -->
+<div data-navbar></div>
+
+<main id="main-content">
+
+  <!-- ================= HERO (layout 2: light spotlight, image-led) ================= -->
+  <section class="relative overflow-hidden border-b border-neutral-200 bg-white bg-gradient-to-b from-secondary-50 via-white to-primary-50 dark:border-white/10 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950 xl:flex xl:min-h-[90vh] xl:flex-col xl:justify-center">
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-secondary-300/40 blur-3xl dark:bg-secondary-500/25 xl:h-96 xl:w-96"></div>
+      <div class="absolute -right-20 top-1/3 h-80 w-80 rounded-full bg-primary-300/40 blur-3xl dark:bg-primary-500/20 xl:h-96 xl:w-96"></div>
+      <img src="images/rangoli-hero.svg" alt="" class="absolute left-1/2 top-1/2 w-[34rem] max-w-[135%] -translate-x-1/2 -translate-y-1/2 opacity-[0.14] dark:opacity-[0.07] xl:w-[44rem]">
+      <div class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-secondary-500/30 to-transparent dark:via-secondary-400/40"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-5xl px-4 py-16 text-center sm:px-6 sm:py-20 xl:px-8 xl:py-10">
+      <p class="inline-flex items-center gap-2 rounded-full border border-secondary-200 bg-secondary-50 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-secondary-700 dark:border-white/15 dark:bg-white/5 dark:text-secondary-300">
+        <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-secondary-500 dark:bg-secondary-400"></span>
+        Custom Rangoli Designs
+      </p>
+      <h1 class="mx-auto mt-6 max-w-3xl font-display text-4xl font-bold leading-[1.12] tracking-tight text-neutral-900 dark:text-white sm:text-5xl xl:text-6xl">
+        Every festival gets a floor it deserves.
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300 sm:text-lg">
+        A seasonal showcase layout &mdash; collections arranged by occasion, live workshop dates you can book a
+        seat in, and a look at the eight hands that draw each design.
+      </p>
+      <div class="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/30 transition-all duration-200 hover:from-primary-600 hover:to-primary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:scale-[0.98] motion-reduce:transition-none dark:focus-visible:ring-primary-400 dark:focus-visible:ring-offset-neutral-950">
+          Reserve a festive slot
+        </a>
+        <a href="gallery.html" class="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-300 px-7 py-3.5 text-sm font-semibold text-neutral-800 transition-all duration-200 hover:border-secondary-500 hover:text-secondary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/20 dark:text-white dark:hover:border-secondary-400 dark:hover:text-secondary-200 dark:focus-visible:ring-secondary-400 dark:focus-visible:ring-offset-neutral-950">
+          Browse collections
+        </a>
+      </div>
+    </div>
+
+    <div class="relative mx-auto w-full max-w-6xl px-4 pb-14 sm:px-6 xl:max-w-3xl xl:px-8 xl:pb-10">
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <figure class="overflow-hidden rounded-2xl border border-neutral-200 transition duration-300 hover:-translate-y-1 hover:border-secondary-500/60 hover:shadow-xl hover:shadow-secondary-500/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-white/10 dark:hover:border-secondary-400/60">
+          <img src="images/rangoli-03.svg" alt="Marigold festival rangoli with sixteen petals" class="aspect-square w-full object-cover" width="400" height="400" loading="eager">
+        </figure>
+        <figure class="overflow-hidden rounded-2xl border border-neutral-200 transition duration-300 hover:-translate-y-1 hover:border-secondary-500/60 hover:shadow-xl hover:shadow-secondary-500/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-white/10 dark:hover:border-secondary-400/60">
+          <img src="images/rangoli-10.svg" alt="Twenty petal leaf green kolam" class="aspect-square w-full object-cover" width="400" height="400" loading="eager">
+        </figure>
+        <figure class="overflow-hidden rounded-2xl border border-neutral-200 transition duration-300 hover:-translate-y-1 hover:border-secondary-500/60 hover:shadow-xl hover:shadow-secondary-500/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-white/10 dark:hover:border-secondary-400/60">
+          <img src="images/rangoli-12.svg" alt="Teal and rose fifteen petal festive design" class="aspect-square w-full object-cover" width="400" height="400" loading="lazy">
+        </figure>
+        <figure class="overflow-hidden rounded-2xl border border-neutral-200 transition duration-300 hover:-translate-y-1 hover:border-secondary-500/60 hover:shadow-xl hover:shadow-secondary-500/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-white/10 dark:hover:border-secondary-400/60">
+          <img src="images/rangoli-05.svg" alt="Fourteen petal traditional kolam" class="aspect-square w-full object-cover" width="400" height="400" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SEASONAL COLLECTIONS ================= -->
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 xl:px-8 xl:py-24">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400">Seasonal collections</p>
+      <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+        Choose the occasion, we&rsquo;ll draw the rest
+      </h2>
+    </div>
+
+    <div class="mt-12 space-y-6">
+      <article class="grid gap-6 rounded-2xl border border-neutral-200 p-6 text-center sm:p-8 md:grid-cols-12 md:items-center md:text-left dark:border-white/10">
+        <div class="md:col-span-3">
+          <img src="images\img8.jpeg" alt="Daily entrance kolam" class="mx-auto aspect-square w-40 rounded-2xl border border-neutral-200 md:mx-0 md:w-full dark:border-white/10" width="400" height="400" loading="lazy">
+        </div>
+        <div class="md:col-span-6">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-400">Collection 01</p>
+          <h3 class="mt-2 font-display text-2xl font-bold text-neutral-900 dark:text-white">Everyday Kolam</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Grid-based morning kolam with a rotating motif each week — peacock, lotus, lamp or your family
+            initials. Powder only, laid in ninety minutes, swept clean by us.
+          </p>
+        </div>
+        <div class="md:col-span-3 md:text-end">
+          <p class="font-display text-3xl font-bold text-primary dark:text-primary-400">₹1,200+</p>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400">per design</p>
+          <a href="services.html#home" class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-neutral-800 underline decoration-primary/40 underline-offset-4 hover:text-primary dark:text-neutral-200 dark:hover:text-primary-300">Home service details</a>
+        </div>
+      </article>
+
+      <article class="grid gap-6 rounded-2xl border border-neutral-200 p-6 text-center sm:p-8 md:grid-cols-12 md:items-center md:text-left dark:border-white/10">
+        <div class="md:col-span-3">
+          <img src="images\img6.jpeg" alt="Six petal festive kolam" class="mx-auto aspect-square w-40 rounded-2xl border border-neutral-200 md:mx-0 md:w-full dark:border-white/10" width="400" height="400" loading="lazy">
+        </div>
+        <div class="md:col-span-6">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-400">Collection 02</p>
+          <h3 class="mt-2 font-display text-2xl font-bold text-neutral-900 dark:text-white">Diwali &amp; Deepavali</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Diya pathways, toran and marigold set dressing alongside the floor art. Warm turmeric,
+            vermilion and lamp-gold palettes sized for apartment landings and villa gates.
+          </p>
+        </div>
+        <div class="md:col-span-3 md:text-end">
+          <p class="font-display text-3xl font-bold text-secondary dark:text-secondary-300">₹11,900+</p>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400">per home</p>
+          <a href="services.html#festive" class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-neutral-800 underline decoration-secondary/40 underline-offset-4 hover:text-secondary dark:text-neutral-200 dark:hover:text-secondary-300">Festive decor details</a>
+        </div>
+      </article>
+
+      <article class="grid gap-6 rounded-2xl border border-neutral-200 p-6 text-center sm:p-8 md:grid-cols-12 md:items-center md:text-left dark:border-white/10">
+        <div class="md:col-span-3">
+          <img src="images\img7.jpeg" alt="Wedding celebration mandala" class="mx-auto aspect-square w-40 rounded-2xl border border-neutral-200 md:mx-0 md:w-full dark:border-white/10" width="400" height="400" loading="lazy">
+        </div>
+        <div class="md:col-span-6">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-400">Collection 03</p>
+          <h3 class="mt-2 font-display text-2xl font-bold text-neutral-900 dark:text-white">Weddings &amp; Utsavs</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Large mandala and urva floors built around your family motif, finished with rose petals, brass
+            urvil and a six-person crew working while the guests still sleep.
+          </p>
+        </div>
+        <div class="md:col-span-3 md:text-end">
+          <p class="font-display text-3xl font-bold text-plum dark:text-plum">₹9,500+</p>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400">per event</p>
+          <a href="services.html#events" class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-neutral-800 underline decoration-plum/50 underline-offset-4 hover:text-plum dark:text-neutral-200 dark:hover:text-plum">Event decor details</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= THE TEAM ================= -->
+  <section class="border-y border-neutral-200 bg-[#0B2E2B] py-16 text-white dark:border-white/10 dark:bg-black sm:py-20 xl:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 xl:px-8">
+      <div class="mx-auto max-w-2xl text-center xl:mx-0 xl:text-left">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-400">The hands behind it</p>
+        <h2 class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+          One lead artist, seven trained hands, zero subcontractors
+        </h2>
+        <p class="mt-4 text-sm leading-relaxed text-white/70 sm:text-base">
+          Every floor in the gallery was drawn by this team. We keep the crew small on purpose — it is the
+          only way a grid stays true from the first dot to the last.
+        </p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <div class="rounded-2xl border border-white/15 p-6 text-center xl:text-left">
+          <p class="font-display text-3xl font-bold text-primary-400">8</p>
+          <p class="mt-2 text-sm text-white/70">Full-time artisans, trained in-house</p>
+        </div>
+        <div class="rounded-2xl border border-white/15 p-6 text-center xl:text-left">
+          <p class="font-display text-3xl font-bold text-primary-400">5 hrs</p>
+          <p class="mt-2 text-sm text-white/70">Typical wedding urva, start to sweep</p>
+        </div>
+        <div class="rounded-2xl border border-white/15 p-6 text-center xl:text-left">
+          <p class="font-display text-3xl font-bold text-primary-400">90+</p>
+          <p class="mt-2 text-sm text-white/70">Grids archived for redrawing later</p>
+        </div>
+        <div class="rounded-2xl border border-white/15 p-6 text-center xl:text-left">
+          <p class="font-display text-3xl font-bold text-primary-400">100%</p>
+          <p class="mt-2 text-sm text-white/70">Natural powders, petals and rice</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORKSHOPS ================= -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-primary-50/70 via-white to-plum/[0.05] dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950">
+    <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-500/30 to-transparent" aria-hidden="true"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 xl:px-8 xl:py-24">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="inline-flex items-center gap-2 rounded-full border border-plum/20 bg-plum/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-plum">
+          <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+          Live sessions
+        </p>
+        <h2 class="mt-5 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+          Learn the grid yourself
+        </h2>
+        <p class="mt-4 text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+          Three-hour weekend workshops in the studio &mdash; 12 seats, all materials included, and you leave with
+          two finished kolams and a printed grid to practise at home.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 sm:grid-rows-2 sm:gap-6 lg:grid-cols-3">
+        <article class="group relative flex flex-col overflow-hidden rounded-3xl border border-neutral-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-primary-500/50 hover:shadow-xl hover:shadow-neutral-900/5 motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-white/10 dark:bg-neutral-900/40 dark:hover:border-primary-400/50 dark:hover:shadow-black/20">
+          <span class="pointer-events-none absolute end-5 top-4 font-display text-5xl font-bold leading-none text-neutral-200 select-none dark:text-white/[0.10]" aria-hidden="true">01</span>
+          <span class="absolute inset-x-0 top-0 h-1 bg-primary-500" aria-hidden="true"></span>
+          <p class="relative text-xs font-semibold uppercase tracking-[0.18em] text-primary-600 dark:text-primary-400">Sun &middot; 9:00 AM</p>
+          <h3 class="relative mt-3 font-display text-xl font-bold text-neutral-900 dark:text-white">The Basic 8-Petal Kolam</h3>
+          <p class="relative mt-2 flex-1 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">Free symmetry, dot spacing and the rice-flour ratio that keeps powder crisp.</p>
+          <p class="relative mt-6 flex items-baseline gap-2">
+            <span class="font-display text-3xl font-bold text-neutral-900 dark:text-white">&#8377;1,499</span>
+            <span class="text-xs text-neutral-500 dark:text-neutral-400">per seat</span>
+          </p>
+          <a href="contact.html" class="relative mt-5 inline-flex items-center justify-center rounded-full border border-neutral-300 px-5 py-2.5 text-sm font-semibold text-neutral-800 transition-colors duration-200 hover:border-primary-500 hover:bg-primary-500 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:border-white/15 dark:text-neutral-100 dark:hover:border-primary-400 dark:hover:bg-primary-500 dark:focus-visible:ring-primary-400 dark:focus-visible:ring-offset-neutral-950">Book a seat</a>
+        </article>
+
+        <article class="group relative flex flex-col overflow-hidden rounded-3xl p-7 text-white shadow-2xl shadow-neutral-900/25 ring-1 ring-inset ring-white/10 transition duration-300 hover:-translate-y-1 hover:shadow-neutral-900/35 motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:col-span-1 sm:row-span-2 lg:col-span-2 lg:p-8 dark:shadow-black/40">
+          <img src="images\img3.webp" alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async">
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-neutral-950/25 to-neutral-950/70" aria-hidden="true"></div>
+          <span class="pointer-events-none absolute end-7 top-5 font-display text-6xl font-bold leading-none text-white/[0.12] select-none" aria-hidden="true">02</span>
+
+          <div class="relative flex flex-wrap items-center gap-3">
+            <span class="inline-flex items-center gap-2 rounded-full bg-primary-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary-200 ring-1 ring-inset ring-primary-400/30">
+              Flagship session
+            </span>
+            <span class="text-xs font-semibold uppercase tracking-[0.18em] text-white">Sat &middot; 2:30 PM &middot; 3 hrs</span>
+          </div>
+          <h3 class="relative mt-6 max-w-md font-display text-2xl font-bold leading-tight text-white sm:text-3xl lg:text-4xl">Wedding Urva Masterclass</h3>
+          <p class="relative mt-4 max-w-lg flex-1 text-sm leading-relaxed text-white lg:text-base">Scaling a mandala to a 12-foot hall and managing a six-person crew on a deadline. Includes a printed master grid and a recorded walkthrough of the full layout.</p>
+          <p class="relative mt-8 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+            <span class="font-display text-3xl font-bold text-white sm:text-4xl">&#8377;3,499</span>
+            <span class="text-sm text-white">per seat &middot; 4 seats left</span>
+          </p>
+          <div class="relative mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-primary-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950">Reserve a seat</a>
+            <a href="gallery.html" class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:border-white/40 hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950">See finished work</a>
+          </div>
+        </article>
+
+        <article class="group relative flex flex-col overflow-hidden rounded-3xl border border-neutral-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-secondary-500/50 hover:shadow-xl hover:shadow-neutral-900/5 motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-white/10 dark:bg-neutral-900/40 dark:hover:border-secondary-400/50 dark:hover:shadow-black/20">
+          <span class="pointer-events-none absolute end-5 top-4 font-display text-5xl font-bold leading-none text-neutral-200 select-none dark:text-white/[0.10]" aria-hidden="true">03</span>
+          <span class="absolute inset-x-0 top-0 h-1 bg-secondary-500" aria-hidden="true"></span>
+          <p class="relative text-xs font-semibold uppercase tracking-[0.18em] text-secondary-700 dark:text-secondary-300">Sat &middot; 10:00 AM</p>
+          <h3 class="relative mt-3 font-display text-xl font-bold text-neutral-900 dark:text-white">Pookalam with Petals</h3>
+          <p class="relative mt-2 flex-1 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">A 5-foot flower pookalam from loose petals, with a wet-look trick for longevity.</p>
+          <p class="relative mt-6 flex items-baseline gap-2">
+            <span class="font-display text-3xl font-bold text-neutral-900 dark:text-white">&#8377;1,899</span>
+            <span class="text-xs text-neutral-500 dark:text-neutral-400">per seat</span>
+          </p>
+          <a href="contact.html" class="relative mt-5 inline-flex items-center justify-center rounded-full border border-neutral-300 px-5 py-2.5 text-sm font-semibold text-neutral-800 transition-colors duration-200 hover:border-secondary-500 hover:bg-secondary-500 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-500 focus-visible:ring-offset-2 dark:border-white/15 dark:text-neutral-100 dark:hover:border-secondary-400 dark:hover:bg-secondary-500 dark:focus-visible:ring-secondary-400 dark:focus-visible:ring-offset-neutral-950">Book a seat</a>
+        </article>
+      </div>
+    </div>
+  </section>
+<br>
+  <!-- ================= CTA ================= -->
+  <section class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 sm:pb-24 xl:px-8">
+    <div class="rounded-3xl border border-neutral-200 px-6 py-14 text-center dark:border-white/10 sm:px-12">
+      <h2 class="mx-auto max-w-2xl font-display text-3xl font-bold leading-tight text-neutral-900 dark:text-white sm:text-4xl">
+        Prefer layout one? It has the full service breakdown.
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-neutral-600 sm:text-base dark:text-neutral-300">
+        Home 1 walks through services, packages, testimonials and FAQs in one scroll. Home 2 is this
+        collection-first view. Both share the same booking form and the same studio calendar.
+      </p>
+      <div class="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+        <a href="packages.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950">
+          Visit package
+        </a>
+        <a href="packages.html" class="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-300 px-7 py-3.5 text-sm font-semibold text-neutral-800 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:text-neutral-100">
+          See festive packages
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER (injected) ============ -->
+<div data-footer></div>
+
+</body>
+</html>

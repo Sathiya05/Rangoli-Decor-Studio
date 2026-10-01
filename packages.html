@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Festive Packages &amp; Pricing | Rangoli Rang</title>
+<meta name="description" content="Festive packages for home, wedding and corporate kolam art. Clear inclusions, a side-by-side comparison table and transparent add-on pricing.">
+<meta name="theme-color" content="#B4532A">
+<!-- favicons: SVG for modern browsers, ICO/PNG fallbacks, iOS home screen, PWA manifest -->
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('rr-theme');
+      if (!t) { t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+      if (t === 'dark') { document.documentElement.classList.add('dark'); document.documentElement.style.colorScheme = 'dark'; }
+      if (localStorage.getItem('rr-dir') === 'rtl') { document.documentElement.setAttribute('dir', 'rtl'); }
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Source+Serif+4:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          primary:   { 50:'#FBF3EF', 100:'#F6E5DB', 200:'#EDCBB8', 300:'#DFA98C', 400:'#CE8462', 500:'#B4532A', 600:'#9A4523', 700:'#7C371C', 800:'#5F2A15', 900:'#451D0F' },
+          secondary: { 50:'#EFFAF8', 100:'#D7F2EE', 200:'#AEE5DE', 300:'#7ED4CB', 400:'#3FA79C', 500:'#0F766E', 600:'#0C5B55', 700:'#094A45', 800:'#073A36', 900:'#052B28' },
+          gold: '#E8A33D',
+          plum: '#7C2D5B'
+        },
+        fontFamily: {
+          display: ['"Source Serif 4"', 'Georgia', 'Cambria', 'Times New Roman', 'serif'],
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+<script src="js/navbar.js" defer></script>
+<script src="js/footer.js" defer></script>
+
+<style>
+  /* ==========================================================================
+     TABLES THAT NEVER SCROLL SIDEWAYS
+     < 768px : every row becomes a card, each cell is labelled with its column
+              name. The real <thead> is kept for screen readers (visually hidden).
+     768-1023: the 5-column comparison table compacts its type and padding so all
+              four plans stay side by side.
+     >= 1024  : the original roomy table.
+     The column names below mirror the <thead> text - keep them in sync if a
+     plan is renamed. Specificity beats the Tailwind utility classes on every
+     cell, so the markup needs no extra classes.
+     ========================================================================== */
+  @media (max-width: 767px) {
+    /* keep the real column headers in the accessibility tree */
+    .rt thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .rt, .rt tbody, .rt tr, .rt th, .rt td {
+      display: block;
+      width: auto;
+    }
+
+    .rt tbody tr {
+      border: 1px solid #e5e5e5;
+      border-radius: 1rem;
+      margin-bottom: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: rgb(250 250 250 / 0.7);
+    }
+    .rt tbody tr:last-child { margin-bottom: 0; }
+
+    .rt tbody th[scope='row'] {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 0 0 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .rt tbody td {
+      display: grid;
+      grid-template-columns: minmax(0, 7.25rem) minmax(0, 1fr);
+      gap: 0.75rem;
+      align-items: baseline;
+      padding: 0.3125rem 0;
+      font-size: 0.8125rem;
+    }
+
+    .rt tbody td::before {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #737373;
+    }
+
+    /* comparison table - one label per plan column */
+    .rt-plan tbody td:nth-child(2)::before { content: 'Home Starter\A' '\A' '₹2,400 / month'; }
+    .rt-plan tbody td:nth-child(3)::before { content: 'Festive Signature\A' '\A' '₹11,900 / festival'; }
+    .rt-plan tbody td:nth-child(4)::before { content: 'Wedding Grand\A' '\A' '₹24,500 / event'; }
+    .rt-plan tbody td:nth-child(5)::before { content: 'Corporate Annual\A' '\A' '₹68,000 / year'; }
+
+    /* add-ons table */
+    .rt-addon tbody td:nth-child(2)::before { content: 'Notes'; }
+    .rt-addon tbody td:nth-child(3)::before { content: 'Price'; }
+
+    .dark .rt tbody tr {
+      border-color: rgb(255 255 255 / 0.12);
+      background: rgb(255 255 255 / 0.04);
+    }
+    .dark .rt tbody th[scope='row'] { border-bottom-color: rgb(255 255 255 / 0.12); }
+    .dark .rt tbody td::before { color: #a3a3a3; }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .rt-plan tbody { font-size: 0.75rem; }
+    .rt-plan th, .rt-plan td {
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem;
+      padding-inline-end: 0.5rem;
+    }
+    .rt-plan thead th { width: auto; }
+    .rt-plan thead th:first-child { width: 20%; }
+    .rt-plan thead th > span:first-child { font-size: 0.8125rem; }
+    .rt-plan tbody th[scope='row'] { font-size: 0.625rem; letter-spacing: 0.08em; }
+  }
+</style>
+</head>
+
+<body class="bg-white font-sans text-neutral-800 antialiased selection:bg-primary-200 selection:text-neutral-900 dark:bg-neutral-950 dark:text-neutral-200 dark:selection:bg-primary-500/30">
+
+<!-- ============ NAVBAR (injected) ============ -->
+<div data-navbar></div>
+
+<main id="main-content">
+
+
+  <section class="relative isolate overflow-hidden border-b border-neutral-200 bg-gradient-to-b from-primary-50 via-white to-secondary-50/70 dark:border-white/10 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950">
+
+    <div class="pointer-events-none absolute inset-0 text-primary-900/[0.14] dark:text-white/[0.06]" style="background-image:radial-gradient(currentColor 1px, transparent 1px);background-size:26px 26px;-webkit-mask-image:radial-gradient(ellipse 75% 65% at 50% 45%,#000 35%,transparent 100%);mask-image:radial-gradient(ellipse 75% 65% at 50% 45%,#000 35%,transparent 100%)" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -start-40 -top-48 h-[36rem] w-[36rem] rounded-full border border-primary-500/10 dark:border-white/[0.06]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -start-16 -top-24 h-[22rem] w-[22rem] rounded-full border border-gold/25 dark:border-white/[0.05]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -end-40 -bottom-40 h-[30rem] w-[30rem] rounded-full border border-secondary-500/10 dark:border-white/[0.06]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -start-32 bottom-0 h-80 w-80 rounded-full bg-primary-200/50 blur-3xl dark:bg-primary-500/10" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -end-24 top-1/4 h-72 w-72 rounded-full bg-gold/25 blur-3xl dark:bg-secondary-500/10" aria-hidden="true"></div>
+    <img src="images/rangoli-hero.svg" alt="" aria-hidden="true" class="pointer-events-none absolute -end-32 top-1/2 w-[34rem] max-w-[80%] -translate-y-1/2 opacity-[0.07] dark:opacity-[0.05] xl:-end-24 xl:w-[44rem]" loading="eager">
+
+    <div class="relative mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-20 xl:px-8 xl:py-24">
+      <p class="inline-flex items-center gap-2 rounded-full border border-primary-200 bg-white/70 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary-700 backdrop-blur-sm dark:border-white/10 dark:bg-white/5 dark:text-primary-300">
+        <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-primary-500" aria-hidden="true"></span>
+        Festive packages
+      </p>
+
+      <h1 class="mx-auto mt-6 max-w-3xl font-display text-4xl font-bold leading-[1.08] tracking-tight text-neutral-900 sm:text-5xl xl:text-6xl dark:text-white">
+        Priced in writing,
+        <span class="text-primary-600 dark:text-primary-400">inclusions published</span>
+      </h1>
+
+      <span class="mx-auto mt-6 block h-px w-24 bg-gradient-to-r from-transparent via-gold to-transparent" aria-hidden="true"></span>
+
+      <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-600 sm:text-lg dark:text-neutral-300">
+        Four packages covering homes, festivals, weddings and corporate sites. What follows is the complete
+        list &mdash; the same document we send as a quote, so there is nothing held back until checkout.
+      </p>
+
+      <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:items-center">
+        <a href="#starter" class="inline-flex items-center gap-2 rounded-full bg-primary-500 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-all duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:scale-[0.98] motion-reduce:transition-none dark:focus-visible:ring-offset-neutral-950">
+          Read the packages
+          <svg viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4 rtl:rotate-180" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.06-1.06l5.5 5.5a.75.75 0 0 1 0 1.06l-5.5 5.5a.75.75 0 1 1-1.06-1.06l4.138-3.86H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/></svg>
+        </a>
+        <a href="contact.html" class="inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white/70 px-7 py-3.5 text-sm font-semibold text-neutral-800 backdrop-blur transition-all duration-200 hover:border-primary-500 hover:text-primary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:scale-[0.98] motion-reduce:transition-none dark:border-white/15 dark:bg-white/5 dark:text-neutral-100 dark:hover:border-white/40 dark:hover:bg-white/10 dark:focus-visible:ring-offset-neutral-950">
+          Request a custom quote
+        </a>
+      </div>
+
+      <dl class="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-200/70 text-start shadow-sm backdrop-blur-sm sm:grid-cols-4 dark:border-white/10 dark:bg-white/10">
+        <div class="bg-white/80 px-5 py-4 dark:bg-white/[0.04]">
+          <dt class="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">Packages</dt>
+          <dd class="mt-1 font-display text-2xl font-bold text-neutral-900 dark:text-white">4</dd>
+        </div>
+        <div class="bg-white/80 px-5 py-4 dark:bg-white/[0.04]">
+          <dt class="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">Entry price</dt>
+          <dd class="mt-1 font-display text-2xl font-bold text-neutral-900 dark:text-white">₹2,400<span class="text-sm font-medium text-neutral-500 dark:text-neutral-400">/mo</span></dd>
+        </div>
+        <div class="bg-white/80 px-5 py-4 dark:bg-white/[0.04]">
+          <dt class="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">Extra floor</dt>
+          <dd class="mt-1 font-display text-2xl font-bold text-neutral-900 dark:text-white">₹340<span class="text-sm font-medium text-neutral-500 dark:text-neutral-400">/sq ft</span></dd>
+        </div>
+        <div class="bg-white/80 px-5 py-4 dark:bg-white/[0.04]">
+          <dt class="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">Billing</dt>
+          <dd class="mt-1 font-display text-2xl font-bold text-neutral-900 dark:text-white">GST<span class="text-sm font-medium text-neutral-500 dark:text-neutral-400"> invoice</span></dd>
+        </div>
+      </dl>
+
+      <nav aria-label="Breadcrumb" class="mt-8 text-sm text-neutral-500 dark:text-neutral-400">
+        <ol class="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-neutral-200 bg-white/70 px-4 py-2 backdrop-blur-sm dark:border-white/10 dark:bg-white/5">
+          <li><a href="index.html" class="rounded-full px-1.5 py-0.5 font-medium transition-colors duration-200 hover:text-primary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 dark:hover:text-primary-300">Home</a></li>
+          <li aria-hidden="true" class="text-neutral-300 dark:text-neutral-600">/</li>
+          <li class="rounded-full px-1.5 py-0.5 font-semibold text-neutral-900 dark:text-white" aria-current="page">Festive Packages</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+
+
+  <!-- ================= PACKAGE CARDS ================= -->
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 xl:px-8 xl:py-24">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+        The four packages
+      </h2>
+      <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+        All prices are exclusive of GST unless stated, and all include the design sketch, the materials and
+        the clean-up. Floor sizes beyond the listed limit are quoted by the square foot.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-2">
+
+      <!-- Home Starter -->
+      <article id="starter" class="scroll-mt-40 flex flex-col rounded-2xl border border-neutral-200 p-7 text-center xl:text-left dark:border-white/10">
+        <header class="border-b border-neutral-200 pb-5 dark:border-white/10">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">For apartments &amp; homes</p>
+          <h3 class="mt-2 font-display text-2xl font-bold text-neutral-900 dark:text-white">Home Starter</h3>
+          <p class="mt-4 font-display text-4xl font-bold text-neutral-900 dark:text-white">
+            ₹2,400<span class="text-base font-medium text-neutral-500"> / month</span>
+          </p>
+          <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-400">Two doorstep designs a month · min. 3-month term</p>
+        </header>
+        <ul class="mt-6 flex-1 space-y-2.5 text-start text-sm text-neutral-600 dark:text-neutral-300">
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> 2 designs per month, up to 6 ft wide</li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Morning arrival between 6:30 and 8:00 AM</li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Natural powder set, two rotating motifs</li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> One pooja-room design on request</li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Sketches, materials, sweeping and clean-up</li>
+        </ul>
+        <a href="contact.html" class="mt-7 inline-flex items-center justify-center rounded-full border border-neutral-300 px-5 py-2.5 text-sm font-semibold text-neutral-800 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:text-neutral-100">Enquire about Starter</a>
+      </article>
+
+      <!-- Festive Signature -->
+      <article id="signature" class="scroll-mt-40 flex flex-col rounded-2xl border-2 border-neutral-900 p-7 text-center xl:text-left dark:border-neutral-100">
+        <header class="border-b border-neutral-200 pb-5 dark:border-white/10">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">
+            Most booked &middot; For full-home festive decor
+          </p>
+          <h3 class="mt-2 font-display text-2xl font-bold text-neutral-900 dark:text-white">Festive Signature</h3>
+          <p class="mt-4 font-display text-4xl font-bold text-neutral-900 dark:text-white">
+            ₹11,900<span class="text-base font-medium text-neutral-500"> / festival</span>
+          </p>
+          <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-400">One-off Diwali, Deepavali, Ugadi or Pongal takeover</p>
+        </header>
+        <ul class="mt-6 flex-1 space-y-2.5 text-start text-sm text-neutral-600 dark:text-neutral-300">
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Entrance, pooja room and balcony floors</li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Diya pathway, toran and marigold set dressing</li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> 3 morning refreshes across the festive week</li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Loose-petal border and 12 diyas included</li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Archived grid plan for future redraws</li>
+        </ul>
+        <a href="contact.html" class="mt-7 inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950">Enquire about Signature</a>
+      </article>
+
+      <!-- Wedding Grand -->
+      <article id="wedding" class="scroll-mt-40 flex flex-col rounded-2xl border border-neutral-200 p-7 text-center xl:text-left dark:border-white/10">
+        <header class="border-b border-neutral-200 pb-5 dark:border-white/10">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">For weddings &amp; large events</p>
+          <h3 class="mt-2 font-display text-2xl font-bold text-neutral-900 dark:text-white">Wedding Grand</h3>
+          <p class="mt-4 font-display text-4xl font-bold text-neutral-900 dark:text-white">
+            ₹24,500<span class="text-base font-medium text-neutral-500"> / event</span>
+          </p>
+          <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-400">Up to 20 ft floor &middot; crew of 6 &middot; 5 hours on site</p>
+        </header>
+        <ul class="mt-6 flex-1 space-y-2.5 text-start text-sm text-neutral-600 dark:text-neutral-300">
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Mandala or urva floor scaled to your venue</li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Family motif worked into the centrepiece</li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Rose petals, brass urvil and diya finishing</li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Two mock-ups on paper before the event</li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Start time of your choosing, day or night</li>
+        </ul>
+        <a href="contact.html" class="mt-7 inline-flex items-center justify-center rounded-full border border-neutral-300 px-5 py-2.5 text-sm font-semibold text-neutral-800 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:text-neutral-100">Enquire about Wedding</a>
+      </article>
+
+      <!-- Corporate Annual -->
+      <article id="corporate" class="scroll-mt-40 flex flex-col rounded-2xl border border-neutral-200 p-7 text-center xl:text-left dark:border-white/10">
+        <header class="border-b border-neutral-200 pb-5 dark:border-white/10">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">For offices, parks &amp; showrooms</p>
+          <h3 class="mt-2 font-display text-2xl font-bold text-neutral-900 dark:text-white">Corporate Annual</h3>
+          <p class="mt-4 font-display text-4xl font-bold text-neutral-900 dark:text-white">
+            ₹68,000<span class="text-base font-medium text-neutral-500"> / year</span>
+          </p>
+          <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-400">Four scheduled installations &middot; GST invoice included</p>
+        </header>
+        <ul class="mt-6 flex-1 space-y-2.5 text-start text-sm text-neutral-600 dark:text-neutral-300">
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Branded reception medallion, up to 12 ft</li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Fixed grid and palette across all four visits</li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Festival calendar set at contract signing</li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Site photography and install report each time</li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 text-neutral-400">&mdash;</span> Add-ons on the same visit at no extra travel</li>
+        </ul>
+        <a href="contact.html" class="mt-7 inline-flex items-center justify-center rounded-full border border-neutral-300 px-5 py-2.5 text-sm font-semibold text-neutral-800 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:text-neutral-100">Enquire about Corporate</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ================= COMPARISON TABLE ================= -->
+  <section id="compare" class="scroll-mt-40 border-y border-neutral-200 py-16 dark:border-white/10 sm:py-20 xl:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 xl:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400">Side by side</p>
+        <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+          Full comparison
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+          One table, every plan, every line item. It fits your screen, so there is nothing to scroll sideways.
+        </p>
+      </div>
+
+      <div class="mt-10 overflow-x-auto">
+        <table class="rt rt-plan w-full border-collapse text-start">
+          <caption class="sr-only">Comparison of Rangoli Rang festive packages: Home Starter, Festive Signature, Wedding Grand and Corporate Annual</caption>
+          <thead>
+            <tr class="border-b-2 border-neutral-900 dark:border-white">
+              <th scope="col" class="w-[26%] py-4 pe-4 text-start align-top">
+                <span class="block text-xs font-semibold uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">Feature</span>
+              </th>
+              <th scope="col" class="py-4 pe-4 text-start align-top">
+                <span class="block font-display text-base font-bold leading-snug text-neutral-900 dark:text-white">Home Starter</span>
+                <span class="mt-1 block text-xs font-normal text-neutral-500 dark:text-neutral-400">₹2,400 / month</span>
+              </th>
+              <th scope="col" class="py-4 pe-4 text-start align-top">
+                <span class="block font-display text-base font-bold leading-snug text-neutral-900 dark:text-white">Festive Signature</span>
+                <span class="mt-1 block text-xs font-normal text-neutral-500 dark:text-neutral-400">₹11,900 / festival</span>
+              </th>
+              <th scope="col" class="py-4 pe-4 text-start align-top">
+                <span class="block font-display text-base font-bold leading-snug text-neutral-900 dark:text-white">Wedding Grand</span>
+                <span class="mt-1 block text-xs font-normal text-neutral-500 dark:text-neutral-400">₹24,500 / event</span>
+              </th>
+              <th scope="col" class="py-4 text-start align-top">
+                <span class="block font-display text-base font-bold leading-snug text-neutral-900 dark:text-white">Corporate Annual</span>
+                <span class="mt-1 block text-xs font-normal text-neutral-500 dark:text-neutral-400">₹68,000 / year</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-neutral-200 text-sm dark:divide-white/10">
+            <tr>
+              <th scope="row" class="py-4 pe-4 text-start align-top text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500 dark:text-neutral-400">Designed for</th>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">Apartments, single homes</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">Full-home festive takeover</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">Weddings, large events</td>
+              <td class="py-4 text-neutral-700 dark:text-neutral-300">Offices, parks, showrooms</td>
+            </tr>
+            <tr>
+              <th scope="row" class="py-4 pe-4 text-start align-top text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500 dark:text-neutral-400">Floor area included</th>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">Up to 6 ft &times; 4 ft</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">Up to 12 ft &times; 8 ft</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">Up to 20 ft &times; 20 ft</td>
+              <td class="py-4 text-neutral-700 dark:text-neutral-300">Up to 12 ft &times; 12 ft</td>
+            </tr>
+            <tr>
+              <th scope="row" class="py-4 pe-4 text-start align-top text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500 dark:text-neutral-400">Visits included</th>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">2 per month</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">1 install + 3 refreshes</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">1 install + 2 mock-ups</td>
+              <td class="py-4 text-neutral-700 dark:text-neutral-300">4 per year</td>
+            </tr>
+            <tr>
+              <th scope="row" class="py-4 pe-4 text-start align-top text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500 dark:text-neutral-400">Crew on site</th>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">1&ndash;2 artisans</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">3 artisans</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">6 artisans</td>
+              <td class="py-4 text-neutral-700 dark:text-neutral-300">2&ndash;3 artisans</td>
+            </tr>
+            <tr>
+              <th scope="row" class="py-4 pe-4 text-start align-top text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500 dark:text-neutral-400">Festive set dressing</th>
+              <td class="py-4 pe-4 text-neutral-400 dark:text-neutral-500">Not included</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">Diyas, toran, pooja room</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">Petals, brass urvil, diyas</td>
+              <td class="py-4 text-neutral-700 dark:text-neutral-300">Lobby &amp; atrium on request</td>
+            </tr>
+            <tr>
+              <th scope="row" class="py-4 pe-4 text-start align-top text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500 dark:text-neutral-400">Design revisions</th>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">Unlimited before install</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">Unlimited before install</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">2 paper mock-ups</td>
+              <td class="py-4 text-neutral-700 dark:text-neutral-300">1 revision per quarter</td>
+            </tr>
+            <tr>
+              <th scope="row" class="py-4 pe-4 text-start align-top text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500 dark:text-neutral-400">Photographs supplied</th>
+              <td class="py-4 pe-4 text-neutral-400 dark:text-neutral-500">On request</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">12 edited images</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">25 edited images</td>
+              <td class="py-4 text-neutral-700 dark:text-neutral-300">Install report, 8 images</td>
+            </tr>
+            <tr>
+              <th scope="row" class="py-4 pe-4 text-start align-top text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500 dark:text-neutral-400">GST invoice</th>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">Yes</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">Yes</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">Yes</td>
+              <td class="py-4 text-neutral-700 dark:text-neutral-300">Yes, with vendor docs</td>
+            </tr>
+            <tr>
+              <th scope="row" class="py-4 pe-4 text-start align-top text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500 dark:text-neutral-400">Minimum term</th>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">3 months</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">None</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">None</td>
+              <td class="py-4 text-neutral-700 dark:text-neutral-300">12 months</td>
+            </tr>
+            <tr>
+              <th scope="row" class="py-4 pe-4 text-start align-top text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500 dark:text-neutral-400">Out-of-station travel</th>
+              <td class="py-4 pe-4 text-neutral-400 dark:text-neutral-500">Not applicable</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">Quoted in advance</td>
+              <td class="py-4 pe-4 text-neutral-700 dark:text-neutral-300">Quoted in advance</td>
+              <td class="py-4 text-neutral-700 dark:text-neutral-300">Included within 15 km</td>
+            </tr>
+            <tr class="border-t-2 border-neutral-900 dark:border-t-white dark:border-white/20">
+              <th scope="row" class="py-4 pe-4 text-start align-top text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500 dark:text-neutral-400">Total</th>
+              <td class="py-4 pe-4 font-display text-base font-bold text-neutral-900 dark:text-white">₹2,400<span class="text-xs font-medium text-neutral-500">/mo</span></td>
+              <td class="py-4 pe-4 font-display text-base font-bold text-neutral-900 dark:text-white">₹11,900<span class="text-xs font-medium text-neutral-500">/fest</span></td>
+              <td class="py-4 pe-4 font-display text-base font-bold text-neutral-900 dark:text-white">₹24,500<span class="text-xs font-medium text-neutral-500">/event</span></td>
+              <td class="py-4 font-display text-base font-bold text-neutral-900 dark:text-white">₹68,000<span class="text-xs font-medium text-neutral-500">/yr</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mt-4 text-xs text-neutral-500 dark:text-neutral-400">
+        All prices exclude GST. Areas beyond the included floor size are charged at ₹340 per additional square
+        foot for home work and ₹420 per square foot for event work.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= ADD-ONS TABLE ================= -->
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 xl:px-8 xl:py-24">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+        Add-ons
+      </h2>
+      <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+        Attach any line below to any package. The same prices apply across services.
+      </p>
+    </div>
+
+      <div class="mt-10 overflow-x-auto">
+        <table class="rt rt-addon w-full border-collapse text-start">
+          <caption class="sr-only">Add-on services and prices for Rangoli Rang festive decor</caption>
+        <thead>
+          <tr class="border-b-2 border-neutral-900 dark:border-white">
+            <th scope="col" class="py-4 pe-4 text-start align-bottom">
+              <span class="text-xs font-semibold uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">Add-on</span>
+            </th>
+            <th scope="col" class="w-[38%] py-4 pe-4 text-start align-bottom">
+              <span class="text-xs font-semibold uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">Notes</span>
+            </th>
+            <th scope="col" class="w-[18%] py-4 text-end align-bottom">
+              <span class="text-xs font-semibold uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">Price</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-neutral-200 text-sm dark:divide-white/10">
+          <tr>
+            <th scope="row" class="py-4 pe-4 text-start font-medium text-neutral-900 dark:text-white">Terracotta diyas, set of 12</th>
+            <td class="py-4 pe-4 text-neutral-600 dark:text-neutral-300">Unlit, with cotton wicks; oil sold separately</td>
+            <td class="py-4 text-end font-semibold text-neutral-900 dark:text-white">₹480</td>
+          </tr>
+          <tr>
+            <th scope="row" class="py-4 pe-4 text-start font-medium text-neutral-900 dark:text-white">Toran, per entrance</th>
+            <td class="py-4 pe-4 text-neutral-600 dark:text-neutral-300">Mango leaf and marigold, fitted on site</td>
+            <td class="py-4 text-end font-semibold text-neutral-900 dark:text-white">₹1,400</td>
+          </tr>
+          <tr>
+            <th scope="row" class="py-4 pe-4 text-start font-medium text-neutral-900 dark:text-white">Pooja room styling</th>
+            <td class="py-4 pe-4 text-neutral-600 dark:text-neutral-300">Sandalwood, kumkum border, banana-leaf decking</td>
+            <td class="py-4 text-end font-semibold text-neutral-900 dark:text-white">₹2,600</td>
+          </tr>
+          <tr>
+            <th scope="row" class="py-4 pe-4 text-start font-medium text-neutral-900 dark:text-white">Pookalam, 5 ft square</th>
+            <td class="py-4 pe-4 text-neutral-600 dark:text-neutral-300">Loose fresh petals, laid on a wet base</td>
+            <td class="py-4 text-end font-semibold text-neutral-900 dark:text-white">₹1,750</td>
+          </tr>
+          <tr>
+            <th scope="row" class="py-4 pe-4 text-start font-medium text-neutral-900 dark:text-white">Framed printed grid plan</th>
+            <td class="py-4 pe-4 text-neutral-600 dark:text-neutral-300">A3, laminated, for home redraws</td>
+            <td class="py-4 text-end font-semibold text-neutral-900 dark:text-white">₹600</td>
+          </tr>
+          <tr>
+            <th scope="row" class="py-4 pe-4 text-start font-medium text-neutral-900 dark:text-white">Photo session</th>
+            <td class="py-4 pe-4 text-neutral-600 dark:text-neutral-300">30 minutes, 20 edited images</td>
+            <td class="py-4 text-end font-semibold text-neutral-900 dark:text-white">₹2,200</td>
+          </tr>
+          <tr>
+            <th scope="row" class="py-4 pe-4 text-start font-medium text-neutral-900 dark:text-white">Weekend or holiday slot</th>
+            <td class="py-4 pe-4 text-neutral-600 dark:text-neutral-300">Applies to home and event bookings</td>
+            <td class="py-4 text-end font-semibold text-neutral-900 dark:text-white">+25%</td>
+          </tr>
+          <tr>
+            <th scope="row" class="py-4 pe-4 text-start font-medium text-neutral-900 dark:text-white">Out-of-station travel</th>
+            <td class="py-4 pe-4 text-neutral-600 dark:text-neutral-300">Beyond 15 km from the studio</td>
+            <td class="py-4 text-end font-semibold text-neutral-900 dark:text-white">₹9 / km</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= TERMS ================= -->
+  <section class="border-t border-neutral-200 py-16 dark:border-white/10 sm:py-20 xl:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 xl:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-secondary-700 dark:text-secondary-300">Terms</p>
+        <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+          The small print, in plain words
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+          Four things worth knowing before a date is booked &mdash; no clause buried in a contract.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6 text-center transition-colors duration-200 hover:border-secondary-300 hover:bg-secondary-50/50 xl:text-left dark:border-white/10 dark:bg-white/[0.02] dark:hover:border-white/25 dark:hover:bg-white/[0.05]">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-secondary-200 bg-secondary-50 font-display text-sm font-bold text-secondary-700 dark:border-white/10 dark:bg-white/5 dark:text-secondary-300" aria-hidden="true">01</span>
+          <h3 class="mt-4 text-sm font-bold text-neutral-900 dark:text-white">Payment</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            50% to confirm the date, balance on completion. Retainers are billed on the 1st of each month.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6 text-center transition-colors duration-200 hover:border-secondary-300 hover:bg-secondary-50/50 xl:text-left dark:border-white/10 dark:bg-white/[0.02] dark:hover:border-white/25 dark:hover:bg-white/[0.05]">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-secondary-200 bg-secondary-50 font-display text-sm font-bold text-secondary-700 dark:border-white/10 dark:bg-white/5 dark:text-secondary-300" aria-hidden="true">02</span>
+          <h3 class="mt-4 text-sm font-bold text-neutral-900 dark:text-white">Rescheduling</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Free up to 48 hours before. Inside 48 hours on an event booking, 30% of the value is retained.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6 text-center transition-colors duration-200 hover:border-secondary-300 hover:bg-secondary-50/50 xl:text-left dark:border-white/10 dark:bg-white/[0.02] dark:hover:border-white/25 dark:hover:bg-white/[0.05]">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-secondary-200 bg-secondary-50 font-display text-sm font-bold text-secondary-700 dark:border-white/10 dark:bg-white/5 dark:text-secondary-300" aria-hidden="true">03</span>
+          <h3 class="mt-4 text-sm font-bold text-neutral-900 dark:text-white">Cancellations</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Retainers can be paused for one month per year at no charge, with 14 days&rsquo; notice.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6 text-center transition-colors duration-200 hover:border-secondary-300 hover:bg-secondary-50/50 xl:text-left dark:border-white/10 dark:bg-white/[0.02] dark:hover:border-white/25 dark:hover:bg-white/[0.05]">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-secondary-200 bg-secondary-50 font-display text-sm font-bold text-secondary-700 dark:border-white/10 dark:bg-white/5 dark:text-secondary-300" aria-hidden="true">04</span>
+          <h3 class="mt-4 text-sm font-bold text-neutral-900 dark:text-white">Longevity</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Powder floors last 3&ndash;5 days indoors. Petal floors last through one day of footfall, refreshed free on day two.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="border-t border-neutral-200 py-16 dark:border-white/10 sm:py-20 xl:py-24">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 xl:px-8">
+      <div class="text-center xl:text-left">
+        <h2 class="font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+          Package questions
+        </h2>
+      </div>
+
+      <div class="mt-10 divide-y divide-neutral-200 border-y border-neutral-200 dark:divide-white/10 dark:border-white/10">
+        <details class="group py-5 text-center xl:text-left" open>
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-start text-base font-semibold text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:text-white">
+            Can I mix packages, e.g. Starter plus Signature?
+            <span class="shrink-0 text-primary transition-transform duration-200 group-open:rotate-45" aria-hidden="true">+</span>
+          </summary>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Yes. Most homes run Home Starter through the year and add Festive Signature in October. The
+            monthly retainer is adjusted by the days of the festive week that fall inside it.
+          </p>
+        </details>
+        <details class="group py-5 text-center xl:text-left">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-start text-base font-semibold text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:text-white">
+            Is a home visit needed before booking?
+            <span class="shrink-0 text-primary transition-transform duration-200 group-open:rotate-45" aria-hidden="true">+</span>
+          </summary>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            It helps, but it is not mandatory. Within 15 km of the studio the visit is free; further out we
+            deduct the visit cost from the booking if you proceed.
+          </p>
+        </details>
+        <details class="group py-5 text-center xl:text-left">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-start text-base font-semibold text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:text-white">
+            Do you supply the oil and cotton for the diyas?
+            <span class="shrink-0 text-primary transition-transform duration-200 group-open:rotate-45" aria-hidden="true">+</span>
+          </summary>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Diyas and wicks are included in the add-on price. Cooking oil and lighting the lamps are left to
+            you, or we can arrange a helper for an hour at ₹600.
+          </p>
+        </details>
+        <details class="group py-5 text-center xl:text-left">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-start text-base font-semibold text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:text-white">
+            Can corporate work be invoiced with GST?
+            <span class="shrink-0 text-primary transition-transform duration-200 group-open:rotate-45" aria-hidden="true">+</span>
+          </summary>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Yes. We issue a proper GST invoice with our GSTIN, plus vendor onboarding documents, W-9
+            equivalents and installation reports your finance team can file.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 sm:pb-24 xl:px-8">
+    <div class="rounded-3xl bg-[#0B2E2B] px-6 py-14 text-center dark:bg-neutral-900 sm:px-12">
+      <h2 class="mx-auto max-w-2xl font-display text-3xl font-bold leading-tight text-white sm:text-4xl">
+        Send us the space and we&rsquo;ll name the right plan
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/70 sm:text-base">
+        A photo and a rough measurement is all we need. You&rsquo;ll get a written quote within one working day.
+      </p>
+      <div class="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-[#0B2E2B] transition-colors duration-200 hover:bg-[#F2B755] focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B2E2B]">
+          Request a written quote
+        </a>
+        <a href="services.html" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:border-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B2E2B]">
+          Compare the services
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER (injected) ============ -->
+<div data-footer></div>
+
+</body>
+</html>
