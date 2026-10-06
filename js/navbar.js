@@ -392,6 +392,17 @@
               '</button>' +
             '</div>' +
 
+            /* primary CTA — drawer copy of the desktop "Book an Enquiry" action,
+               full-width so phones/tablets get the same conversion entry point
+               inside the hamburger. data-nav-link closes the drawer on tap. */
+            '<a href="contact.html" data-nav-link' +
+              ' class="mt-3 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl' +
+              ' bg-primary-500 px-4 text-sm font-semibold text-white shadow-sm shadow-primary/25' +
+              ' transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2' +
+              ' focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white' +
+              ' motion-reduce:transition-none dark:focus-visible:ring-offset-neutral-950">' +
+              'Book an Enquiry' + ICON.arrow + '</a>' +
+
             '<div class="mt-4 flex items-center justify-between gap-3 rounded-xl bg-neutral-50 px-4 py-3' +
               ' text-xs text-neutral-600 dark:bg-white/5 dark:text-neutral-300">' +
              '<span class="hidden sm:inline">' + esc(BRAND.hours) + '</span>' +
