@@ -67,14 +67,11 @@
     <div class="pointer-events-none absolute -end-28 -top-32 h-[28rem] w-[28rem] rounded-full border border-secondary-500/10 dark:border-white/[0.05]" aria-hidden="true"></div>
     <div class="pointer-events-none absolute -end-24 top-1/3 h-72 w-72 rounded-full bg-secondary-100/60 blur-3xl dark:bg-secondary-500/10" aria-hidden="true"></div>
     <div class="pointer-events-none absolute -bottom-28 -start-24 h-80 w-80 rounded-full bg-primary-100/70 blur-3xl dark:bg-primary-500/10" aria-hidden="true"></div>
-    <img src="images/rangoli-hero.svg" alt="" aria-hidden="true" class="pointer-events-none absolute -start-28 top-1/2 w-[38rem] max-w-[78%] -translate-y-1/2 opacity-[0.07] dark:opacity-[0.05] xl:w-[48rem]" loading="eager">
+    <!-- background decor rings -->
+    <div class="pointer-events-none absolute -start-28 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full border border-primary-500/10 blur-2xl dark:border-white/5" aria-hidden="true"></div>
 
-    <!-- min-h was `sm:`, so every tablet (>=640px) stretched this hero to the
-         full viewport height while the content stayed top-aligned — the leftover
-         space all landed below the figures (96px on an iPad mini, 209px on an
-         iPad Pro 13"). Now the viewport-locked height is desktop-only, gated the
-         same way as the navbar: 1280px AND a fine pointer. -->
-    <div class="relative mx-auto flex max-w-7xl flex-col items-center px-4 py-10 text-center sm:px-6 sm:py-14 xl:justify-center xl:px-8 xl:py-8 [@media(min-width:1280px)_and_(pointer:fine)]:min-h-[calc(100svh-5rem-2px)]">
+    <!-- the viewport-locked height is desktop-only -->
+    <div class="relative mx-auto flex max-w-7xl flex-col items-center px-4 py-10 text-center sm:px-6 sm:py-14 xl:justify-center xl:px-8 xl:py-8 xl:min-h-[calc(100svh-5rem-2px)]">
       <p class="inline-flex items-center gap-2 rounded-full border border-primary-500/20 bg-white/70 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary-700 backdrop-blur-sm dark:border-white/10 dark:bg-white/5 dark:text-primary-300">
         <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-primary-500" aria-hidden="true"></span>
         About the studio
@@ -97,15 +94,11 @@
 
       <div class="mt-6 flex items-center justify-center gap-2 sm:mt-10 sm:gap-6 lg:gap-8">
         <figure class="h-20 w-20 shrink-0 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl motion-reduce:transition-none sm:h-32 sm:w-32 lg:h-40 lg:w-40 dark:border-white/10 dark:bg-white/5">
-          <img src="images/rangoli-11.svg" alt="Eleven petal plum wedding urva with a family motif" class="h-full w-full object-cover" width="400" height="400" loading="eager">
+          <img src="images/kolam11.jpeg" alt="Traditional brass uruli with rose petals and water" class="h-full w-full object-cover" width="400" height="400" loading="eager">
         </figure>
 
         <figure class="relative h-20 w-30 shrink-0 overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-xl ring-1 ring-primary-500/10 transition duration-300 hover:-translate-y-1 hover:shadow-2xl motion-reduce:transition-none sm:h-32 sm:w-48 lg:h-40 lg:w-60 dark:border-white/10 dark:bg-white/5 dark:ring-primary-400/20">
           <img src="images/img8.jpeg" alt="Daily entrance kolam drawn before sunrise" class="h-full w-full object-cover" width="400" height="400" loading="eager">
-          <!-- caption hidden below sm: at 390px the tile is only 80px tall and the
-               two lines need ~110px, so the text was clipped mid-sentence and the
-               gradient covered the whole photo. From 640px up the tile is 192x128
-               (240x160 at lg) and the caption fits comfortably. -->
           <figcaption class="absolute inset-x-0 bottom-0 hidden bg-gradient-to-t from-neutral-950/90 via-neutral-950/50 to-transparent px-2.5 pb-2.5 pt-8 text-left sm:block sm:px-3 sm:pb-3">
             <span class="block text-[0.625rem] font-semibold uppercase tracking-[0.16em] text-white sm:text-[0.6875rem]">Est. 2014</span>
             <span class="mt-0.5 block text-[0.6875rem] leading-snug text-white/80 sm:text-xs">Morning kolam, before sunrise</span>
@@ -113,7 +106,7 @@
         </figure>
 
         <figure class="h-20 w-20 shrink-0 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl motion-reduce:transition-none sm:h-32 sm:w-32 lg:h-40 lg:w-40 dark:border-white/10 dark:bg-white/5">
-          <img src="images/rangoli-01.svg" alt="Twelve petal terracotta and teal entrance kolam" class="h-full w-full object-cover" width="400" height="400" loading="eager">
+          <img src="images/kolam12.jpeg" alt="Pure white rice flour pulli kolam on threshold" class="h-full w-full object-cover" width="400" height="400" loading="eager">
         </figure>
       </div>
     </div>
@@ -126,11 +119,11 @@
       <div class="xl:col-span-5">
         <div class="relative mx-auto max-w-sm xl:mx-0 xl:max-w-none">
           <div class="overflow-hidden rounded-3xl border border-neutral-200 bg-neutral-50 dark:border-white/10 dark:bg-white/5">
-            <img src="images\img9.jpeg" alt="Nine petal gold and terracotta kolam drawn by the studio's founder"
+            <img src="images/img9.jpeg" alt="Nine petal gold and terracotta kolam drawn by the studio's founder"
                  class="aspect-[4/5] w-full object-cover" width="400" height="400" loading="eager">
           </div>
           <div class="absolute -bottom-6 end-0 w-40 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-xl sm:w-48 dark:border-white/10 dark:bg-neutral-950">
-            <img src="images\img10.jpeg" alt="Eight petal teal kolam study" class="aspect-square w-full object-cover" width="400" height="400" loading="lazy">
+            <img src="images/img10.jpeg" alt="Eight petal teal kolam study" class="aspect-square w-full object-cover" width="400" height="400" loading="lazy">
           </div>
         </div>
       </div>
@@ -159,7 +152,7 @@
           </p>
         </div>
         <div class="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-center xl:justify-start">
-          <a href="gallery.html" class="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950">
+          <a href="gallery.html" class="inline-flex items-center gap-2 rounded-full bg-primary-500 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950">
             See the work
           </a>
           <a href="contact.html" class="inline-flex items-center gap-2 rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-800 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:text-neutral-100">
@@ -320,8 +313,8 @@
           The reason our floors hold their shape for days is unglamorous: preparation, measurement and
           timing. We do all three before a single dot is placed.
         </p>
-        <img src="images/rangoli-04.svg" alt="Plum and rose festive rangoli prepared as a final study"
-             class="mx-auto mt-8 aspect-square w-48 rounded-2xl border border-neutral-200 dark:border-white/10 sm:w-56 xl:mx-0" width="400" height="400" loading="lazy">
+        <img src="images/kolam13.jpeg" alt="Artisan studio design layout and precision grid study"
+             class="mx-auto mt-8 aspect-square w-48 rounded-2xl border border-neutral-200 object-cover shadow-md dark:border-white/10 sm:w-56 xl:mx-0" width="400" height="400" loading="lazy">
       </div>
 
       <ol class="grid gap-4 sm:grid-cols-2 xl:col-span-7">

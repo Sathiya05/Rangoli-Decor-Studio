@@ -60,121 +60,359 @@
 
 <main id="main-content">
 
-  <!-- ================= HERO (layout 2: light spotlight, image-led) ================= -->
-  <section class="relative overflow-hidden border-b border-neutral-200 bg-white bg-gradient-to-b from-secondary-50 via-white to-primary-50 dark:border-white/10 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950 xl:flex xl:min-h-[90vh] xl:flex-col xl:justify-center">
+  <!-- ================= HERO (layout 2: festival spotlight, image-led) ================= -->
+  <section class="relative overflow-hidden border-b border-neutral-200 bg-gradient-to-b from-secondary-50 via-white to-primary-50 dark:border-white/10 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950 xl:flex xl:min-h-[85vh] xl:flex-col xl:justify-center">
     <div class="pointer-events-none absolute inset-0" aria-hidden="true">
       <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-secondary-300/40 blur-3xl dark:bg-secondary-500/25 xl:h-96 xl:w-96"></div>
       <div class="absolute -right-20 top-1/3 h-80 w-80 rounded-full bg-primary-300/40 blur-3xl dark:bg-primary-500/20 xl:h-96 xl:w-96"></div>
-      <img src="images/rangoli-hero.svg" alt="" class="absolute left-1/2 top-1/2 w-[34rem] max-w-[135%] -translate-x-1/2 -translate-y-1/2 opacity-[0.14] dark:opacity-[0.07] xl:w-[44rem]">
       <div class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-secondary-500/30 to-transparent dark:via-secondary-400/40"></div>
     </div>
 
-    <div class="relative mx-auto max-w-5xl px-4 py-16 text-center sm:px-6 sm:py-20 xl:px-8 xl:py-10">
-      <p class="inline-flex items-center gap-2 rounded-full border border-secondary-200 bg-secondary-50 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-secondary-700 dark:border-white/15 dark:bg-white/5 dark:text-secondary-300">
-        <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-secondary-500 dark:bg-secondary-400"></span>
-        Custom Rangoli Designs
+    <div class="relative mx-auto max-w-5xl px-4 py-14 text-center sm:px-6 sm:py-16 xl:px-8 xl:py-12">
+      <p class="inline-flex items-center gap-2 rounded-full border border-secondary-200 bg-secondary-50/90 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-secondary-700 shadow-sm backdrop-blur dark:border-white/15 dark:bg-white/5 dark:text-secondary-300">
+        <span class="h-2 w-2 shrink-0 rounded-full bg-secondary-500 animate-pulse dark:bg-secondary-400"></span>
+        Curated Festive Showcase · 2026 Season
       </p>
       <h1 class="mx-auto mt-6 max-w-3xl font-display text-4xl font-bold leading-[1.12] tracking-tight text-neutral-900 dark:text-white sm:text-5xl xl:text-6xl">
         Every festival gets a floor it deserves.
       </h1>
       <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300 sm:text-lg">
-        A seasonal showcase layout &mdash; collections arranged by occasion, live workshop dates you can book a
-        seat in, and a look at the eight hands that draw each design.
+        A seasonal showcase of authentic hand-drawn rangoli art — collections arranged by occasion, customizable family motifs, real floral pookalams, and live masterclass dates.
       </p>
       <div class="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-        <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/30 transition-all duration-200 hover:from-primary-600 hover:to-primary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:scale-[0.98] motion-reduce:transition-none dark:focus-visible:ring-primary-400 dark:focus-visible:ring-offset-neutral-950">
-          Reserve a festive slot
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-all duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white active:scale-[0.98] motion-reduce:transition-none dark:focus-visible:ring-offset-neutral-950">
+          Book an Artist
+          <svg viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4 rtl:rotate-180" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.06-1.06l5.5 5.5a.75.75 0 0 1 0 1.06l-5.5 5.5a.75.75 0 1 1-1.06-1.06l4.138-3.86H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/></svg>
         </a>
-        <a href="gallery.html" class="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-300 px-7 py-3.5 text-sm font-semibold text-neutral-800 transition-all duration-200 hover:border-secondary-500 hover:text-secondary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/20 dark:text-white dark:hover:border-secondary-400 dark:hover:text-secondary-200 dark:focus-visible:ring-secondary-400 dark:focus-visible:ring-offset-neutral-950">
-          Browse collections
+        <a href="gallery.html" class="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-300 bg-white/80 px-7 py-3.5 text-sm font-semibold text-neutral-800 shadow-sm backdrop-blur transition-all duration-200 hover:border-secondary-500 hover:text-secondary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:scale-[0.98] motion-reduce:transition-none dark:border-white/20 dark:bg-white/5 dark:text-white dark:hover:border-secondary-400 dark:hover:text-secondary-200 dark:focus-visible:ring-secondary-400 dark:focus-visible:ring-offset-neutral-950">
+          Explore Designs
+          <svg viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4" aria-hidden="true"><path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 0 0 2 4.25v11.5A2.25 2.25 0 0 0 4.25 18h11.5A2.25 2.25 0 0 0 18 15.75V4.25A2.25 2.25 0 0 0 15.75 2H4.25Zm4.03 6.28a.75.75 0 0 0-1.06-1.06L4.97 9.47a.75.75 0 0 0 0 1.06l2.25 2.25a.75.75 0 0 0 1.06-1.06L6.56 10l1.72-1.72Zm3.44-1.06a.75.75 0 1 1 1.06 1.06L14.5 10l-1.72 1.72a.75.75 0 1 1-1.06-1.06L13.44 10l-1.72-1.72Z" clip-rule="evenodd"/></svg>
         </a>
       </div>
     </div>
 
-    <div class="relative mx-auto w-full max-w-6xl px-4 pb-14 sm:px-6 xl:max-w-3xl xl:px-8 xl:pb-10">
+    <!-- Real Photographs of Completed Artwork -->
+    <div class="relative mx-auto w-full max-w-6xl px-4 pb-14 sm:px-6 xl:px-8 xl:pb-12">
       <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-        <figure class="overflow-hidden rounded-2xl border border-neutral-200 transition duration-300 hover:-translate-y-1 hover:border-secondary-500/60 hover:shadow-xl hover:shadow-secondary-500/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-white/10 dark:hover:border-secondary-400/60">
-          <img src="images/rangoli-03.svg" alt="Marigold festival rangoli with sixteen petals" class="aspect-square w-full object-cover" width="400" height="400" loading="eager">
+        <figure class="group overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-secondary-500/60 hover:shadow-xl dark:border-white/10 dark:bg-white/5">
+          <div class="relative aspect-square overflow-hidden">
+            <img src="images/kolam1.jpeg" alt="Diwali festival rangoli with marigold flowers and clay lamps" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="400" height="400" loading="eager">
+            <span class="absolute bottom-2 start-2 rounded-full bg-neutral-900/75 px-2.5 py-0.5 text-[0.6875rem] font-semibold text-white backdrop-blur-sm">Diwali Luminous</span>
+          </div>
+          <figcaption class="p-3 text-center text-xs font-semibold text-neutral-800 dark:text-neutral-200">
+            Diwali Floor · Jayanagar
+          </figcaption>
         </figure>
-        <figure class="overflow-hidden rounded-2xl border border-neutral-200 transition duration-300 hover:-translate-y-1 hover:border-secondary-500/60 hover:shadow-xl hover:shadow-secondary-500/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-white/10 dark:hover:border-secondary-400/60">
-          <img src="images/rangoli-10.svg" alt="Twenty petal leaf green kolam" class="aspect-square w-full object-cover" width="400" height="400" loading="eager">
+
+        <figure class="group overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-secondary-500/60 hover:shadow-xl dark:border-white/10 dark:bg-white/5">
+          <div class="relative aspect-square overflow-hidden">
+            <img src="images/kolam2.jpeg" alt="Eighteen petal royal palace wedding rangoli centrepiece" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="400" height="400" loading="eager">
+            <span class="absolute bottom-2 start-2 rounded-full bg-neutral-900/75 px-2.5 py-0.5 text-[0.6875rem] font-semibold text-white backdrop-blur-sm">Palace Centrepiece</span>
+          </div>
+          <figcaption class="p-3 text-center text-xs font-semibold text-neutral-800 dark:text-neutral-200">
+            Palace Floor · Mysuru
+          </figcaption>
         </figure>
-        <figure class="overflow-hidden rounded-2xl border border-neutral-200 transition duration-300 hover:-translate-y-1 hover:border-secondary-500/60 hover:shadow-xl hover:shadow-secondary-500/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-white/10 dark:hover:border-secondary-400/60">
-          <img src="images/rangoli-12.svg" alt="Teal and rose fifteen petal festive design" class="aspect-square w-full object-cover" width="400" height="400" loading="lazy">
+
+        <figure class="group overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-secondary-500/60 hover:shadow-xl dark:border-white/10 dark:bg-white/5">
+          <div class="relative aspect-square overflow-hidden">
+            <img src="images/kolam3.jpeg" alt="Pongal harvest celebration floor with rose petals and teal powder" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="400" height="400" loading="lazy">
+            <span class="absolute bottom-2 start-2 rounded-full bg-neutral-900/75 px-2.5 py-0.5 text-[0.6875rem] font-semibold text-white backdrop-blur-sm">Pongal Harvest</span>
+          </div>
+          <figcaption class="p-3 text-center text-xs font-semibold text-neutral-800 dark:text-neutral-200">
+            Pongal Mandala · Coimbatore
+          </figcaption>
         </figure>
-        <figure class="overflow-hidden rounded-2xl border border-neutral-200 transition duration-300 hover:-translate-y-1 hover:border-secondary-500/60 hover:shadow-xl hover:shadow-secondary-500/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-white/10 dark:hover:border-secondary-400/60">
-          <img src="images/rangoli-05.svg" alt="Fourteen petal traditional kolam" class="aspect-square w-full object-cover" width="400" height="400" loading="lazy">
+
+        <figure class="group overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-secondary-500/60 hover:shadow-xl dark:border-white/10 dark:bg-white/5">
+          <div class="relative aspect-square overflow-hidden">
+            <img src="images/kolam4.jpeg" alt="Traditional wedding urva with plum accents and brass urvil" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="400" height="400" loading="lazy">
+            <span class="absolute bottom-2 start-2 rounded-full bg-neutral-900/75 px-2.5 py-0.5 text-[0.6875rem] font-semibold text-white backdrop-blur-sm">Wedding Urva</span>
+          </div>
+          <figcaption class="p-3 text-center text-xs font-semibold text-neutral-800 dark:text-neutral-200">
+            Wedding Urva · Whitefield
+          </figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <!-- ================= SEASONAL COLLECTIONS ================= -->
+  <!-- ================= SEASONAL COLLECTIONS (Real Photographs) ================= -->
   <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 xl:px-8 xl:py-24">
     <div class="mx-auto max-w-2xl text-center">
-      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400">Seasonal collections</p>
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400">Seasonal Collections</p>
       <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
         Choose the occasion, we&rsquo;ll draw the rest
       </h2>
+      <p class="mt-4 text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+        Each collection is custom planned to scale, prepared with pure herbal ingredients, and completed on-site by our dedicated artist team.
+      </p>
     </div>
 
-    <div class="mt-12 space-y-6">
-      <article class="grid gap-6 rounded-2xl border border-neutral-200 p-6 text-center sm:p-8 md:grid-cols-12 md:items-center md:text-left dark:border-white/10">
-        <div class="md:col-span-3">
-          <img src="images\img8.jpeg" alt="Daily entrance kolam" class="mx-auto aspect-square w-40 rounded-2xl border border-neutral-200 md:mx-0 md:w-full dark:border-white/10" width="400" height="400" loading="lazy">
+    <div class="mt-12 space-y-8">
+      <!-- Collection 01 -->
+      <article class="grid gap-6 rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-primary-300 hover:shadow-lg sm:p-8 md:grid-cols-12 md:items-center dark:border-white/10 dark:bg-white/[0.03]">
+        <div class="md:col-span-4">
+          <img src="images/hd-art-5.jpg" alt="Daily doorstep entrance kolam" class="mx-auto aspect-[4/3] w-full rounded-2xl border border-neutral-200 object-cover shadow-sm dark:border-white/10" width="400" height="300" loading="lazy">
         </div>
-        <div class="md:col-span-6">
-          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-400">Collection 01</p>
-          <h3 class="mt-2 font-display text-2xl font-bold text-neutral-900 dark:text-white">Everyday Kolam</h3>
+        <div class="md:col-span-5 text-start">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-primary-600 dark:text-primary-400">Collection 01</p>
+          <h3 class="mt-2 font-display text-2xl font-bold text-neutral-900 dark:text-white">Everyday Kolam &amp; Doorstep Art</h3>
           <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
-            Grid-based morning kolam with a rotating motif each week — peacock, lotus, lamp or your family
-            initials. Powder only, laid in ninety minutes, swept clean by us.
+            Grid-based morning pulli kolam with rotating auspicious motifs — lotus, peacock, lamp, or your family monogram. Ground rice flour, laid in 90 minutes, swept clean by us.
           </p>
+          <ul class="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-xs text-neutral-500 dark:text-neutral-400">
+            <li>✔ Pure rice flour &amp; kaavi</li>
+            <li>✔ 4–6 ft standard size</li>
+            <li>✔ Fortnightly retainers available</li>
+          </ul>
         </div>
-        <div class="md:col-span-3 md:text-end">
-          <p class="font-display text-3xl font-bold text-primary dark:text-primary-400">₹1,200+</p>
-          <p class="text-xs text-neutral-500 dark:text-neutral-400">per design</p>
-          <a href="services.html#home" class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-neutral-800 underline decoration-primary/40 underline-offset-4 hover:text-primary dark:text-neutral-200 dark:hover:text-primary-300">Home service details</a>
+        <div class="md:col-span-3 text-center md:text-end">
+          <p class="font-display text-3xl font-bold text-primary-600 dark:text-primary-400">₹1,200+</p>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400">per floor design</p>
+          <a href="contact.html?collection=everyday" class="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-600 transition-all active:scale-[0.98]">
+            Book an Artist
+          </a>
         </div>
       </article>
 
-      <article class="grid gap-6 rounded-2xl border border-neutral-200 p-6 text-center sm:p-8 md:grid-cols-12 md:items-center md:text-left dark:border-white/10">
-        <div class="md:col-span-3">
-          <img src="images\img6.jpeg" alt="Six petal festive kolam" class="mx-auto aspect-square w-40 rounded-2xl border border-neutral-200 md:mx-0 md:w-full dark:border-white/10" width="400" height="400" loading="lazy">
+      <!-- Collection 02 -->
+      <article class="grid gap-6 rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-secondary-300 hover:shadow-lg sm:p-8 md:grid-cols-12 md:items-center dark:border-white/10 dark:bg-white/[0.03]">
+        <div class="md:col-span-4">
+          <img src="images/kolam5.jpeg" alt="Diwali festival rangoli with marigold flowers and diya lights" class="mx-auto aspect-[4/3] w-full rounded-2xl border border-neutral-200 object-cover shadow-sm dark:border-white/10" width="400" height="300" loading="lazy">
         </div>
-        <div class="md:col-span-6">
-          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-400">Collection 02</p>
-          <h3 class="mt-2 font-display text-2xl font-bold text-neutral-900 dark:text-white">Diwali &amp; Deepavali</h3>
+        <div class="md:col-span-5 text-start">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-secondary-600 dark:text-secondary-400">Collection 02</p>
+          <h3 class="mt-2 font-display text-2xl font-bold text-neutral-900 dark:text-white">Diwali, Deepavali &amp; Pookalam</h3>
           <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
-            Diya pathways, toran and marigold set dressing alongside the floor art. Warm turmeric,
-            vermilion and lamp-gold palettes sized for apartment landings and villa gates.
+            Diya pathways, fresh marigold torans, and wet-look flower carpets alongside symmetrical floor art. Warm turmeric, vermilion, and lamp-gold palettes sized for apartment landings and villa gates.
           </p>
+          <ul class="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-xs text-neutral-500 dark:text-neutral-400">
+            <li>✔ Fresh flowers &amp; terracotta diyas</li>
+            <li>✔ 8–12 ft festive spread</li>
+            <li>✔ Morning refresh visits included</li>
+          </ul>
         </div>
-        <div class="md:col-span-3 md:text-end">
-          <p class="font-display text-3xl font-bold text-secondary dark:text-secondary-300">₹11,900+</p>
-          <p class="text-xs text-neutral-500 dark:text-neutral-400">per home</p>
-          <a href="services.html#festive" class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-neutral-800 underline decoration-secondary/40 underline-offset-4 hover:text-secondary dark:text-neutral-200 dark:hover:text-secondary-300">Festive decor details</a>
+        <div class="md:col-span-3 text-center md:text-end">
+          <p class="font-display text-3xl font-bold text-secondary-600 dark:text-secondary-400">₹11,900+</p>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400">full home festive takeover</p>
+          <a href="contact.html?collection=diwali" class="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-600 transition-all active:scale-[0.98]">
+            Book an Artist
+          </a>
         </div>
       </article>
 
-      <article class="grid gap-6 rounded-2xl border border-neutral-200 p-6 text-center sm:p-8 md:grid-cols-12 md:items-center md:text-left dark:border-white/10">
-        <div class="md:col-span-3">
-          <img src="images\img7.jpeg" alt="Wedding celebration mandala" class="mx-auto aspect-square w-40 rounded-2xl border border-neutral-200 md:mx-0 md:w-full dark:border-white/10" width="400" height="400" loading="lazy">
+      <!-- Collection 03 -->
+      <article class="grid gap-6 rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-plum/40 hover:shadow-lg sm:p-8 md:grid-cols-12 md:items-center dark:border-white/10 dark:bg-white/[0.03]">
+        <div class="md:col-span-4">
+          <img src="images/hd-art-1.jpg" alt="Grand wedding celebration mandala urva" class="mx-auto aspect-[4/3] w-full rounded-2xl border border-neutral-200 object-cover shadow-sm dark:border-white/10" width="400" height="300" loading="lazy">
         </div>
-        <div class="md:col-span-6">
-          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-400">Collection 03</p>
-          <h3 class="mt-2 font-display text-2xl font-bold text-neutral-900 dark:text-white">Weddings &amp; Utsavs</h3>
+        <div class="md:col-span-5 text-start">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-plum dark:text-plum">Collection 03</p>
+          <h3 class="mt-2 font-display text-2xl font-bold text-neutral-900 dark:text-white">Weddings, Receptions &amp; Utsavs</h3>
           <p class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
-            Large mandala and urva floors built around your family motif, finished with rose petals, brass
-            urvil and a six-person crew working while the guests still sleep.
+            Expansive 12 to 20-foot mandala and urva floors built around your custom family motif, finished with fresh Dutch rose petals, polished brass urulis, and an expert 6-person artisan crew.
           </p>
+          <ul class="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-xs text-neutral-500 dark:text-neutral-400">
+            <li>✔ Scaled custom master sketch</li>
+            <li>✔ 12–20 ft banquet scale</li>
+            <li>✔ Overnight or sunrise installation</li>
+          </ul>
         </div>
-        <div class="md:col-span-3 md:text-end">
+        <div class="md:col-span-3 text-center md:text-end">
           <p class="font-display text-3xl font-bold text-plum dark:text-plum">₹9,500+</p>
-          <p class="text-xs text-neutral-500 dark:text-neutral-400">per event</p>
-          <a href="services.html#events" class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-neutral-800 underline decoration-plum/50 underline-offset-4 hover:text-plum dark:text-neutral-200 dark:hover:text-plum">Event decor details</a>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400">per wedding ceremony</p>
+          <a href="contact.html?collection=wedding" class="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-600 transition-all active:scale-[0.98]">
+            Book an Artist
+          </a>
         </div>
       </article>
+    </div>
+  </section>
+
+  <!-- ================= OCCASIONS & FESTIVE THEMES ================= -->
+  <section class="bg-neutral-50/70 py-16 dark:bg-white/[0.02] sm:py-20 xl:py-24 border-y border-neutral-200 dark:border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 xl:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400">Festive Themes &amp; Occasions</p>
+        <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+          Sacred art curated for every milestone
+        </h2>
+        <p class="mt-4 text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+          From sunrise wedding muhurthams to glowing Diwali courtyards and corporate grand inaugurations, we craft designs steeped in tradition and tailored to your architecture.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Occasion 1 -->
+        <div class="group overflow-hidden rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-xl dark:border-white/10 dark:bg-neutral-900/40">
+          <div class="relative aspect-[16/10] overflow-hidden rounded-2xl">
+            <img src="images/hd-art-2.jpg" alt="Wedding muhurtham mandala rangoli" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="400" height="250" loading="lazy">
+            <span class="absolute bottom-2 start-2 rounded-full bg-primary-600/90 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">Weddings &amp; Muhurthams</span>
+          </div>
+          <h3 class="mt-4 font-display text-xl font-bold text-neutral-900 dark:text-white">Wedding Mandalas &amp; Urvas</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Intricate 10–20 ft floor mandalas, polished brass urulis with floating tea lights, and scented rose &amp; marigold petal borders designed for mandap entrances.
+          </p>
+          <div class="mt-4 flex items-center justify-between border-t border-neutral-100 pt-3 text-xs text-neutral-500 dark:border-white/5 dark:text-neutral-400">
+            <span>Crew: 4–8 Artisans</span>
+            <span class="font-semibold text-primary-600 dark:text-primary-400">From ₹9,500</span>
+          </div>
+        </div>
+
+        <!-- Occasion 2 -->
+        <div class="group overflow-hidden rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-secondary-300 hover:shadow-xl dark:border-white/10 dark:bg-neutral-900/40">
+          <div class="relative aspect-[16/10] overflow-hidden rounded-2xl">
+            <img src="images/kolam6.jpeg" alt="Diwali and Deepavali festive rangoli with oil lamps" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="400" height="250" loading="lazy">
+            <span class="absolute bottom-2 start-2 rounded-full bg-secondary-600/90 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">Diwali &amp; Karthigai</span>
+          </div>
+          <h3 class="mt-4 font-display text-xl font-bold text-neutral-900 dark:text-white">Diwali &amp; Festival of Lights</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Radiant turmeric &amp; vermilion geometries surrounded by terracotta agal vilakku lamps, welcoming prosperity and Goddess Lakshmi into homes and offices.
+          </p>
+          <div class="mt-4 flex items-center justify-between border-t border-neutral-100 pt-3 text-xs text-neutral-500 dark:border-white/5 dark:text-neutral-400">
+            <span>Crew: 2–4 Artisans</span>
+            <span class="font-semibold text-secondary-600 dark:text-secondary-400">From ₹4,500</span>
+          </div>
+        </div>
+
+        <!-- Occasion 3 -->
+        <div class="group overflow-hidden rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-xl dark:border-white/10 dark:bg-neutral-900/40">
+          <div class="relative aspect-[16/10] overflow-hidden rounded-2xl">
+            <img src="images/kolam7.jpeg" alt="Pongal and Sankranti traditional harvest kolam" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="400" height="250" loading="lazy">
+            <span class="absolute bottom-2 start-2 rounded-full bg-primary-600/90 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">Pongal &amp; Sankranti</span>
+          </div>
+          <h3 class="mt-4 font-display text-xl font-bold text-neutral-900 dark:text-white">Makar Sankranti &amp; Pongal</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Traditional overflowing harvest pots (Pongal paanai), sugarcane stalks, sun motifs, and bold geometric pulli grids drawn with fresh rice flour.
+          </p>
+          <div class="mt-4 flex items-center justify-between border-t border-neutral-100 pt-3 text-xs text-neutral-500 dark:border-white/5 dark:text-neutral-400">
+            <span>Crew: 2–4 Artisans</span>
+            <span class="font-semibold text-primary-600 dark:text-primary-400">From ₹3,500</span>
+          </div>
+        </div>
+
+        <!-- Occasion 4 -->
+        <div class="group overflow-hidden rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-xl dark:border-white/10 dark:bg-neutral-900/40">
+          <div class="relative aspect-[16/10] overflow-hidden rounded-2xl">
+            <img src="images/hd-art-4.jpg" alt="Griha Pravesh threshold kolam and pooja room floor art" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="400" height="250" loading="lazy">
+            <span class="absolute bottom-2 start-2 rounded-full bg-plum/90 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">Griha Pravesh</span>
+          </div>
+          <h3 class="mt-4 font-display text-xl font-bold text-neutral-900 dark:text-white">Housewarming &amp; Pooja Setup</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Auspicious doorway threshold padams, lotus floral accents, and sanctum kolams to bless your new home with positive energy and divine abundance.
+          </p>
+          <div class="mt-4 flex items-center justify-between border-t border-neutral-100 pt-3 text-xs text-neutral-500 dark:border-white/5 dark:text-neutral-400">
+            <span>Crew: 1–2 Artisans</span>
+            <span class="font-semibold text-plum dark:text-plum">From ₹2,800</span>
+          </div>
+        </div>
+
+        <!-- Occasion 5 -->
+        <div class="group overflow-hidden rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-xl dark:border-white/10 dark:bg-neutral-900/40">
+          <div class="relative aspect-[16/10] overflow-hidden rounded-2xl">
+            <img src="images/kolam8.jpeg" alt="Navratri and Golu step decorative rangoli" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="400" height="250" loading="lazy">
+            <span class="absolute bottom-2 start-2 rounded-full bg-primary-600/90 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">Navratri &amp; Golu</span>
+          </div>
+          <h3 class="mt-4 font-display text-xl font-bold text-neutral-900 dark:text-white">Navratri Golu Floor Decor</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Rotating 9-day floral and powder rangolis laid in front of your Golu steps, featuring devi yantras, peacock wings, and organic kaavi clay borders.
+          </p>
+          <div class="mt-4 flex items-center justify-between border-t border-neutral-100 pt-3 text-xs text-neutral-500 dark:border-white/5 dark:text-neutral-400">
+            <span>Rotating 9-Day Packs</span>
+            <span class="font-semibold text-primary-600 dark:text-primary-400">From ₹8,900</span>
+          </div>
+        </div>
+
+        <!-- Occasion 6 -->
+        <div class="group overflow-hidden rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-secondary-300 hover:shadow-xl dark:border-white/10 dark:bg-neutral-900/40">
+          <div class="relative aspect-[16/10] overflow-hidden rounded-2xl">
+            <img src="images/kolam9.jpeg" alt="Corporate gala and annual day floral rangoli installation" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="400" height="250" loading="lazy">
+            <span class="absolute bottom-2 start-2 rounded-full bg-secondary-600/90 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">Corporate Galas</span>
+          </div>
+          <h3 class="mt-4 font-display text-xl font-bold text-neutral-900 dark:text-white">Corporate Inaugurations &amp; Galas</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Scale-drawn corporate logo medallions, tech campus annual days, and lobby centerpieces with 100% dust-free powders and non-slip mats.
+          </p>
+          <div class="mt-4 flex items-center justify-between border-t border-neutral-100 pt-3 text-xs text-neutral-500 dark:border-white/5 dark:text-neutral-400">
+            <span>Crew: 4–10 Artisans</span>
+            <span class="font-semibold text-secondary-600 dark:text-secondary-400">From ₹12,500</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-12 text-center">
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-8 py-3 text-sm font-semibold text-white shadow-md hover:bg-primary-600 transition-all active:scale-[0.98]">
+          Book an Artist for Your Occasion
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CUSTOMIZATION & NATURAL MATERIALS ================= -->
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 xl:px-8 xl:py-24">
+    <div class="grid gap-12 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-5">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400">Artisan Purity &amp; Craft</p>
+        <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+          100% Organic Ingredients &amp; Bespoke Customization
+        </h2>
+        <p class="mt-4 text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+          We honor ancestral craft traditions. No synthetic chemical dyes, no aerosol fixatives, and no artificial glitters. Everything that touches your sanctum floor is pure, safe, and easily washed away.
+        </p>
+
+        <div class="mt-8 space-y-5">
+          <div class="flex gap-4">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-500/10 text-primary-600 dark:bg-primary-400/10 dark:text-primary-400">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+            </div>
+            <div>
+              <h3 class="font-display text-base font-bold text-neutral-900 dark:text-white">Custom Family Motifs &amp; Monograms</h3>
+              <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-300">Wedding couple initials, family kuladevam symbols, or company emblems incorporated seamlessly into ancient sacred geometry.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary-500/10 text-secondary-600 dark:bg-secondary-400/10 dark:text-secondary-400">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+            </div>
+            <div>
+              <h3 class="font-display text-base font-bold text-neutral-900 dark:text-white">Herbal Powders &amp; Fresh Petals</h3>
+              <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-300">Stone-ground rice flour, raw Kaavi red clay, Kasturi turmeric, vermilion, fresh marigolds, and Dutch roses.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-500/10 text-primary-600 dark:bg-primary-400/10 dark:text-primary-400">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+            </div>
+            <div>
+              <h3 class="font-display text-base font-bold text-neutral-900 dark:text-white">Any Floor Scale &amp; Surface Safe</h3>
+              <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-300">Formulated to leave zero stains or discoloration on Italian marble, polished granite, wooden decks, or temple stones.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-primary-500 px-7 py-3 text-sm font-semibold text-white shadow-sm hover:bg-primary-600 transition-all">
+            Book an Artist
+          </a>
+          <a href="gallery.html" class="inline-flex items-center justify-center rounded-full border border-neutral-300 px-7 py-3 text-sm font-semibold text-neutral-800 transition-all hover:bg-neutral-100 dark:border-white/20 dark:text-neutral-100 dark:hover:bg-white/5">
+            Explore Designs
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 lg:col-span-7">
+        <div class="space-y-4">
+          <img src="images/kolam10.jpeg" alt="Artisan hand laying delicate green rice flour rangoli petals" class="aspect-[4/5] w-full rounded-3xl border border-neutral-200 object-cover shadow-sm dark:border-white/10" width="350" height="420" loading="lazy">
+          <img src="images/hd-art-6.jpg" alt="Teal and gold powder mandala detail" class="aspect-square w-full rounded-3xl border border-neutral-200 object-cover shadow-sm dark:border-white/10" width="350" height="350" loading="lazy">
+        </div>
+        <div class="space-y-4 pt-6">
+          <img src="images/hd-art-7.jpg" alt="Rich festive celebration floor art with fresh flowers" class="aspect-square w-full rounded-3xl border border-neutral-200 object-cover shadow-sm dark:border-white/10" width="350" height="350" loading="lazy">
+          <img src="images/hd-art-8.jpg" alt="Traditional terracotta doorstep rangoli" class="aspect-[4/5] w-full rounded-3xl border border-neutral-200 object-cover shadow-sm dark:border-white/10" width="350" height="420" loading="lazy">
+        </div>
+      </div>
     </div>
   </section>
 
@@ -213,6 +451,108 @@
     </div>
   </section>
 
+  <!-- ================= 4-STEP BOOKING PROCESS ================= -->
+  <section class="border-y border-neutral-200 bg-neutral-50/60 py-16 dark:border-white/10 dark:bg-white/[0.02] sm:py-20 xl:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 xl:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400">Effortless Experience</p>
+        <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+          How our booking process works
+        </h2>
+        <p class="mt-4 text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+          Four simple steps from your first enquiry to a sacred, photo-ready floor creation.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="relative rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-neutral-900/40">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary-500/10 font-display text-lg font-bold text-primary-600 dark:bg-primary-400/10 dark:text-primary-400">1</span>
+          <h3 class="mt-4 font-display text-lg font-bold text-neutral-900 dark:text-white">Share Date &amp; Floor Size</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">Send us your event date, venue location, floor type, and approximate dimensions or photos.</p>
+        </div>
+
+        <div class="relative rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-neutral-900/40">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary-500/10 font-display text-lg font-bold text-primary-600 dark:bg-primary-400/10 dark:text-primary-400">2</span>
+          <h3 class="mt-4 font-display text-lg font-bold text-neutral-900 dark:text-white">Custom Sketch &amp; Quote</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">Within 24 hours, receive a scaled digital sketch with custom motif choices and transparent pricing.</p>
+        </div>
+
+        <div class="relative rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-neutral-900/40">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary-500/10 font-display text-lg font-bold text-primary-600 dark:bg-primary-400/10 dark:text-primary-400">3</span>
+          <h3 class="mt-4 font-display text-lg font-bold text-neutral-900 dark:text-white">On-Site Artisan Setup</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">Our lead artist and trained crew arrive on schedule, prep the floor, and execute the design dot-by-dot.</p>
+        </div>
+
+        <div class="relative rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-neutral-900/40">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary-500/10 font-display text-lg font-bold text-primary-600 dark:bg-primary-400/10 dark:text-primary-400">4</span>
+          <h3 class="mt-4 font-display text-lg font-bold text-neutral-900 dark:text-white">Completion &amp; Clean Sweep</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">Fresh petal accents placed, diya oil lamps lit, and surrounding floor swept clean for your guests to admire.</p>
+        </div>
+      </div>
+      
+      <div class="mt-12 text-center">
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-8 py-3.5 text-sm font-semibold text-white shadow-md hover:bg-primary-600 transition-all active:scale-[0.98]">
+          Book an Artist Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICE LOCATIONS & COVERAGE ================= -->
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 xl:px-8 xl:py-24">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400">On-Site Coverage</p>
+      <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+        Service locations across Bengaluru &amp; Beyond
+      </h2>
+      <p class="mt-4 text-base leading-relaxed text-neutral-600 dark:text-neutral-300">
+        Our studio artists travel directly to your venue equipped with all necessary materials, brass decoratives, and fresh flower stocks.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-neutral-900/40">
+        <div class="flex items-center gap-2 text-primary-600 dark:text-primary-400 font-semibold text-sm">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+          East Bengaluru
+        </div>
+        <h3 class="mt-3 font-display text-lg font-bold text-neutral-900 dark:text-white">Whitefield &amp; Indiranagar</h3>
+        <p class="mt-2 text-xs leading-relaxed text-neutral-600 dark:text-neutral-300">Whitefield, Indiranagar, Marathahalli, Bellandur, Sarjapur Road, and Outer Ring Road tech parks.</p>
+        <span class="mt-4 inline-block text-[0.6875rem] font-semibold text-primary-600 dark:text-primary-400">Zero Travel Surcharge</span>
+      </div>
+
+      <div class="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-neutral-900/40">
+        <div class="flex items-center gap-2 text-primary-600 dark:text-primary-400 font-semibold text-sm">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
+          South Bengaluru
+        </div>
+        <h3 class="mt-3 font-display text-lg font-bold text-neutral-900 dark:text-white">Koramangala &amp; Jayanagar</h3>
+        <p class="mt-2 text-xs leading-relaxed text-neutral-600 dark:text-neutral-300">Koramangala, HSR Layout, Jayanagar, JP Nagar, BTM Layout, and Electronic City wedding halls.</p>
+        <span class="mt-4 inline-block text-[0.6875rem] font-semibold text-primary-600 dark:text-primary-400">Zero Travel Surcharge</span>
+      </div>
+
+      <div class="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-neutral-900/40">
+        <div class="flex items-center gap-2 text-primary-600 dark:text-primary-400 font-semibold text-sm">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
+          North &amp; West Bengaluru
+        </div>
+        <h3 class="mt-3 font-display text-lg font-bold text-neutral-900 dark:text-white">Malleshwaram &amp; Hebbal</h3>
+        <p class="mt-2 text-xs leading-relaxed text-neutral-600 dark:text-neutral-300">Malleshwaram, Sadashivanagar, Rajajinagar, Hebbal, Yelahanka, and Devanahalli resorts.</p>
+        <span class="mt-4 inline-block text-[0.6875rem] font-semibold text-primary-600 dark:text-primary-400">Morning Slots Available</span>
+      </div>
+
+      <div class="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-neutral-900/40">
+        <div class="flex items-center gap-2 text-secondary-600 dark:text-secondary-400 font-semibold text-sm">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" /></svg>
+          Outstation &amp; Destination
+        </div>
+        <h3 class="mt-3 font-display text-lg font-bold text-neutral-900 dark:text-white">Mysuru, Chennai &amp; Beyond</h3>
+        <p class="mt-2 text-xs leading-relaxed text-neutral-600 dark:text-neutral-300">Dedicated destination artist unit for Mysuru, Chennai, Hyderabad, Coimbatore, and pan-India weddings.</p>
+        <span class="mt-4 inline-block text-[0.6875rem] font-semibold text-secondary-600 dark:text-secondary-400">Advance Notice: 2 Weeks</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= WORKSHOPS ================= -->
   <section class="relative overflow-hidden bg-gradient-to-b from-primary-50/70 via-white to-plum/[0.05] dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950">
     <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-500/30 to-transparent" aria-hidden="true"></div>
@@ -247,7 +587,7 @@
         </article>
 
         <article class="group relative flex flex-col overflow-hidden rounded-3xl p-7 text-white shadow-2xl shadow-neutral-900/25 ring-1 ring-inset ring-white/10 transition duration-300 hover:-translate-y-1 hover:shadow-neutral-900/35 motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:col-span-1 sm:row-span-2 lg:col-span-2 lg:p-8 dark:shadow-black/40">
-          <img src="images\img3.webp" alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async">
+          <img src="images/img3.webp" alt="Wedding Urva masterclass studio session" class="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async">
           <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-neutral-950/25 to-neutral-950/70" aria-hidden="true"></div>
           <span class="pointer-events-none absolute end-7 top-5 font-display text-6xl font-bold leading-none text-white/[0.12] select-none" aria-hidden="true">02</span>
 
@@ -284,23 +624,27 @@
       </div>
     </div>
   </section>
-<br>
+
   <!-- ================= CTA ================= -->
-  <section class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 sm:pb-24 xl:px-8">
-    <div class="rounded-3xl border border-neutral-200 px-6 py-14 text-center dark:border-white/10 sm:px-12">
-      <h2 class="mx-auto max-w-2xl font-display text-3xl font-bold leading-tight text-neutral-900 dark:text-white sm:text-4xl">
-        Prefer layout one? It has the full service breakdown.
+  <section class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 sm:pb-24 xl:px-8 pt-8">
+    <div class="relative overflow-hidden rounded-3xl border border-primary-500/20 bg-gradient-to-br from-primary-500/10 via-amber-500/5 to-secondary-500/10 px-6 py-14 text-center dark:border-white/10 dark:from-neutral-900 dark:to-neutral-900/90 sm:px-12">
+      <div class="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-primary-500/10 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -bottom-16 -left-16 h-64 w-64 rounded-full bg-secondary-500/10 blur-3xl" aria-hidden="true"></div>
+      <span class="inline-flex items-center gap-2 rounded-full border border-primary-500/20 bg-primary-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary-700 dark:text-primary-300">
+        Book Your Celebration
+      </span>
+      <h2 class="mx-auto mt-4 max-w-2xl font-display text-3xl font-bold leading-tight text-neutral-900 dark:text-white sm:text-4xl">
+        Bring Sacred Art &amp; Festive Radiance to Your Occasion
       </h2>
       <p class="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-neutral-600 sm:text-base dark:text-neutral-300">
-        Home 1 walks through services, packages, testimonials and FAQs in one scroll. Home 2 is this
-        collection-first view. Both share the same booking form and the same studio calendar.
+        Whether you need a daily doorstep kolam, a vibrant festive flower pookalam, or an expansive 20-foot wedding mandala, our master artists bring pure tradition and perfection to your floor.
       </p>
-      <div class="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-        <a href="packages.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950">
-          Visit package
+      <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a href="contact.html" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-primary-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-all duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 active:scale-[0.98]">
+          Book an Artist
         </a>
-        <a href="packages.html" class="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-300 px-7 py-3.5 text-sm font-semibold text-neutral-800 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/15 dark:text-neutral-100">
-          See festive packages
+        <a href="gallery.html" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-neutral-300 dark:border-white/20 bg-white/60 dark:bg-neutral-800/60 px-8 py-3.5 text-sm font-semibold text-neutral-800 dark:text-neutral-100 backdrop-blur-sm transition-all duration-200 hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500">
+          Explore Designs
         </a>
       </div>
     </div>

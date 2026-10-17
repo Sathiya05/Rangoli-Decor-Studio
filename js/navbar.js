@@ -34,20 +34,9 @@
 
   var MOUNT_SELECTOR = '#app-navbar, #navbar, #site-navbar, [data-navbar]';
 
-  /* Arbitrary Tailwind variant matching JS navMode() below: the inline nav is
-     used only from 1280px up AND with a fine pointer. A touch device — e.g.
-     iPad Pro 13" at 1376x1032, or a tablet/2-in-1 — keeps the hamburger at any
-     width, because a 1376px tablet is not a desktop and hover dropdowns are
-     useless on touch. It has to be ONE media query (the `_and_` join), not two
-     separate variants: two variants that both set `display` are an OR, which
-     would show the nav on the iPad. Keep in sync with NAV_MODE_QUERY. */
-  var NAV_MODE = '[@media(min-width:1280px)_and_(pointer:fine)]';
-
-  /* The opposite of navMode(), expressed as two variants — for `display` an OR
-     is exactly what we want here: show the hamburger if the viewport is under
-     1280px OR the pointer is coarse. */
-  var DRAWER_MODE_A = '[@media(max-width:1279px)]';
-  var DRAWER_MODE_B = '[@media(pointer:coarse)]';
+  /* The nav switches modes at Tailwind's xl breakpoint (1280px), rendered as
+     `xl:` / `xl:hidden` classes in navbarTemplate() and mirrored by navMode()
+     further down. Keep them in sync. */
 
   /* ------------------------------------------------------------------
      2. ICONS (inline, currentColor driven)
@@ -255,7 +244,7 @@
        see mount(). A sticky box can never leave its parent's box, and the
        wrapper is exactly as tall as this header, so sticky on the header
        itself would be a no-op. */
-    '<header id="site-header" data-header class="border-b border-neutral-200/80 bg-white/85' +
+    '<header id="site-header" data-header class="relative border-b border-neutral-200/80 bg-white/85' +
       ' backdrop-blur-md transition-shadow duration-300 dark:border-white/10 dark:bg-neutral-950/85">' +
       '<nav class="mx-auto max-w-7xl px-4 sm:px-6 xl:px-8" aria-label="Primary">' +
         /* relative + two flex-1 sides so the nav list can be pinned dead
@@ -283,28 +272,18 @@
                 ' dark:text-primary-400 min-[360px]:text-[0.5625rem] min-[360px]:tracking-[0.14em]' +
                 ' min-[480px]:text-[0.625rem] min-[480px]:tracking-[0.16em]">' + esc(BRAND.mark) + '</span>' +
             '</span>' +
-          '</a>' +
-
-          /* desktop nav — only when NAV_MODE (see above): 1280px+ AND a fine
-             pointer. Hidden at the base, shown by the single combined media
-             query, so a touch iPad at 1376px falls back to the drawer. */
+               /* desktop nav — visible at xl breakpoint (1280px+) */
           '<ul class="pointer-events-none absolute start-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2' +
-            ' items-center gap-0.5 ' + NAV_MODE + ':pointer-events-auto ' + NAV_MODE + ':flex' +
-            ' rtl:translate-x-1/2">' + buildDesktopNav() + '</ul>' +
+            ' items-center gap-0.5 xl:pointer-events-auto xl:flex rtl:translate-x-1/2">' + buildDesktopNav() + '</ul>' +
 
-          /* actions — the two preference toggles and the primary CTA only
-             appear here in nav mode; otherwise they live in the drawer, so a
-             bar stays logo + hamburger. They only start growing at xl (paired
-             with the equally growing brand) so the nav list stays optically
-             centred; below that they take only their own width, which leaves
-             the brand the full slack it needs. */
+          /* actions — toggles and Book an Artist CTA */
           '<div class="flex shrink-0 items-center justify-end gap-1.5 sm:gap-2 xl:flex-1">' +
 
             '<button type="button" data-theme-toggle aria-label="Switch to dark mode" title="Toggle dark mode"' +
               ' class="hidden h-10 w-10 items-center justify-center rounded-full border border-neutral-200' +
               ' bg-white text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary' +
               ' focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2' +
-              ' focus-visible:ring-offset-white ' + NAV_MODE + ':inline-flex' +
+              ' focus-visible:ring-offset-white xl:inline-flex' +
               ' dark:border-white/10 dark:bg-white/5 dark:text-neutral-200' +
               ' dark:hover:border-primary-400 dark:hover:text-primary-300 dark:focus-visible:ring-offset-neutral-950">' +
               ICON.sun + ICON.moon +
@@ -315,7 +294,7 @@
               ' class="hidden h-10 min-w-[3.5rem] items-center justify-center rounded-full border border-neutral-200' +
               ' bg-white px-3 text-xs font-bold uppercase tracking-wider text-neutral-700 transition-colors duration-200' +
               ' hover:border-secondary hover:text-secondary focus:outline-none focus-visible:ring-2' +
-              ' ' + NAV_MODE + ':inline-flex' +
+              ' xl:inline-flex' +
               ' focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-white' +
               ' dark:border-white/10 dark:bg-white/5 dark:text-neutral-200 dark:hover:border-secondary-400' +
               ' dark:hover:text-secondary-300 dark:focus-visible:ring-offset-neutral-950">' +
@@ -323,29 +302,22 @@
               '<span class="hidden ltr:inline" aria-hidden="true">LTR</span>' +
             '</button>' +
 
-            /* primary CTA - desktop / laptop only, on the same NAV_MODE gate as
-               the two toggles above, and sitting directly after them. Phones
-               and tablets never show it in the bar: they reach "Contact"
-               through the drawer nav list instead. h-10 keeps it the same
-               height as the toggles it follows. */
+            /* primary CTA - desktop: Book an Artist */
             '<a href="contact.html" data-nav-link' +
-              ' class="hidden h-10 items-center justify-center gap-1.5 rounded-xl' +
-              ' bg-primary-500 px-4 text-sm font-semibold text-white shadow-sm shadow-primary/25' +
-              ' transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2' +
-              ' ' + NAV_MODE + ':inline-flex' +
-              ' focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white' +
-              ' motion-reduce:transition-none dark:focus-visible:ring-offset-neutral-950">' +
-              'Book an Enquiry' + ICON.arrow + '</a>' +
+              ' class="hidden h-10 items-center justify-center gap-1.5 rounded-full' +
+              ' bg-primary-500 px-5 text-sm font-semibold text-white shadow-sm shadow-primary/25' +
+              ' transition-all duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2' +
+              ' xl:inline-flex focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white' +
+              ' active:scale-[0.98] motion-reduce:transition-none dark:focus-visible:ring-offset-neutral-950">' +
+              'Book an Artist' + ICON.arrow + '</a>' +
 
-            /* hamburger: shown whenever the inline nav is not in use — under
-               1280px, or on any coarse/touch pointer (iPad Pro 13" at
-               1376x1032, tablets, touch 2-in-1s). */
+            /* hamburger: reliably visible at 360px, 768px, 1024px (< 1280px / xl:hidden) */
             '<button type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu"' +
               ' aria-label="Open navigation menu"' +
-              ' class="hidden h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-200' +
+              ' class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-200' +
               ' bg-white text-neutral-800 transition-colors duration-200 hover:border-primary hover:text-primary' +
               ' focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2' +
-              ' focus-visible:ring-offset-white ' + DRAWER_MODE_A + ':inline-flex ' + DRAWER_MODE_B + ':inline-flex' +
+              ' focus-visible:ring-offset-white xl:hidden' +
               ' dark:border-white/10 dark:bg-white/5 dark:text-neutral-100' +
               ' dark:hover:border-primary-400 dark:hover:text-primary-300 dark:focus-visible:ring-offset-neutral-950">' +
               '<span data-icon-open>' + ICON.menu + '</span>' +
@@ -355,21 +327,22 @@
           '</div>' +
         '</div>' +
 
-        /* mobile / touch drawer — mounted unless nav mode is active */
+        /* mobile / touch drawer — absolutely positioned under the bar so it
+           overlays the hero instead of pushing it down the page. The px on the
+           panel matches <nav> (px-4 sm:px-6), so the rows, the active
+           highlight and the full-width CTA line up with the logo instead of
+           bleeding to the screen edges. */
         '<div id="mobile-menu" data-mobile-menu' +
-          ' class="max-h-0 overflow-hidden transition-[max-height] duration-300' +
-          ' motion-reduce:transition-none ' + NAV_MODE + ':hidden">' +
-          '<div class="max-h-[75vh] overflow-y-auto overscroll-contain py-4">' +
+          ' class="absolute inset-x-0 top-full z-50 px-4 sm:px-6' +
+          ' max-h-0 overflow-hidden bg-white/95 shadow-xl' +
+          ' backdrop-blur-md transition-[max-height] duration-300 ease-in-out' +
+          ' motion-reduce:transition-none dark:bg-neutral-950/95 xl:hidden">' +
+          '<div class="max-h-[85vh] overflow-y-auto overscroll-contain py-4">' +
             '<ul class="space-y-1">' + buildMobileNav() + '</ul>' +
 
-            /* the dark / direction toggles are duplicated here so phones and
-               tablets — and any touch device in drawer mode, however wide —
-               get the same controls. data-theme-toggle / data-dir-toggle are
-               delegated globally, and applyTheme / applyDir re-sync every
-               instance, so both copies always agree. */
-            '<div class="mt-3 grid grid-cols-2 gap-2 ' + NAV_MODE + ':hidden">' +
+            '<div class="mt-3 grid grid-cols-2 gap-2 xl:hidden">' +
               '<button type="button" data-theme-toggle aria-label="Switch to dark mode" title="Toggle dark mode"' +
-                ' class="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-neutral-200' +
+                ' class="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-neutral-200' +
                 ' bg-white px-3 text-xs font-semibold text-neutral-700 transition-colors duration-200' +
                 ' hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2' +
                 ' focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white' +
@@ -381,7 +354,7 @@
 
               '<button type="button" data-dir-toggle aria-label="Switch layout direction to right-to-left"' +
                 ' title="Toggle LTR / RTL layout"' +
-                ' class="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-neutral-200' +
+                ' class="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-neutral-200' +
                 ' bg-white px-3 text-xs font-semibold text-neutral-700 transition-colors duration-200' +
                 ' hover:border-secondary hover:text-secondary focus:outline-none focus-visible:ring-2' +
                 ' focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-white' +
@@ -392,16 +365,14 @@
               '</button>' +
             '</div>' +
 
-            /* primary CTA — drawer copy of the desktop "Book an Enquiry" action,
-               full-width so phones/tablets get the same conversion entry point
-               inside the hamburger. data-nav-link closes the drawer on tap. */
+            /* primary CTA — full-width drawer Book an Artist */
             '<a href="contact.html" data-nav-link' +
-              ' class="mt-3 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl' +
+              ' class="mt-3 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full' +
               ' bg-primary-500 px-4 text-sm font-semibold text-white shadow-sm shadow-primary/25' +
-              ' transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2' +
+              ' transition-all duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2' +
               ' focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white' +
-              ' motion-reduce:transition-none dark:focus-visible:ring-offset-neutral-950">' +
-              'Book an Enquiry' + ICON.arrow + '</a>' +
+              ' active:scale-[0.98] motion-reduce:transition-none dark:focus-visible:ring-offset-neutral-950">' +
+              'Book an Artist' + ICON.arrow + '</a>' +
 
             '<div class="mt-4 flex items-center justify-between gap-3 rounded-xl bg-neutral-50 px-4 py-3' +
               ' text-xs text-neutral-600 dark:bg-white/5 dark:text-neutral-300">' +
@@ -481,15 +452,12 @@
      7. BEHAVIOUR WIRING
      ------------------------------------------------------------------ */
 
-  /* The inline nav is used only on wide screens driven by a fine pointer;
-     a touch device (iPad Pro 13" at 1376x1032, tablets, touch laptops) gets
-     the drawer instead, so hover-open must be gated on the same condition the
-     CSS uses. Keep these three in sync with the arbitrary media variants in
+  /* Hover-open must be gated on the same condition the CSS uses: the inline
+     nav only exists from 1280px (xl) up, so below that the drawer is the only
+     navigation. Keep navMode() in sync with the `xl:` classes in
      navbarTemplate(). */
-  var NAV_MODE_QUERY = '(min-width: 1280px) and (pointer: fine)';
-
   function navMode() {
-    return !window.matchMedia || window.matchMedia(NAV_MODE_QUERY).matches;
+    return window.innerWidth >= 1280;
   }
 
   function wireNavbar(root) {
@@ -520,14 +488,16 @@
       if (openIcon) openIcon.classList.toggle('hidden', open);
       if (closeIcon) closeIcon.classList.toggle('hidden', !open);
       mobileMenu.classList.toggle('max-h-0', !open);
-      mobileMenu.classList.toggle('max-h-[75vh]', open);
-      mobileMenu.classList.toggle('border-t', open);
-      mobileMenu.classList.toggle('border-neutral-200', open);
-      mobileMenu.classList.toggle('dark:border-white/10', open);
+      mobileMenu.classList.toggle('max-h-[85vh]', open);
     }
     if (menuBtn && mobileMenu) {
       menuBtn.addEventListener('click', function () {
         setMenu(menuBtn.getAttribute('aria-expanded') !== 'true');
+      });
+      /* the drawer overlays the page now, so tapping outside it dismisses it */
+      document.addEventListener('click', function (e) {
+        if (menuBtn.getAttribute('aria-expanded') !== 'true') return;
+        if (header && !header.contains(e.target)) setMenu(false);
       });
     }
 
