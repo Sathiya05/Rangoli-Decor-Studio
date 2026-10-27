@@ -36,8 +36,8 @@
     theme: {
       extend: {
         colors: {
-          primary:   { 50:'#FBF3EF', 100:'#F6E5DB', 200:'#EDCBB8', 300:'#DFA98C', 400:'#CE8462', 500:'#B4532A', 600:'#9A4523', 700:'#7C371C', 800:'#5F2A15', 900:'#451D0F' },
-          secondary: { 50:'#EFFAF8', 100:'#D7F2EE', 200:'#AEE5DE', 300:'#7ED4CB', 400:'#3FA79C', 500:'#0F766E', 600:'#0C5B55', 700:'#094A45', 800:'#073A36', 900:'#052B28' },
+          primary:   { DEFAULT:'#B4532A', 50:'#FBF3EF', 100:'#F6E5DB', 200:'#EDCBB8', 300:'#DFA98C', 400:'#CE8462', 500:'#B4532A', 600:'#9A4523', 700:'#7C371C', 800:'#5F2A15', 900:'#451D0F' },
+          secondary: { DEFAULT:'#0F766E', 50:'#EFFAF8', 100:'#D7F2EE', 200:'#AEE5DE', 300:'#7ED4CB', 400:'#3FA79C', 500:'#0F766E', 600:'#0C5B55', 700:'#094A45', 800:'#073A36', 900:'#052B28' },
           gold: '#E8A33D',
           plum: '#7C2D5B'
         },
@@ -135,15 +135,15 @@
       <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center xl:justify-between">
         <div class="flex flex-wrap items-center justify-center gap-2" role="group" aria-label="Filter gallery by category">
           <button type="button" data-filter="all" aria-pressed="true"
-            class="rounded-full border border-primary bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950">All work</button>
+            class="rounded-full border border-primary bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950">All work</button>
           <button type="button" data-filter="home" aria-pressed="false"
-            class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:text-neutral-300">Home</button>
+            class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:text-neutral-300 dark:hover:border-primary-400 dark:hover:text-primary-300">Home</button>
           <button type="button" data-filter="festival" aria-pressed="false"
-            class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:text-neutral-300">Festival</button>
+            class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:text-neutral-300 dark:hover:border-primary-400 dark:hover:text-primary-300">Festival</button>
           <button type="button" data-filter="wedding" aria-pressed="false"
-            class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:text-neutral-300">Wedding</button>
+            class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:text-neutral-300 dark:hover:border-primary-400 dark:hover:text-primary-300">Wedding</button>
           <button type="button" data-filter="corporate" aria-pressed="false"
-            class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:text-neutral-300">Corporate</button>
+            class="rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:text-neutral-300 dark:hover:border-primary-400 dark:hover:text-primary-300">Corporate</button>
         </div>
         <p data-count class="text-sm text-neutral-500 dark:text-neutral-400" role="status" aria-live="polite">
           Showing 12 of 12 designs
@@ -406,8 +406,8 @@
     var countEl = document.querySelector('[data-count]');
     var emptyEl = document.querySelector('[data-empty]');
 
-    var activeCls = 'rounded-full border border-primary bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950';
-    var idleCls = 'rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:text-neutral-300';
+    var activeCls = 'rounded-full border border-primary bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950';
+    var idleCls = 'rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors duration-200 hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:border-white/10 dark:text-neutral-300 dark:hover:border-primary-400 dark:hover:text-primary-300';
 
     function applyFilter(filter) {
       var shown = 0;
